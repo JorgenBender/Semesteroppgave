@@ -1,0 +1,10 @@
+org\openjfx\FXMLController.class
+module-info.class
+org\openjfx\Forsikring.class
+org\openjfx\Reiseforsikring.class
+org\openjfx\Kunde.class
+org\openjfx\Husforsikring.class
+org\openjfx\MainApp.class
+org\openjfx\Skademelding.class
+org\openjfx\Fritidsboligforsikring.class
+org\openjfx\Batforsikring.class
