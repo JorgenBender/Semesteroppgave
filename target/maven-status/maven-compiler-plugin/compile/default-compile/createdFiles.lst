@@ -1,3 +1,15 @@
-org\openjfx\MainApp.class
-org\openjfx\FXMLController.class
+org\openjfx\MainSceneController.class
+org\openjfx\Kunderegister$1.class
+org\openjfx\Reiseforsikring.class
+org\openjfx\Kunde.class
+org\openjfx\Kunderegister.class
+org\openjfx\Husforsikring.class
+org\openjfx\ImporterKundeRegisterKontroller.class
+org\openjfx\KundeRegKontroller.class
+org\openjfx\KunderegisterIO.class
 module-info.class
+org\openjfx\Forsikring.class
+org\openjfx\MainApp.class
+org\openjfx\Skademelding.class
+org\openjfx\Fritidsboligforsikring.class
+org\openjfx\Batforsikring.class

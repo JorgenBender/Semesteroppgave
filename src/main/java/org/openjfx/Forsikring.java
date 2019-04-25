@@ -11,11 +11,13 @@ public class Forsikring {
     private int arligPremie;
     private int forsikringsbelop;
     private LocalDate opprettetDato;
+    private String betingelser;
 
-    public Forsikring(int arligPremie, int forsikringsbelop, String dato) {
+    public Forsikring(int arligPremie, int forsikringsbelop, String dato, String betingelser) {
         this.arligPremie = arligPremie;
         this.forsikringsbelop = forsikringsbelop;
         this.opprettetDato = LocalDate.parse(dato, mittFormat);
+        this.betingelser = betingelser;
     }
 
     public int getArligPremie() {

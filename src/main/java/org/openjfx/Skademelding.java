@@ -13,20 +13,48 @@ public class Skademelding {
     private String skadeType;
     private String skadeBeskrivelse;
     private String vitner_kontaktinformasjon;
-    private int takseringsbeløp;
-    private int utbetalt_erstatningsbeløp; //kan være lavere enn taksert beløp
+    private int takseringsbelop;
+    private int utbetalt_erstatningsbelop; //kan være lavere enn taksert beløp
 
     public Skademelding(String skadeDato,
                         String skadenummer,
                         String skadeType,
                         String skadeBeskrivelse,
                         String vitner_kontaktinformasjon,
-                        int takseringsbeløp) {
+                        int takseringsbelop) {
         this.skadeDato = LocalDate.parse(skadeDato, mittFormat);
         this.skadenummer = skadenummer;
         this.skadeType = skadeType;
         this.skadeBeskrivelse = skadeBeskrivelse;
         this.vitner_kontaktinformasjon = vitner_kontaktinformasjon;
-        this.takseringsbeløp = takseringsbeløp;
+        this.takseringsbelop = takseringsbelop;
+    }
+
+    public LocalDate getSkadeDato() {
+        return skadeDato;
+    }
+
+    public String getSkadenummer() {
+        return skadenummer;
+    }
+
+    public String getSkadeType() {
+        return skadeType;
+    }
+
+    public String getSkadeBeskrivelse() {
+        return skadeBeskrivelse;
+    }
+
+    public String getVitner_kontaktinformasjon() {
+        return vitner_kontaktinformasjon;
+    }
+
+    public int getTakseringsbelop() {
+        return takseringsbelop;
+    }
+
+    public int getUtbetalt_erstatningsbelop() {
+        return utbetalt_erstatningsbelop;
     }
 }

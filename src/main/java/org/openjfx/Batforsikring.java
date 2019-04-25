@@ -13,6 +13,7 @@ public class Batforsikring extends Forsikring {
     public Batforsikring(int arligPremie,
                          int forsikringsbelop,
                          String dato,
+                         String betingelser,
                          String eier,
                          String registreringsnummer,
                          String battype,
@@ -21,7 +22,7 @@ public class Batforsikring extends Forsikring {
                          String arsmodell,
                          String motortype,
                          String motorstyrke) {
-        super(arligPremie, forsikringsbelop, dato);
+        super(arligPremie, forsikringsbelop, dato, betingelser);
         this.eier = eier;
         this.registreringsnummer = registreringsnummer;
         this.battype = battype;

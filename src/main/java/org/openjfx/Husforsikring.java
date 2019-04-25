@@ -19,6 +19,7 @@ public class Husforsikring extends Forsikring {
     public Husforsikring(int arligPremie,
                          int forsikringsbelop,
                          String dato,
+                         String betingelser,
                          String adresse,
                          String byggear,
                          String boligtype,
@@ -27,7 +28,7 @@ public class Husforsikring extends Forsikring {
                          int kvadratmeter,
                          int forsikringsbelopBygning,
                          int forsikringsbelopInnbo) {
-        super(arligPremie, forsikringsbelop, dato);
+        super(arligPremie, forsikringsbelop, dato, betingelser);
         this.adresse = adresse;
         this.byggear = LocalDate.parse(byggear, mittFormat);
         this.boligtype = boligtype;

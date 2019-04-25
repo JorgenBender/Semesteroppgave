@@ -1,4 +1,4 @@
-module hellofx {
+module Semesteroppgave {
     requires javafx.controls;
     requires javafx.fxml;
 
