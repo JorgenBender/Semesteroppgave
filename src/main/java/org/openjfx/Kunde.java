@@ -2,24 +2,21 @@ package org.openjfx;
 
 import java.io.Serializable;
 import java.time.LocalDate;  // import the LocalDate class
-import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
 
 import java.util.ArrayList;
 
 public class Kunde implements Serializable {
-    private static final long serialVersionUID = 1;
-
-    //private transient DateTimeFormatter mittFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+    private static final long serialVersionUID = 2;
 
     private LocalDate datoKundeforhold;
     private String navn;
     private String fakturaadresse;
     private String forsikringsnummer;
-    /*
+
     private ArrayList<Forsikring> forsikringer;
     private ArrayList<Skademelding> skademeldinger;
     private ArrayList<String> ubetalteErstatninger;
-    */
+
 
     public Kunde(LocalDate datoKundeforhold, String navn, String fakturaadresse, String forsikringsnummer) {
         this.datoKundeforhold = datoKundeforhold;
@@ -28,49 +25,29 @@ public class Kunde implements Serializable {
         this.forsikringsnummer = forsikringsnummer;
     }
 
-    //public LocalDate getDatoKundeforhold() { return datoKundeforhold; }
+    public String getNavn() { return navn; }
 
-    public String getNavn() {
-        return navn;
-    }
+    public String getFakturaadresse() { return fakturaadresse; }
 
-    public String getFakturaadresse() {
-        return fakturaadresse;
-    }
+    public String getForsikringsnummer() { return forsikringsnummer; }
 
-    public String getForsikringsnummer() {
-        return forsikringsnummer;
-    }
+    public LocalDate getDatoKundeforhold() { return datoKundeforhold; }
 
-    public LocalDate getDatoKundeforhold() {
-        return datoKundeforhold;
-    }
 
-    /*
-            public ArrayList<Forsikring> getForsikringer() {
-                return forsikringer;
-            }
+    public ArrayList<Forsikring> getForsikringer() { return forsikringer; }
 
-            public ArrayList<Skademelding> getSkademeldinger() {
-                return skademeldinger;
-            }
+    public ArrayList<Skademelding> getSkademeldinger() { return skademeldinger; }
 
-            public ArrayList<String> getUbetalteErstatninger() {
-                return ubetalteErstatninger;
-            }
+    public ArrayList<String> getUbetalteErstatninger() { return ubetalteErstatninger; }
 
-            public void addForsikring(Forsikring nyForsikring) {
-                this.forsikringer.add(nyForsikring);
-            }
-            public void addSkademelding(Skademelding nySkademelding){
-                this.skademeldinger.add(nySkademelding);
-            }
-            public void addUbetalteErstatninger(String nyErstatning) {
-                this.ubetalteErstatninger.add(nyErstatning);
-            }
-        */
+    public void addForsikring(Forsikring nyForsikring) { this.forsikringer.add(nyForsikring); }
+
+    public void addSkademelding(Skademelding nySkademelding){ this.skademeldinger.add(nySkademelding); }
+
+    public void addUbetalteErstatninger(String nyErstatning) { this.ubetalteErstatninger.add(nyErstatning); }
+
     @Override
     public String toString() {
-        return String.format(getNavn() + getDatoKundeforhold() + getForsikringsnummer() + getFakturaadresse());
+        return String.format("%s ble kunde %s har faktureringsadresse: %s og forsikringsnummer: %s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer());
     }
 }

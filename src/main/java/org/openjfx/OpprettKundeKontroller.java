@@ -1,16 +1,11 @@
 package org.openjfx;
 
-
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-
 import java.time.LocalDate;
 
-
-
-public class KundeRegKontroller {
+public class OpprettKundeKontroller{
 
     @FXML
     private DatePicker nyKundeRegDato;
@@ -31,7 +26,7 @@ public class KundeRegKontroller {
     private Button nyKundeRegistrer;
 
     @FXML
-    void nyRegistrering (ActionEvent event) {
+    void nyRegistrering (ActionEvent event){
 
         LocalDate dato;
         if(iDag.isSelected()){
@@ -40,17 +35,18 @@ public class KundeRegKontroller {
         else{
             dato = nyKundeRegDato.getValue();
         }
-
         Kunde kunde = new Kunde(dato, nyKundeNavn.getText(), nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText());
-
-        MainSceneController.kunderegister.nyKunde(kunde);
-
+        Kunderegister.nyKunde(kunde);
+        KunderegisterIO.exporterKundeliste(Kunderegister.getKundeliste());
+        System.out.println(kunde);
     }
 
-
-
+    @FXML
+    void iDagChecked (ActionEvent event){ nyKundeRegDato.setValue(LocalDate.now()); }
 
     public void initialize() {
+
+        System.out.println(Kunderegister.getKundeliste().size());
 
     }
 }

@@ -1,34 +1,27 @@
 package org.openjfx;
 
-
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.io.*;
+import java.util.ArrayList;
 
-public class Kunderegister implements Serializable {
+public class Kunderegister {
 
-    private ObservableList<Kunde> kundeliste = FXCollections.observableArrayList();
+    private static ArrayList<Kunde> kundeliste = new ArrayList<>(); // FXCollections.observableArrayList();
 
-    public Kunderegister() {
-        kundeliste.addListener(new InvalidationListener() { @Override public void invalidated(Observable observable) {
 
-        //KunderegisterIO.skrivKundeRegisterTilFil();
-
-        }});
-    }
-
-    public void nyKunde(Kunde kunde){
+    public static void nyKunde(Kunde kunde){
         kundeliste.add(kunde);
     }
 
-    public ObservableList<Kunde> getKundeliste(){
+    public static ArrayList<Kunde> getKundeliste(){
         return kundeliste;
     }
 
-    public void setKundeliste(ObservableList<Kunde> kundeliste){
-        this.kundeliste = kundeliste;
+    public static void setKundeliste(ArrayList<Kunde> enKundeliste){
+        kundeliste = enKundeliste;
     }
+
+    //public Kunderegister() { kundeliste.addListener(new InvalidationListener() { @Override public void invalidated(Observable observable) { KunderegisterIO.exporterKundeliste(kundeliste());; }});}
 }

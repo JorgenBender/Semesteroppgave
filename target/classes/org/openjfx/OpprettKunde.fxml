@@ -8,13 +8,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.KundeRegKontroller">
+<AnchorPane prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.OpprettKundeKontroller">
    <children>
       <TextField fx:id="nyKundeNavn" layoutX="300.0" layoutY="204.0" />
       <TextField fx:id="nyKundeFakturaAdresse" layoutX="300.0" layoutY="255.0" />
       <TextField fx:id="nyKundeForsikringsnummer" layoutX="300.0" layoutY="306.0" />
       <DatePicker fx:id="nyKundeRegDato" layoutX="300.0" layoutY="153.0" prefHeight="31.0" prefWidth="187.0" />
-      <CheckBox fx:id="iDag" layoutX="492.0" layoutY="158.0" mnemonicParsing="false" text="I dag" />
+      <CheckBox fx:id="iDag" layoutX="492.0" layoutY="158.0" mnemonicParsing="false" onAction="#iDagChecked" text="I dag" />
       <Label layoutX="148.0" layoutY="27.0" prefHeight="57.0" prefWidth="305.0" text="Registrer ny kunde" textAlignment="CENTER">
          <font>
             <Font size="36.0" />

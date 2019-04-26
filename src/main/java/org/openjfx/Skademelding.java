@@ -1,12 +1,11 @@
 package org.openjfx;
 
+import java.io.Serializable;
 import java.time.LocalDate;  // import the LocalDate class
-import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
 
 
-public class Skademelding {
 
-    private DateTimeFormatter mittFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+public class Skademelding implements Serializable {
 
     private LocalDate skadeDato;
     private String skadenummer;
@@ -16,13 +15,13 @@ public class Skademelding {
     private int takseringsbelop;
     private int utbetalt_erstatningsbelop; //kan være lavere enn taksert beløp
 
-    public Skademelding(String skadeDato,
+    public Skademelding(LocalDate skadeDato,
                         String skadenummer,
                         String skadeType,
                         String skadeBeskrivelse,
                         String vitner_kontaktinformasjon,
                         int takseringsbelop) {
-        this.skadeDato = LocalDate.parse(skadeDato, mittFormat);
+        this.skadeDato = skadeDato;
         this.skadenummer = skadenummer;
         this.skadeType = skadeType;
         this.skadeBeskrivelse = skadeBeskrivelse;

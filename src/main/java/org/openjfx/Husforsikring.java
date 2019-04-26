@@ -1,11 +1,9 @@
 package org.openjfx;
 
+import java.io.Serializable;
 import java.time.LocalDate;  // import the LocalDate class
-import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
 
-public class Husforsikring extends Forsikring {
-
-    private DateTimeFormatter mittFormat = DateTimeFormatter.ofPattern("yyyy");
+public class Husforsikring extends Forsikring implements Serializable {
 
     private String adresse;
     private LocalDate byggear;
@@ -18,19 +16,19 @@ public class Husforsikring extends Forsikring {
 
     public Husforsikring(int arligPremie,
                          int forsikringsbelop,
-                         String dato,
+                         LocalDate opprettetDato,
                          String betingelser,
                          String adresse,
-                         String byggear,
+                         LocalDate byggear,
                          String boligtype,
                          String byggemateriale,
                          String standard,
                          int kvadratmeter,
                          int forsikringsbelopBygning,
                          int forsikringsbelopInnbo) {
-        super(arligPremie, forsikringsbelop, dato, betingelser);
+        super(arligPremie, forsikringsbelop, opprettetDato, betingelser);
         this.adresse = adresse;
-        this.byggear = LocalDate.parse(byggear, mittFormat);
+        this.byggear = byggear;
         this.boligtype = boligtype;
         this.byggemateriale = byggemateriale;
         this.standard = standard;

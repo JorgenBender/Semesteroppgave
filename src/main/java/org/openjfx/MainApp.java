@@ -7,13 +7,14 @@ import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("MainScene.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("HovedScene.fxml"));
 
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
@@ -21,6 +22,9 @@ public class MainApp extends Application {
         stage.setTitle("Bender Forsikring AS");
         stage.setScene(scene);
         stage.show();
+
+
+        Kunderegister kunderegister = new Kunderegister();
     }
 
     /**

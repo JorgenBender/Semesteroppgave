@@ -1,22 +1,20 @@
 package org.openjfx;
 
+import java.io.Serializable;
 import java.time.LocalDate;  // import the LocalDate class
 import java.time.format.DateTimeFormatter; // Import the DateTimeFormatter class
 
-public class Forsikring {
-
-    private DateTimeFormatter mittFormat = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
+public class Forsikring implements Serializable{
 
     private int arligPremie;
     private int forsikringsbelop;
     private LocalDate opprettetDato;
     private String betingelser;
 
-    public Forsikring(int arligPremie, int forsikringsbelop, String dato, String betingelser) {
+    public Forsikring(int arligPremie, int forsikringsbelop, LocalDate opprettetDato, String betingelser) {
         this.arligPremie = arligPremie;
         this.forsikringsbelop = forsikringsbelop;
-        this.opprettetDato = LocalDate.parse(dato, mittFormat);
+        this.opprettetDato = opprettetDato;
         this.betingelser = betingelser;
     }
 
@@ -31,4 +29,10 @@ public class Forsikring {
     public LocalDate getOpprettetDato() {
         return opprettetDato;
     }
+
+    @Override
+    public String toString(){
+        return arligPremie + forsikringsbelop + opprettetDato.toString() + betingelser;
+    }
+
 }

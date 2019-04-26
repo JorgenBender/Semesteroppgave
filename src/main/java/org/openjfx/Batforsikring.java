@@ -1,6 +1,9 @@
 package org.openjfx;
 
-public class Batforsikring extends Forsikring {
+import java.io.Serializable;
+import java.time.LocalDate;
+
+public class Batforsikring extends Forsikring implements Serializable {
     private String eier;
     private String registreringsnummer;
     private String battype;
@@ -12,7 +15,7 @@ public class Batforsikring extends Forsikring {
 
     public Batforsikring(int arligPremie,
                          int forsikringsbelop,
-                         String dato,
+                         LocalDate opprettetDato,
                          String betingelser,
                          String eier,
                          String registreringsnummer,
@@ -22,7 +25,7 @@ public class Batforsikring extends Forsikring {
                          String arsmodell,
                          String motortype,
                          String motorstyrke) {
-        super(arligPremie, forsikringsbelop, dato, betingelser);
+        super(arligPremie, forsikringsbelop, opprettetDato, betingelser);
         this.eier = eier;
         this.registreringsnummer = registreringsnummer;
         this.battype = battype;
@@ -64,4 +67,10 @@ public class Batforsikring extends Forsikring {
     public String getMotorstyrke() {
         return motorstyrke;
     }
+
+    @Override
+    public String toString(){
+        return String.format("Båtforsikring:\n Eier: %s\n Regnr: %s\n Type: %s\n Modell: %s\n lengde(fot): %d\n Årsmodell: %s\n Motortype: %s\n Motorkraft: %s", eier, registreringsnummer,battype,modell,lengdeFot,arsmodell,motortype,motorstyrke);
+    }
+
 }

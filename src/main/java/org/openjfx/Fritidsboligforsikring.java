@@ -1,13 +1,16 @@
 package org.openjfx;
 
-public class Fritidsboligforsikring extends Husforsikring {
+import java.io.Serializable;
+import java.time.LocalDate;
+
+public class Fritidsboligforsikring extends Husforsikring implements Serializable {
 
     public Fritidsboligforsikring(int arligPremie,
                                   int forsikringsbelop,
-                                  String dato,
+                                  LocalDate opprettetDato,
                                   String betingelser,
                                   String adresse,
-                                  String byggear,
+                                  LocalDate byggear,
                                   String boligtype,
                                   String byggemateriale,
                                   String standard,
@@ -16,7 +19,7 @@ public class Fritidsboligforsikring extends Husforsikring {
                                   int forsikringsbelopInnbo) {
           super(arligPremie,
                 forsikringsbelop,
-                dato,
+                opprettetDato,
                 betingelser,
                 adresse,
                 byggear,

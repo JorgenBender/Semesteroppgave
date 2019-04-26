@@ -1,13 +1,16 @@
 package org.openjfx;
 
-public class Reiseforsikring extends Forsikring{
+import java.io.Serializable;
+import java.time.LocalDate;
+
+public class Reiseforsikring extends Forsikring implements Serializable {
 
     private String forsikringsOmrade;
     private int forsikringsSum;
 
-    public Reiseforsikring(int arligPremie, int forsikringsbelop, String dato, String betingelser,
+    public Reiseforsikring(int arligPremie, int forsikringsbelop, LocalDate opprettetDato, String betingelser,
                            String forsikringsOmrade, int forsikringsSum) {
-        super(arligPremie, forsikringsbelop, dato, betingelser);
+        super(arligPremie, forsikringsbelop, opprettetDato, betingelser);
         this.forsikringsOmrade = forsikringsOmrade;
         this.forsikringsSum = forsikringsSum;
     }
