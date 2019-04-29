@@ -26,7 +26,7 @@ public class HovedSceneKontroller{
             Stage regKunde = new Stage();
             regKunde.setScene(new Scene(root));
             regKunde.initModality(Modality.APPLICATION_MODAL);
-            regKunde.show();
+            regKunde.showAndWait();
         }
         catch (Exception e){
             System.err.println("Cant load new window");
@@ -42,7 +42,7 @@ public class HovedSceneKontroller{
             Parent root = fxmlLoader.load();
             Stage stage = new Stage();
             stage.setScene(new Scene(root));
-            stage.setAlwaysOnTop(true);
+            //stage.setAlwaysOnTop(false);
             stage.initModality(Modality.APPLICATION_MODAL);
             stage.showAndWait();
 

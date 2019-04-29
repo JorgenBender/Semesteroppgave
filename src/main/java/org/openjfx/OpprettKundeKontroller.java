@@ -36,15 +36,19 @@ public class OpprettKundeKontroller{
             dato = nyKundeRegDato.getValue();
         }
         Kunde kunde = new Kunde(dato, nyKundeNavn.getText(), nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText());
-        kunde.addForsikring(new Batforsikring(1,1,dato,"gw","ewgsgw","egwrh",
-                                            "gefwedfgn","ergfwqeg",1,"rgefw","fgbsd","grgge"));
+        //kunde.addForsikring(new Batforsikring(1,1,dato,"gw","ewgsgw","egwrh",
+        //                                    "gefwedfgn","ergfwqeg",1,"rgefw","fgbsd","grgge"));
         Kunderegister.nyKunde(kunde);
         KunderegisterIO.exporterKundeliste(Kunderegister.getKundeliste());
         System.out.println(Kunderegister.getKundeliste().toString());
     }
 
     @FXML
-    void iDagChecked (ActionEvent event){ nyKundeRegDato.setValue(LocalDate.now()); }
+    void iDagChecked (ActionEvent event){
+        if(iDag.isSelected()) {
+            nyKundeRegDato.setValue(LocalDate.now());
+        }
+    }
 
     public void initialize() {
 
