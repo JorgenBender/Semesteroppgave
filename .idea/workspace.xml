@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29385a30-2dbe-4777-8f68-d0e2f9cbeec5" name="Default Changelist" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <list default="true" id="e4a46412-9c05-41f1-94b0-256cbe29e562" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,65 +27,8 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/Person.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/org/openjfx/scene.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/kundeRegKontroller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/FXMLController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/importerKundeliste.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/ImporterKundelisteKontroller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/MainScene.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/org/openjfx/importerKundeliste.fxml" />
-        <option value="$PROJECT_DIR$/src/main/resources/org/openjfx/RegistrerForsikring.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/MainSceneController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/org/openjfx/MainScene.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/KundelisteSkriver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/KunderegisterIO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/Fritidsboligforsikring.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/org/openjfx/registrerKunde.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/KundeRegKontroller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/Kunde.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/MainSceneKontroller.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/org/openjfx/OpprettKunde.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/org/openjfx/HovedScene.fxml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/Forsikring.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/Batforsikring.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/Husforsikring.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/Reiseforsikring.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/Skademelding.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/ImporterKundeRegisterKontroller.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/Kunderegister.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/HovedSceneKontroller.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/openjfx/OpprettKundeKontroller.java" />
-      </list>
-    </option>
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="importingSettings">
-      <MavenImportingSettings>
-        <option name="importAutomatically" value="true" />
-      </MavenImportingSettings>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -155,20 +97,6 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
-  <component name="PropertiesComponent">
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556325646189" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../NetBeansProjects/Obligatorisk Oppgave 2, oppg1/src/obligatorisk/oppgave/pkg2/oppg1/Oppgave_1.java" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\resources\org\openjfx" />
-    </key>
-  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -180,25 +108,6 @@
         </RuleState>
       </list>
     </option>
-  </component>
-  <component name="RunManager" selected="Maven.hellofx">
-    <configuration name="Oppgave_1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="obligatorisk.oppgave.pkg2.oppg1.Oppgave_1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="obligatorisk.oppgave.pkg2.oppg1.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Oppgave_1" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -224,23 +133,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556222572727</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68773000" />
-  </component>
-  <component name="TodoView" selected-index="4">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="6000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19513513" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -273,9 +173,6 @@
       <window_info anchor="right" id="Database" order="8" />
     </layout>
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Påskens arbeid" />
     <MESSAGE value="Påskens arbeid v2" />
@@ -284,9 +181,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fredagens Arbeid" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-graphics/11.0.2/javafx-graphics-11.0.2-win.jar!/com/sun/javafx/application/LauncherImpl.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
@@ -493,6 +387,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/openjfx/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -500,80 +397,5 @@
         </state>
       </provider>
     </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Semesteroppgave</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: org.openjfx:javafx-base:11.0.2</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
   </component>
 </project>
