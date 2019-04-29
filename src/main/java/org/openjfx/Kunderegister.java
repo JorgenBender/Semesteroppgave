@@ -23,5 +23,15 @@ public class Kunderegister {
         kundeliste = enKundeliste;
     }
 
+    @Override
+    public String toString(){
+        String out = "";
+        for(Kunde kunde : kundeliste){
+            out += kunde + "\n";
+        }
+        return out;
+    }
+
+
     //public Kunderegister() { kundeliste.addListener(new InvalidationListener() { @Override public void invalidated(Observable observable) { KunderegisterIO.exporterKundeliste(kundeliste());; }});}
 }

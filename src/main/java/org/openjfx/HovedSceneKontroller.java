@@ -26,11 +26,12 @@ public class HovedSceneKontroller{
             Stage regKunde = new Stage();
             regKunde.setScene(new Scene(root));
             regKunde.initModality(Modality.APPLICATION_MODAL);
-            regKunde.showAndWait();
+            regKunde.show();
         }
         catch (Exception e){
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
+
 
         }
 

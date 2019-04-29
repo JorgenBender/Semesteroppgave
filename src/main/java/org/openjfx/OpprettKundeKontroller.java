@@ -36,9 +36,11 @@ public class OpprettKundeKontroller{
             dato = nyKundeRegDato.getValue();
         }
         Kunde kunde = new Kunde(dato, nyKundeNavn.getText(), nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText());
+        kunde.addForsikring(new Batforsikring(1,1,dato,"gw","ewgsgw","egwrh",
+                                            "gefwedfgn","ergfwqeg",1,"rgefw","fgbsd","grgge"));
         Kunderegister.nyKunde(kunde);
         KunderegisterIO.exporterKundeliste(Kunderegister.getKundeliste());
-        System.out.println(kunde);
+        System.out.println(Kunderegister.getKundeliste().toString());
     }
 
     @FXML

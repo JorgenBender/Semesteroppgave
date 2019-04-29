@@ -70,7 +70,10 @@ public class Batforsikring extends Forsikring implements Serializable {
 
     @Override
     public String toString(){
-        return String.format("Båtforsikring:\n Eier: %s\n Regnr: %s\n Type: %s\n Modell: %s\n lengde(fot): %d\n Årsmodell: %s\n Motortype: %s\n Motorkraft: %s", eier, registreringsnummer,battype,modell,lengdeFot,arsmodell,motortype,motorstyrke);
+        return String.format("Båtforsikring:\n%s Eier: %s\n Regnr: %s\n Type: %s\n Modell:" +
+                            "%s\n lengde(fot): %d\n Årsmodell: %s\n Motortype: %s\n Motorkraft: %s",
+                            super.toString(),getEier(), getRegistreringsnummer(),getBattype(),getModell(),
+                            getLengdeFot(),getArsmodell(),getMotortype(),getMotorstyrke());
     }
 
 }

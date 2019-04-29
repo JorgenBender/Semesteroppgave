@@ -30,9 +30,14 @@ public class Forsikring implements Serializable{
         return opprettetDato;
     }
 
+    public String getBetingelser() {
+        return betingelser;
+    }
+
     @Override
     public String toString(){
-        return arligPremie + forsikringsbelop + opprettetDato.toString() + betingelser;
+        return String.format("Årlig Premie: %d\n Forsikringsbeløp: %d \n Opprettet dato: %s\n Betingelser: %s\n",
+                            getArligPremie(),getForsikringsbelop(),getOpprettetDato().toString(),getBetingelser());
     }
 
 }

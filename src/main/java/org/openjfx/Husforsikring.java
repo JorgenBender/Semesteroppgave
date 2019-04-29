@@ -68,4 +68,13 @@ public class Husforsikring extends Forsikring implements Serializable {
     public int getForsikringsbelopInnbo() {
         return forsikringsbelopInnbo;
     }
+
+    @Override
+    public String toString(){
+        return String.format("Husforsikring:\n%s Adresse: %s\n Byggeår: %s\n Boligtype: %s\n Byggematriale: %s\n" +
+                        "Standar: %s\n Kvadratmeter: %d\n Forsikringsbeløp(hus): %d\n Forsikringsbeløp(innbo): %d",
+                        super.toString(),getAdresse(), getByggear().toString(),getBoligtype(),getByggemateriale(),
+                        getStandard(),getKvadratmeter(),getForsikringsbelopBygning(),getForsikringsbelopInnbo());
+    }
+
 }

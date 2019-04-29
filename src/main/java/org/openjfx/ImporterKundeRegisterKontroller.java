@@ -5,6 +5,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+
 public class ImporterKundeRegisterKontroller{
 
     @FXML
@@ -19,14 +21,13 @@ public class ImporterKundeRegisterKontroller{
         Kunderegister.setKundeliste(KunderegisterIO.importerKundeliste());
         Stage stage = (Stage) ja.getScene().getWindow();
         stage.close();
-
-
     }
 
     @FXML
     void nei (ActionEvent event) {
 
-        Stage stage = (Stage) ja.getScene().getWindow();
+        Kunderegister.setKundeliste(new ArrayList<Kunde>());
+        Stage stage = (Stage) nei.getScene().getWindow();
         stage.close();
 
     }
