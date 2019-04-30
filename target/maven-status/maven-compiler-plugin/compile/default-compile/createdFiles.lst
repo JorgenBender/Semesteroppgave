@@ -1,6 +1,6 @@
 org\openjfx\Reiseforsikring.class
 org\openjfx\Kunde.class
-org\openjfx\IOInterface.class
+org\openjfx\KundelisteSkriver.class
 module-info.class
 org\openjfx\HovedSceneKontroller.class
 org\openjfx\Skademelding.class

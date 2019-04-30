@@ -21,7 +21,7 @@
             <Font size="36.0" />
          </font>
       </Label>
-      <Button fx:id="nyKundeRegistrer" layoutX="186.0" layoutY="386.0" mnemonicParsing="false" onAction="#nyRegistrering" text="Registrer" />
+      <Button fx:id="nyKundeRegistrer" layoutX="186.0" layoutY="385.0" mnemonicParsing="false" onAction="#nyRegistrering" text="Registrer" />
       <Pane prefHeight="460.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
       <Button layoutX="284.0" layoutY="386.0" mnemonicParsing="false" text="Avbryt" />
    </children>
