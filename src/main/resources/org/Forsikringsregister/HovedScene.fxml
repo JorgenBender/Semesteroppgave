@@ -8,6 +8,6 @@
    <children>
       <Button fx:id="k" layoutX="323.0" layoutY="117.0" mnemonicParsing="false" onAction="#action" text="Ny kunde" />
       <Pane prefHeight="233.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
-      <Button layoutX="174.0" layoutY="117.0" mnemonicParsing="false" text="Vis kunderegister" />
+      <Button fx:id="Register" layoutX="174.0" layoutY="117.0" mnemonicParsing="false" text="Vis kunderegister" />
    </children>
 </AnchorPane>
