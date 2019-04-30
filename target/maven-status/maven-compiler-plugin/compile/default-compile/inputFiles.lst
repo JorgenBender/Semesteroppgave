@@ -1,15 +1,19 @@
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\module-info.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\Forsikring.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\MainApp.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\Reiseforsikring.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\Batforsikring.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\Fritidsboligforsikring.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\KundelisteSkriver.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\OpprettKundeKontroller.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\KunderegisterIO.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\Kunde.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\Husforsikring.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\Kunderegister.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\ImporterKundeRegisterKontroller.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\Skademelding.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\openjfx\HovedSceneKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\HovedSceneKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Husforsikring.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\OpprettKundeKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\KunderegisterIO.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Kunde.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Forsikring.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\skrivJobj.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Reiseforsikring.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\MainApp.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\ImporterKundeRegisterKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\lesJobj.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Batforsikring.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Kunderegister.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\IOInterface.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\lesCsv.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\skrivCsv.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Skademelding.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\module-info.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Fritidsboligforsikring.java
