@@ -4,10 +4,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import org.Forsikringsregister.Exceptions.InvalidKundeFormatException;
+import org.Forsikringsregister.IO.lesJobj;
+import org.Forsikringsregister.IO.skrivCsv;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Kunderegister;
-import org.Forsikringsregister.KunderegisterIO;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class ImporterKundeRegisterKontroller{
@@ -21,7 +24,15 @@ public class ImporterKundeRegisterKontroller{
     @FXML
     void ja (ActionEvent event) {
 
-        Kunderegister.setKundeliste(KunderegisterIO.importerKundeliste());
+        lesJobj leser = new lesJobj();
+
+        try{Kunderegister.setKundeliste(leser.lesKundeliste());}
+        catch (IOException e){
+
+        }
+        catch (InvalidKundeFormatException e){
+
+        }
         Stage stage = (Stage) ja.getScene().getWindow();
         stage.close();
     }
@@ -37,6 +48,7 @@ public class ImporterKundeRegisterKontroller{
 
 
     public void initialize() {
+
 
 
     }

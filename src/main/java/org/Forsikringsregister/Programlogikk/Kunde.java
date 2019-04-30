@@ -50,4 +50,21 @@ public class Kunde implements Serializable {
     public String toString() {
         return String.format("%s ble kunde %s har faktureringsadresse: %s og forsikringsnummer: %s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer());
     }
+    public String toCsv() {
+
+        String forsikringer = "";
+        for(Forsikring forsikring: this.forsikringer){
+            forsikringer += forsikring.toCsv();
+        }
+        String skademeldinger = "";
+        for(Skademelding skademelding: this.skademeldinger){
+            forsikringer += skademelding.toCsv();
+        }
+        String ubetalteErstatninger = "";
+        for(String erstatning: this.ubetalteErstatninger){
+            ubetalteErstatninger += erstatning +";";
+        }
+
+        return String.format("%s;%s;%s;%s;%s;%s;%s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer(),forsikringer,skademeldinger,ubetalteErstatninger);
+    }
 }
