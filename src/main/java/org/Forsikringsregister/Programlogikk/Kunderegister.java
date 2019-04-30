@@ -27,4 +27,7 @@ public class Kunderegister {
         }
         return out;
     }
+
+
+    //public Kunderegister() { kundeliste.addListener(new InvalidationListener() { @Override public void invalidated(Observable observable) { KunderegisterIO.exporterKundeliste(kundeliste());; }});}
 }

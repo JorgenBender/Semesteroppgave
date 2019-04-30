@@ -3,11 +3,10 @@ package org.Forsikringsregister.Kontrollere;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import org.Forsikringsregister.IO.*;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Kunderegister;
+import org.Forsikringsregister.KunderegisterIO;
 
-import java.io.IOException;
 import java.time.LocalDate;
 
 public class OpprettKundeKontroller{
@@ -41,13 +40,10 @@ public class OpprettKundeKontroller{
             dato = nyKundeRegDato.getValue();
         }
         Kunde kunde = new Kunde(dato, nyKundeNavn.getText(), nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText());
+        //kunde.addForsikring(new Batforsikring(1,1,dato,"gw","ewgsgw","egwrh",
+        //                                    "gefwedfgn","ergfwqeg",1,"rgefw","fgbsd","grgge"));
         Kunderegister.nyKunde(kunde);
-        skrivCsv skriver = new skrivCsv();
-        try {skriver.skrivKundeliste(Kunderegister.getKundeliste());}
-
-        catch (IOException e){
-
-        }
+        KunderegisterIO.exporterKundeliste(Kunderegister.getKundeliste());
         System.out.println(Kunderegister.getKundeliste().toString());
     }
 

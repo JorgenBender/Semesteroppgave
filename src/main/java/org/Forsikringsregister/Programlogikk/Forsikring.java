@@ -39,9 +39,5 @@ public class Forsikring implements Serializable{
         return String.format("Årlig Premie: %d\n Forsikringsbeløp: %d \n Opprettet dato: %s\n Betingelser: %s\n",
                             getArligPremie(),getForsikringsbelop(),getOpprettetDato().toString(),getBetingelser());
     }
-    public String toCsv(){
-        return String.format("%d;%d;%s;%s;",
-                getArligPremie(),getForsikringsbelop(),getOpprettetDato().toString(),getBetingelser());
-    }
 
 }

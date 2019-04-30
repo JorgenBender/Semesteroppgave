@@ -3,7 +3,6 @@ org\Forsikringsregister\Programlogikk\Kunde.class
 org\Forsikringsregister\IO\lesCsv.class
 org\Forsikringsregister\IO\skrivCsv.class
 org\Forsikringsregister\Programlogikk\Skademelding.class
-org\Forsikringsregister\Exceptions\InvalidKundeFormatException.class
 module-info.class
 org\Forsikringsregister\Programlogikk\Batforsikring.class
 org\Forsikringsregister\IO\IOInterface.class
@@ -14,6 +13,7 @@ org\Forsikringsregister\IO\lesJobj.class
 org\Forsikringsregister\Programlogikk\Husforsikring.class
 org\Forsikringsregister\MainApp.class
 org\Forsikringsregister\Kontrollere\OpprettKundeKontroller.class
+org\Forsikringsregister\KunderegisterIO.class
 org\Forsikringsregister\IO\skrivJobj.class
 org\Forsikringsregister\Kontrollere\ImporterKundeRegisterKontroller.class
 org\Forsikringsregister\Kontrollere\HovedSceneKontroller.class

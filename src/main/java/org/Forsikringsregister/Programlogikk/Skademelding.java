@@ -64,10 +64,5 @@ public class Skademelding implements Serializable {
                             getSkadeDato().toString(),getSkadenummer(), getSkadeType(), getSkadeBeskrivelse(),
                             getVitner_kontaktinformasjon(), getTakseringsbelop(), getUtbetalt_erstatningsbelop());
     }
-    public String toCsv(){
-        return String.format("%s;%s;%s;%s;%s;%d;%d",
-                getSkadeDato().toString(),getSkadenummer(), getSkadeType(), getSkadeBeskrivelse(),
-                getVitner_kontaktinformasjon(), getTakseringsbelop(), getUtbetalt_erstatningsbelop());
-    }
 
 }

@@ -76,10 +76,5 @@ public class Husforsikring extends Forsikring implements Serializable {
                         super.toString(),getAdresse(), getByggear().toString(),getBoligtype(),getByggemateriale(),
                         getStandard(),getKvadratmeter(),getForsikringsbelopBygning(),getForsikringsbelopInnbo());
     }
-    public String toCsv(){
-        return String.format("%s;%s;%s;%s;%s;%s;%d;%d;%d",
-                super.toString(),getAdresse(), getByggear().toString(),getBoligtype(),getByggemateriale(),
-                getStandard(),getKvadratmeter(),getForsikringsbelopBygning(),getForsikringsbelopInnbo());
-    }
 
 }
