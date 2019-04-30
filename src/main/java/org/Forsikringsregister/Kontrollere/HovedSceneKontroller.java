@@ -16,6 +16,9 @@ public class HovedSceneKontroller{
     private Button k;
 
     @FXML
+    private Button register;
+
+    @FXML
     void action(ActionEvent event) {
 
         try {
