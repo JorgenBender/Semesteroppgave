@@ -6,8 +6,7 @@ import org.Forsikringsregister.Programlogikk.Kunde;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public interface IOInterface {
-    void skrivKundeliste(ArrayList<Kunde> kundeliste) throws IOException;
+public interface Reader {
     ArrayList<Kunde> lesKundeliste() throws IOException , InvalidKundeFormatException;
 }
 

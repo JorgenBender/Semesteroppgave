@@ -9,48 +9,50 @@ import javafx.scene.control.Button;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 
-public class HovedSceneKontroller{
+
+public class HovedSceneKontroller extends Kontroller{
 
     @FXML
-    private Button k;
+    private Button opprettKunde;
 
     @FXML
     private Button register;
 
     @FXML
-    void action(ActionEvent event) {
+    void opprettKunde(ActionEvent event) {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../OpprettKunde.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage regKunde = new Stage();
-            regKunde.setScene(new Scene(root));
-            regKunde.initModality(Modality.APPLICATION_MODAL);
-            regKunde.showAndWait();
+            Stage opprettKunde = openStage("../OpprettKunde.fxml");
+            opprettKunde.showAndWait();
         }
-        catch (Exception e){
+        catch (IOException e){
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
-
-
         }
+    }
 
+    @FXML
+    void visRegister(ActionEvent event) {
+
+        try {
+            Stage opprettKunde = openStage("../Kundeliste.fxml");
+            opprettKunde.showAndWait();
+        }
+        catch (IOException e){
+            System.err.println("Cant load new window");
+            System.err.println(e.getMessage());
+        }
     }
     public void initialize() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../ImporterKundeRegister.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.showAndWait();
-
+           Stage importerKunde = openStage("../ImporterKundeRegister.fxml");
+           importerKunde.showAndWait();
         }
-        catch (Exception e){
+        catch (IOException e){
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
-
         }
     }
 }

@@ -6,7 +6,7 @@ import javafx.scene.control.*;
 
 import java.time.LocalDate;
 
-public class BaatForsikringKontroller {
+public class BaatForsikringKontroller extends Kontroller {
 
     @FXML
     private TextField ArligPremie;

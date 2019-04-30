@@ -5,8 +5,9 @@ import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import org.Forsikringsregister.Programlogikk.Kunderegister;
 
 public class MainApp extends Application {
 
@@ -15,14 +16,13 @@ public class MainApp extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("HovedScene.fxml"));
 
         Scene scene = new Scene(root);
-        scene.getStylesheets().add(getClass().getResource("styles.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("cosmetic/styles.css").toExternalForm());
 
-        stage.setTitle("Bender Forsikring AS");
+        stage.setTitle("Bender Forsikring");
+        Image icon = new Image(getClass().getResourceAsStream("cosmetic/icon.png"));
+        stage.getIcons().add(icon);
         stage.setScene(scene);
         stage.show();
-
-
-        Kunderegister kunderegister = new Kunderegister();
     }
 
     /**

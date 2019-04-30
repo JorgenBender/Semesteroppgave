@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.util.ArrayList;
 
-public class lesJobj implements IOInterface{
+public class lesJobj implements Reader {
 
     @Override
     public ArrayList<Kunde> lesKundeliste() throws IOException, InvalidKundeFormatException {
@@ -28,6 +28,4 @@ public class lesJobj implements IOInterface{
         }
         return importertListe;
     }
-    @Override
-    public void skrivKundeliste (ArrayList<Kunde> kundeliste) throws IOException {}
 }

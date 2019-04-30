@@ -53,18 +53,18 @@ public class Kunde implements Serializable {
     public String toCsv() {
 
         String forsikringer = "";
-        for(Forsikring forsikring: this.forsikringer){
+        for(Forsikring forsikring: getForsikringer()){
             forsikringer += forsikring.toCsv();
         }
         String skademeldinger = "";
-        for(Skademelding skademelding: this.skademeldinger){
+        for(Skademelding skademelding: getSkademeldinger()){
             forsikringer += skademelding.toCsv();
         }
         String ubetalteErstatninger = "";
-        for(String erstatning: this.ubetalteErstatninger){
+        for(String erstatning: getUbetalteErstatninger()){
             ubetalteErstatninger += erstatning +";";
         }
 
-        return String.format("%s;%s;%s;%s;%s;%s;%s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer(),forsikringer,skademeldinger,ubetalteErstatninger);
+        return String.format("%s;%s;%s;%s;\n%s;\n%s;\n%s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer(),forsikringer,skademeldinger,ubetalteErstatninger);
     }
 }

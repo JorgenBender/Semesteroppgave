@@ -10,7 +10,7 @@ import org.Forsikringsregister.Programlogikk.Kunderegister;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class OpprettKundeKontroller{
+public class OpprettKundeKontroller extends Kontroller{
 
     @FXML
     private DatePicker nyKundeRegDato;

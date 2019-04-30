@@ -1,5 +1,6 @@
 org\Forsikringsregister\Programlogikk\Forsikring.class
 org\Forsikringsregister\Programlogikk\Kunde.class
+org\Forsikringsregister\Kontrollere\Kontroller.class
 org\Forsikringsregister\IO\lesCsv.class
 org\Forsikringsregister\IO\skrivCsv.class
 org\Forsikringsregister\Programlogikk\Skademelding.class
@@ -7,10 +8,11 @@ org\Forsikringsregister\Exceptions\InvalidKundeFormatException.class
 module-info.class
 org\Forsikringsregister\Kontrollere\BaatForsikringKontroller.class
 org\Forsikringsregister\Programlogikk\Batforsikring.class
-org\Forsikringsregister\IO\IOInterface.class
+org\Forsikringsregister\IO\Reader.class
 org\Forsikringsregister\Programlogikk\Fritidsboligforsikring.class
 org\Forsikringsregister\Programlogikk\Reiseforsikring.class
 org\Forsikringsregister\Programlogikk\Kunderegister.class
+org\Forsikringsregister\IO\Writer.class
 org\Forsikringsregister\Kontrollere\SkadeMeldingKontroller.class
 org\Forsikringsregister\IO\lesJobj.class
 org\Forsikringsregister\Programlogikk\Husforsikring.class

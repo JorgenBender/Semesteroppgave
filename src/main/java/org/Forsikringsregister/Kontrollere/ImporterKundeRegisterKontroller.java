@@ -13,7 +13,7 @@ import org.Forsikringsregister.Programlogikk.Kunderegister;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class ImporterKundeRegisterKontroller{
+public class ImporterKundeRegisterKontroller extends Kontroller{
 
     @FXML
     private Button ja;

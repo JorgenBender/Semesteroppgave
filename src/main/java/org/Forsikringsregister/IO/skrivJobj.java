@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
-public class skrivJobj implements IOInterface{
+public class skrivJobj implements Writer{
 
     @Override
     public void skrivKundeliste(ArrayList<Kunde> kundeliste) {
@@ -23,9 +23,5 @@ public class skrivJobj implements IOInterface{
         } catch (IOException e) {
             e.printStackTrace(); // This should not happen, so we print debug information here.
         }
-    }
-    @Override
-    public ArrayList<Kunde> lesKundeliste() throws IOException {
-        return new ArrayList<>();
     }
 }

@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-public class skrivCsv implements IOInterface{
+public class skrivCsv implements Writer{
     @Override
     public void skrivKundeliste(ArrayList<Kunde> kundeliste) throws IOException {
         PrintWriter writer = null;
@@ -21,7 +21,7 @@ public class skrivCsv implements IOInterface{
             writer = new PrintWriter(fileChooser.showSaveDialog(null), "UTF-8");
 
             for (Kunde kunde : kundeliste) {
-                writer.println(kunde);
+                writer.println(kunde.toCsv());
             }
         } finally {
             if (writer != null) {
@@ -29,6 +29,4 @@ public class skrivCsv implements IOInterface{
             }
         }
     }
-    @Override
-    public ArrayList<Kunde> lesKundeliste () throws IOException {return null;}
 }
