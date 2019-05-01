@@ -1,5 +1,8 @@
 package org.Forsikringsregister.Kontrollere;
 
+import javafx.beans.InvalidationListener;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,8 +11,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.Forsikringsregister.Programlogikk.Kunde;
+import org.Forsikringsregister.Programlogikk.Kunderegister;
 
 import java.io.IOException;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 
 public class HovedSceneKontroller extends Kontroller{
@@ -37,8 +46,8 @@ public class HovedSceneKontroller extends Kontroller{
     void visRegister(ActionEvent event) {
 
         try {
-            Stage opprettKunde = openStage("../Kundeliste.fxml");
-            opprettKunde.showAndWait();
+            Stage visRegister = openStage("../Kundeliste.fxml");
+            visRegister.showAndWait();
         }
         catch (IOException e){
             System.err.println("Cant load new window");
@@ -54,5 +63,6 @@ public class HovedSceneKontroller extends Kontroller{
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
         }
+
     }
 }

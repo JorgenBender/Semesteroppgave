@@ -2,19 +2,18 @@ package org.Forsikringsregister.IO;
 
 import javafx.collections.ObservableList;
 import javafx.stage.FileChooser;
-import org.Forsikringsregister.Exceptions.InvalidKundeFormatException;
+import org.Forsikringsregister.Exceptions.InvalidFormatException;
 import org.Forsikringsregister.Programlogikk.Kunde;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
-import java.util.ArrayList;
 
 public class lesJobj implements Reader {
 
     @Override
-    public ObservableList<Kunde> lesKundeliste() throws IOException, InvalidKundeFormatException {
+    public ObservableList<Kunde> lesKundeliste() throws IOException, InvalidFormatException {
 
         FileChooser fileChooser = new FileChooser();
         fileChooser.setInitialDirectory(new File(("data/")));

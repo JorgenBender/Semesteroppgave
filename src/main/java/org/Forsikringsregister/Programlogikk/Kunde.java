@@ -14,9 +14,11 @@ public class Kunde implements Serializable {
     private String fakturaadresse;
     private String forsikringsnummer;
 
-    private ArrayList<Forsikring> forsikringer;
-    private ArrayList<Skademelding> skademeldinger;
-    private ArrayList<String> ubetalteErstatninger;
+    private ArrayList<Forsikring> forsikringer = new ArrayList<>();
+    private ArrayList<Skademelding> skademeldinger = new ArrayList<>();
+    private ArrayList<String> ubetalteErstatninger = new ArrayList<>();
+
+    private int antallForsikringer = forsikringer.size();
 
 
     public Kunde(String navn, LocalDate datoKundeforhold, String fakturaadresse, String forsikringsnummer) {
@@ -59,17 +61,20 @@ public class Kunde implements Serializable {
 
         String forsikringer = "";
         for(Forsikring forsikring: getForsikringer()){
-            forsikringer += forsikring.toCsv();
+            forsikringer += "\nForsikring;" + forsikring.toCsv();
         }
         String skademeldinger = "";
         for(Skademelding skademelding: getSkademeldinger()){
-            forsikringer += skademelding.toCsv();
+            forsikringer += "\nSkademelding;" + skademelding.toCsv();
         }
-        String ubetalteErstatninger = "Erstatning;";
+        String ubetalteErstatninger = "";
         for(String erstatning: getUbetalteErstatninger()){
+            if(ubetalteErstatninger.length()==0){
+                ubetalteErstatninger += "\nErstatning;";
+            }
             ubetalteErstatninger += erstatning +";";
         }
 
-        return String.format("Kunde;%s;%s;%s;%s;\n%s;\n%s;\n%s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer(),forsikringer,skademeldinger,ubetalteErstatninger);
+        return String.format("Kunde;%s;%s;%s;%s;%s;%s;%s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer(),forsikringer,skademeldinger,ubetalteErstatninger);
     }
 }

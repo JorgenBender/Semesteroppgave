@@ -7,8 +7,6 @@ public class Kunderegister {
 
     private static ObservableList<Kunde> kundeliste = FXCollections.observableArrayList();
 
-
-
     public static void nyKunde(Kunde kunde){
         kundeliste.add(kunde);
     }
