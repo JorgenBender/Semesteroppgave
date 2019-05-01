@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1d3d127-1fde-4383-9442-c1f9f2aa0615" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/KundeSceneKontroller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/ImporterKundeRegisterKontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/ImporterKundeRegisterKontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Batforsikring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Batforsikring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Fritidsboligforsikring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Fritidsboligforsikring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Husforsikring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Husforsikring.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Kunde.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Kunde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Reiseforsikring.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Reiseforsikring.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,18 +30,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
               <caret line="7" selection-start-line="7" selection-end-line="7" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="23" column="44" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="23" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -118,7 +97,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/KundeSceneKontroller.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="466">
@@ -126,6 +105,15 @@
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -169,7 +157,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/ImporterKundeRegister.fxml" />
         <option value="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/cosmetic/styles.css" />
         <option value="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/HovedScene.fxml" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Kunde.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/ImporterKundeRegisterKontroller.java" />
@@ -179,6 +166,7 @@
         <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Batforsikring.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Fritidsboligforsikring.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/KundeSceneKontroller.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -307,7 +295,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556714304675" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556714448127" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -343,7 +331,7 @@
       <workItem from="1556214631164" duration="38555000" />
       <workItem from="1556325840883" duration="2041000" />
       <workItem from="1556533831673" duration="16826000" />
-      <workItem from="1556710488455" duration="3805000" />
+      <workItem from="1556710488455" duration="3949000" />
     </task>
     <task id="LOCAL-00001" summary="Påskens arbeid v3">
       <created>1556222572727</created>
@@ -355,7 +343,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62042000" />
+    <option name="totallyTimeSpent" value="62186000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -594,13 +582,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/IO/lesJobj.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -761,6 +742,13 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
