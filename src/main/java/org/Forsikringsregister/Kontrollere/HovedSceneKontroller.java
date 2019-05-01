@@ -52,12 +52,8 @@ public class HovedSceneKontroller extends Kontroller {
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
         }
+        tableView.getItems().setAll(Kunderegister.getKundeliste());
     }
-    /*@FXML
-    void refresh(ActionEvent event){
-        //initialize();
-    }*/
-
     public void initialize() {
 
         navn.setCellValueFactory(new PropertyValueFactory<>("navn"));
