@@ -7,7 +7,7 @@ import javafx.stage.Stage;
 
 import java.time.LocalDate;
 
-public class BaatForsikringKontroller extends Kontroller {
+public class BatForsikringKontroller {
 
     @FXML
     private TextField ArligPremie;
@@ -65,5 +65,8 @@ public class BaatForsikringKontroller extends Kontroller {
     void avbrytScene (ActionEvent event){
         Stage Baatforsikring = (Stage) Avbryt.getScene().getWindow();
         Baatforsikring.close();
+    }
+    public void initialize(){
+        
     }
 }
