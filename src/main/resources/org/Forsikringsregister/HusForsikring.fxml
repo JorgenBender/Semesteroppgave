@@ -12,7 +12,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.HusforsikringKontroller">
    <children>
       <Pane prefHeight="400.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
-      <TextField fx:id="ArligPremie" layoutX="147.0" layoutY="65.0" promptText="Årlig premie" />
+      <TextField fx:id="arligPremie" layoutX="147.0" layoutY="65.0" promptText="Årlig premie" />
       <TextField fx:id="Belop" layoutX="147.0" layoutY="97.0" promptText="Forsikringsbeløp" />
       <TextField fx:id="Byggear" layoutX="147.0" layoutY="129.0" promptText="Byggeår" />
       <TextField fx:id="Materiale" layoutX="147.0" layoutY="162.0" promptText="Byggemateriale" />
@@ -22,8 +22,8 @@
       <TextField fx:id="BoligType" layoutX="356.0" layoutY="129.0" promptText="Boligtype" />
       <TextField fx:id="Standard" layoutX="356.0" layoutY="162.0" promptText="Standard" />
       <TextField fx:id="BygningBelop" layoutX="147.0" layoutY="258.0" promptText="Forsikringsbeløp bygning" />
-      <Button fx:id="Lagre" layoutX="248.0" layoutY="339.0" mnemonicParsing="false" text="Lagre" />
-      <Button fx:id="Avbryt" layoutX="356.0" layoutY="339.0" mnemonicParsing="false" text="Avbryt" />
+      <Button fx:id="Lagre" layoutX="248.0" layoutY="339.0" mnemonicParsing="false" onAction="#nyLagring" text="Lagre" />
+      <Button fx:id="Avbryt" layoutX="356.0" layoutY="339.0" mnemonicParsing="false" onAction="#avbrytScene" text="Avbryt" />
       <DatePicker fx:id="Dato" layoutX="356.0" layoutY="65.0" prefHeight="25.0" prefWidth="149.0" promptText="Dato opprettet" />
       <TextArea fx:id="Betingelser" layoutX="356.0" layoutY="195.0" prefHeight="56.0" prefWidth="149.0" promptText="Forsikringsbetingelser" />
       <Label layoutX="153.0" layoutY="23.0" prefHeight="17.0" prefWidth="197.0" text="Opprettelse av Hus- Innboforsikring" />

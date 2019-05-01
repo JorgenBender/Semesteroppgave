@@ -19,7 +19,7 @@
       <DatePicker fx:id="Dato" layoutX="339.0" layoutY="73.0" prefHeight="25.0" prefWidth="149.0" promptText="Dato for skade" />
       <TextField fx:id="UtbetaltBeløp" layoutX="339.0" layoutY="108.0" promptText="Utbetalt erstatningsbeløp" />
       <Button fx:id="Lagre" layoutX="237.0" layoutY="294.0" mnemonicParsing="false" text="Lagre" />
-      <Button fx:id="Avbryt" layoutX="339.0" layoutY="294.0" mnemonicParsing="false" text="Avbryt" />
+      <Button fx:id="Avbryt" layoutX="339.0" layoutY="294.0" mnemonicParsing="false" onAction="#avbrytScene" text="Avbryt" />
       <CheckBox fx:id="Idag" layoutX="499.0" layoutY="77.0" mnemonicParsing="false" onAction="#IDagChecked" text="I dag" />
       <TextArea fx:id="Beskrivelse" layoutX="339.0" layoutY="143.0" prefHeight="62.0" prefWidth="149.0" promptText="Beskrivelse av skaden" />
       <TextArea fx:id="KontaktInfo" layoutX="140.0" layoutY="179.0" prefHeight="62.0" prefWidth="149.0" promptText="Kontaktinformasjon til vitner" />

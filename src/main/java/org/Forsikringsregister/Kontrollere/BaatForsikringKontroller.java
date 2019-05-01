@@ -3,6 +3,7 @@ package org.Forsikringsregister.Kontrollere;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 import java.time.LocalDate;
 
@@ -58,5 +59,11 @@ public class BaatForsikringKontroller extends Kontroller {
         if(Idag.isSelected()) {
             Dato.setValue(LocalDate.now());
         }
+    }
+
+    @FXML
+    void avbrytScene (ActionEvent event){
+        Stage Baatforsikring = (Stage) Avbryt.getScene().getWindow();
+        Baatforsikring.close();
     }
 }

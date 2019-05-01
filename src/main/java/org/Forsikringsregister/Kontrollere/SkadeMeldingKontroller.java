@@ -3,6 +3,7 @@ package org.Forsikringsregister.Kontrollere;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 import java.time.LocalDate;
 
@@ -43,5 +44,11 @@ public class SkadeMeldingKontroller extends Kontroller{
         if(Idag.isSelected()) {
             Dato.setValue(LocalDate.now());
         }
+    }
+
+    @FXML
+    void avbrytScene (ActionEvent event){
+        Stage Skademelding = (Stage) Avbryt.getScene().getWindow();
+        Skademelding.close();
     }
 }

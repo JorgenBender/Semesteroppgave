@@ -3,6 +3,7 @@ package org.Forsikringsregister.Kontrollere;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 
 import java.time.LocalDate;
 
@@ -42,6 +43,10 @@ public class ReiseForsikringKontroller extends Kontroller {
         }
     }
 
-
+    @FXML
+    void avbrytScene (ActionEvent event){
+        Stage Reiseforsikring = (Stage) Avbryt.getScene().getWindow();
+        Reiseforsikring.close();
+    }
 
 }

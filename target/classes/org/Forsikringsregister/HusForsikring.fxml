@@ -23,7 +23,7 @@
       <TextField fx:id="Standard" layoutX="356.0" layoutY="162.0" promptText="Standard" />
       <TextField fx:id="BygningBelop" layoutX="147.0" layoutY="258.0" promptText="Forsikringsbeløp bygning" />
       <Button fx:id="Lagre" layoutX="248.0" layoutY="339.0" mnemonicParsing="false" text="Lagre" />
-      <Button fx:id="Avbryt" layoutX="356.0" layoutY="339.0" mnemonicParsing="false" text="Avbryt" />
+      <Button fx:id="Avbryt" layoutX="356.0" layoutY="339.0" mnemonicParsing="false" onAction="#avbrytScene" text="Avbryt" />
       <DatePicker fx:id="Dato" layoutX="356.0" layoutY="65.0" prefHeight="25.0" prefWidth="149.0" promptText="Dato opprettet" />
       <TextArea fx:id="Betingelser" layoutX="356.0" layoutY="195.0" prefHeight="56.0" prefWidth="149.0" promptText="Forsikringsbetingelser" />
       <Label layoutX="153.0" layoutY="23.0" prefHeight="17.0" prefWidth="197.0" text="Opprettelse av Hus- Innboforsikring" />

@@ -3,8 +3,36 @@
   <component name="ChangeListManager">
     <list default="true" id="c1d3d127-1fde-4383-9442-c1f9f2aa0615" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/KundeScene.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/KundeScene.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Nyforsikring.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/BaatForsikringKontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/BaatForsikringKontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HusforsikringKontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HusforsikringKontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/ReiseForsikringKontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/ReiseForsikringKontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/SkadeMeldingKontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/SkadeMeldingKontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Baatforsikring.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Baatforsikring.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/FritidsboligForsikring.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/FritidsboligForsikring.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/HusForsikring.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/HusForsikring.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Reiseforsikring.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Reiseforsikring.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Skademelding.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Skademelding.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Semesteroppgave-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/Semesteroppgave-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Baatforsikring.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Baatforsikring.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/FritidsboligForsikring.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/FritidsboligForsikring.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/HusForsikring.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/HusForsikring.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/BaatForsikringKontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/BaatForsikringKontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/HusforsikringKontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/HusforsikringKontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/ImporterKundeRegisterKontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/ImporterKundeRegisterKontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/ReiseForsikringKontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/ReiseForsikringKontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/SkadeMeldingKontroller.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Kontrollere/SkadeMeldingKontroller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Nyforsikring.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Programlogikk/Batforsikring.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Programlogikk/Batforsikring.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Programlogikk/Fritidsboligforsikring.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Programlogikk/Fritidsboligforsikring.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Programlogikk/Husforsikring.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Programlogikk/Husforsikring.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Programlogikk/Kunde.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Programlogikk/Kunde.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Programlogikk/Reiseforsikring.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Programlogikk/Reiseforsikring.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Reiseforsikring.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Reiseforsikring.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Skademelding.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/Forsikringsregister/Skademelding.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,38 +44,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/KundeSceneKontroller.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/NyKundeKontroller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/KundeScene.fxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="211" selection-start-line="11" selection-start-column="211" selection-end-line="11" selection-end-column="211" />
-            </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1125">
-              <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/BaatForsikringKontroller.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-934">
-              <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+            <state relative-caret-position="319">
+              <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -56,10 +56,75 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/HovedScene.fxml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="18" column="95" lean-forward="true" selection-start-line="18" selection-start-column="95" selection-end-line="18" selection-end-column="95" />
+            <state relative-caret-position="340">
+              <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Kunderegister.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="650">
+              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#392#393#0" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Husforsikring.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HusforsikringKontroller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/Kontroller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/KundeSceneKontroller.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/HusForsikring.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="77">
+              <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -88,7 +153,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/Kontroller.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Reiseforsikring.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Batforsikring.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Husforsikring.java" />
@@ -113,6 +177,12 @@
         <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/ImporterKundeRegisterKontroller.java" />
         <option value="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/KundeScene.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/BaatForsikringKontroller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/SkadeMeldingKontroller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/ReiseForsikringKontroller.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/HusForsikring.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HusforsikringKontroller.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/Kontroller.java" />
       </list>
     </option>
   </component>
@@ -227,7 +297,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556715874624" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556724596048" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -265,17 +335,18 @@
       <workItem from="1556533831673" duration="16826000" />
       <workItem from="1556710488455" duration="1048000" />
     </task>
-    <task id="LOCAL-00001" summary="Påskens arbeid v3">
-      <created>1556222572727</created>
+    <task id="LOCAL-00001" summary="Combobox">
+      <created>1556715923372</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1556222572727</updated>
+      <updated>1556715923372</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62142000" />
+    <option name="totallyTimeSpent" value="69378000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -291,7 +362,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3291714" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.36095345" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.21096544" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49945945" visible="true" weight="0.21096544" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39954597" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -299,7 +370,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3291714" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50054055" side_tool="true" weight="0.32896304" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50054055" side_tool="true" weight="0.21096544" />
       <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49945945" weight="0.32896304" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -315,25 +386,13 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Combobox" />
+    <option name="LAST_COMMIT_MESSAGE" value="Combobox" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/KunderegisterIO.java" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/scene.fxml" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Baatforsikring.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="27" column="104" selection-start-line="27" selection-start-column="104" selection-end-line="27" selection-end-column="104" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/FritidsboligForsikring.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="21" column="41" lean-forward="true" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/openjfx/javafx-fxml/11.0.2/javafx-fxml-11.0.2-win.jar!/javafx/fxml/FXMLLoader.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
@@ -398,13 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Skademelding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Fritidsboligforsikring.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -443,13 +495,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Husforsikring.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="74" column="114" selection-start-line="74" selection-start-column="39" selection-end-line="74" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Kunde.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="469">
@@ -472,60 +517,10 @@
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HusforsikringKontroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="987">
-          <caret line="47" column="23" lean-forward="true" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.2/lib/src.zip!/java.base/java/lang/Thread.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
           <caret line="833" selection-start-line="833" selection-end-line="833" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/ReiseForsikringKontroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="8" column="57" selection-start-line="8" selection-start-column="57" selection-end-line="8" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/NyKundeKontroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="42" column="9" selection-start-line="42" selection-start-column="9" selection-end-line="42" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/SkadeMeldingKontroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Kunderegister.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -579,27 +574,152 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/IO/lesCsv.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Batforsikring.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4">
-          <caret line="102" lean-forward="true" selection-start-line="102" selection-end-line="102" />
+        <state relative-caret-position="-110">
+          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Nyforsikring.fxml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Reiseforsikring.fxml">
-      <provider editor-type-id="text-editor">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="11" column="201" selection-start-line="11" selection-start-column="201" selection-end-line="11" selection-end-column="201" />
         </state>
       </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Baatforsikring.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="27" column="104" selection-start-line="27" selection-start-column="104" selection-end-line="27" selection-end-column="104" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/FritidsboligForsikring.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/SkadeMeldingKontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="341">
+          <caret line="51" column="20" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/BaatForsikringKontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="61" column="5" lean-forward="true" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/KundeScene.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="11" column="211" selection-start-line="11" selection-start-column="211" selection-end-line="11" selection-end-column="211" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/ReiseForsikringKontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="35" column="9" lean-forward="true" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/HovedScene.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="18" column="95" lean-forward="true" selection-start-line="18" selection-start-column="95" selection-end-line="18" selection-end-column="95" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/NyKunde.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/KundeSceneKontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="30" column="7" lean-forward="true" selection-start-line="30" selection-start-column="7" selection-end-line="30" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/HusForsikring.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="14" column="35" selection-start-line="14" selection-start-column="35" selection-end-line="14" selection-end-column="35" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/IO/lesCsv.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="182" column="4" lean-forward="true" selection-start-line="182" selection-start-column="4" selection-end-line="191" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/Kontroller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        <state relative-caret-position="365">
+          <caret line="25" column="5" lean-forward="true" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/NyKundeKontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="46" column="32" lean-forward="true" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Kunderegister.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="650">
+          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#392#393#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -612,79 +732,36 @@
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Batforsikring.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Skademelding.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="26" column="41" lean-forward="true" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="41" />
+        <state relative-caret-position="-206">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/NyKunde.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/HusForsikring.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Husforsikring.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="88" lean-forward="true" selection-start-line="16" selection-start-column="88" selection-end-line="16" selection-end-column="88" />
+        <state relative-caret-position="75">
+          <caret line="74" column="13" lean-forward="true" selection-start-line="74" selection-start-column="13" selection-end-line="74" selection-end-column="13" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/HovedScene.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="18" column="95" lean-forward="true" selection-start-line="18" selection-start-column="95" selection-end-line="18" selection-end-column="95" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1125">
-          <caret line="55" column="5" selection-start-line="55" selection-start-column="5" selection-end-line="55" selection-end-column="5" />
+        <state relative-caret-position="340">
+          <caret line="51" column="33" selection-start-line="51" selection-start-column="33" selection-end-line="51" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/BaatForsikringKontroller.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HusforsikringKontroller.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-934">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+        <state relative-caret-position="400">
+          <caret line="82" column="53" lean-forward="true" selection-start-line="82" selection-start-column="53" selection-end-line="82" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/Nyforsikring.fxml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/KundeSceneKontroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/KundeScene.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="211" selection-start-line="11" selection-start-column="211" selection-end-line="11" selection-end-column="211" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
 </project>
