@@ -18,8 +18,7 @@ public class Kunde implements Serializable {
     private ArrayList<Skademelding> skademeldinger = new ArrayList<>();
     private ArrayList<String> ubetalteErstatninger = new ArrayList<>();
 
-    private int antallForsikringer = forsikringer.size();
-
+    private int antallForsikringer = 0;
 
     public Kunde(String navn, LocalDate datoKundeforhold, String fakturaadresse, String forsikringsnummer) {
         this.datoKundeforhold = datoKundeforhold;
@@ -43,7 +42,9 @@ public class Kunde implements Serializable {
 
     public ArrayList<String> getUbetalteErstatninger() { return ubetalteErstatninger; }
 
-    public void addForsikring(Forsikring nyForsikring) { this.forsikringer.add(nyForsikring); }
+    public int getAntallForsikringer() { return antallForsikringer; }
+
+    public void addForsikring(Forsikring nyForsikring) { this.forsikringer.add(nyForsikring); antallForsikringer++;}
 
     public void addSkademelding(Skademelding nySkademelding){ this.skademeldinger.add(nySkademelding); }
 
@@ -75,6 +76,6 @@ public class Kunde implements Serializable {
             ubetalteErstatninger += erstatning +";";
         }
 
-        return String.format("Kunde;%s;%s;%s;%s;%s;%s;%s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer(),forsikringer,skademeldinger,ubetalteErstatninger);
+        return String.format("Kunde;%s;%s;%s;%s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer())+forsikringer+skademeldinger+ubetalteErstatninger;
     }
 }
