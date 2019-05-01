@@ -2,10 +2,16 @@ package org.Forsikringsregister.Kontrollere;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.input.MouseEvent;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Kunderegister;
@@ -13,6 +19,13 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 public class HovedSceneKontroller extends Kontroller {
+
+    public Stage openStageKundeScene(Kunde kunde) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../KundeScene.fxml"));
+        fxmlLoader.setControllerFactory(c ->{ return new KundeSceneKontroller(kunde);});
+        Stage stage = loadStage(fxmlLoader);
+        return stage;
+    }
 
     @FXML
     private Button opprettKunde;
@@ -32,11 +45,24 @@ public class HovedSceneKontroller extends Kontroller {
     private TableColumn<Kunde, String> antallForsikringer;
 
     @FXML
+    public void selectKunde(MouseEvent event) {
+        if (event.getClickCount() == 2) //Checking double click
+        {
+            try {
+                Stage visKunde = openStageKundeScene(tableView.getSelectionModel().getSelectedItem());
+                visKunde.showAndWait();
+            } catch (IOException e) {
+                System.err.println("Cant load new window");
+                System.err.println(e.getMessage());
+            }
+        }
+    }
+    @FXML
     void opprettKunde(ActionEvent event) {
 
         try {
-            Stage opprettKunde = openStage("../NyKunde.fxml");
-            opprettKunde.showAndWait();
+            Stage nyKunde = openStage("../NyKunde.fxml");
+            nyKunde.showAndWait();
         }
         catch (IOException e){
             System.err.println("Cant load new window");
@@ -55,13 +81,12 @@ public class HovedSceneKontroller extends Kontroller {
         }
         tableView.getItems().setAll(Kunderegister.getKundeliste());
     }
-    public void initialize() {
 
+    public void initialize() {
         navn.setCellValueFactory(new PropertyValueFactory<>("navn"));
         datoKundeforhold.setCellValueFactory(new PropertyValueFactory<>("datoKundeforhold"));
         fakturaadresse.setCellValueFactory(new PropertyValueFactory<>("fakturaadresse"));
         forsikringsnummer.setCellValueFactory(new PropertyValueFactory<>("forsikringsnummer"));
         antallForsikringer.setCellValueFactory(new PropertyValueFactory<>("antallForsikringer"));
-        tableView.getItems().setAll(Kunderegister.getKundeliste());
     }
 }

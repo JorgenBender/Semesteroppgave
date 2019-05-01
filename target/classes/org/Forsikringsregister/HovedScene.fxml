@@ -12,7 +12,7 @@
 <AnchorPane prefHeight="471.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.HovedSceneKontroller">
    <children>
       <Pane prefHeight="471.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
-      <TableView fx:id="tableView" layoutX="113.0" layoutY="37.0" prefHeight="355.0" prefWidth="675.0">
+      <TableView fx:id="tableView" layoutX="113.0" layoutY="37.0" onMouseClicked="#selectKunde" prefHeight="355.0" prefWidth="675.0">
         <columns>
           <TableColumn fx:id="navn" prefWidth="98.0" text="Navn" />
           <TableColumn fx:id="datoKundeforhold" prefWidth="119.0" text="Kunde siden" />

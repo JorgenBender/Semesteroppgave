@@ -8,13 +8,19 @@ import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
 
 public class Kontroller {
 
     public Stage openStage(String resource) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(resource));
-        Parent root = fxmlLoader.load();
+        Stage stage = loadStage(fxmlLoader);
+        return stage;
+    }
+
+    public Stage loadStage(FXMLLoader loader) throws IOException {
+        Parent root = loader.load();
         Image icon = new Image(getClass().getResourceAsStream("../cosmetic/icon.png"));
         Scene scene = new Scene(root);
         scene.getStylesheets().add(getClass().getResource("../cosmetic/styles.css").toExternalForm());
@@ -24,5 +30,6 @@ public class Kontroller {
         stage.getIcons().add(icon);
         return stage;
     }
+
 }
 
