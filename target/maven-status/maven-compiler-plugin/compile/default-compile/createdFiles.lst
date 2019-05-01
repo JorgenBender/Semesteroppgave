@@ -12,6 +12,7 @@ org\Forsikringsregister\Programlogikk\Fritidsboligforsikring.class
 org\Forsikringsregister\Programlogikk\Reiseforsikring.class
 org\Forsikringsregister\Programlogikk\Kunderegister.class
 org\Forsikringsregister\IO\Writer.class
+org\Forsikringsregister\Kontrollere\BatForsikringKontroller.class
 org\Forsikringsregister\Kontrollere\NyKundeKontroller.class
 org\Forsikringsregister\Kontrollere\SkadeMeldingKontroller.class
 org\Forsikringsregister\IO\lesJobj.class

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
@@ -18,12 +18,11 @@
       </Label>
       <Label fx:id="forsikringsinfo" layoutX="246.0" layoutY="225.0" prefHeight="246.0" prefWidth="199.0" />
       <Label fx:id="kundeinfo" layoutX="122.0" layoutY="77.0" prefHeight="141.0" prefWidth="307.0" />
-      <TableView fx:id="tableView" layoutX="122.0" layoutY="223.0" onMouseClicked="#selectForsikring" prefHeight="246.0" prefWidth="113.0">
+      <TableView fx:id="tableView" layoutX="122.0" layoutY="223.0" onMouseClicked="#selectForsikring" prefHeight="246.0" prefWidth="100.0">
         <columns>
           <TableColumn fx:id="forsikringstype" prefWidth="98.00001525878906" text="Forsikringer" />
         </columns>
       </TableView>
-      <ComboBox fx:id="nyForsikring" layoutX="201.0" layoutY="496.0" prefWidth="150.0" promptText="Ny forsikring" />
-
+      <Button fx:id="nyForsikring" layoutX="224.0" layoutY="491.0" mnemonicParsing="false" text="Ny forsikring" />
    </children>
 </AnchorPane>
