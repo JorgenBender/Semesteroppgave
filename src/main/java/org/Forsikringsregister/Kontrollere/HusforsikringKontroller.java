@@ -69,18 +69,18 @@ public class HusforsikringKontroller extends Kontroller{
     }
 
     @FXML
-    void nyLagring (ActionEvent event) {
+    void nyLagring (ActionEvent event){
         LocalDate dato;
-        if (Idag.isSelected()) {
+        if(Idag.isSelected()){
             dato = LocalDate.now();
-        } else {
+        }
+        else{
             dato = Dato.getValue();
-        }/*
+        }
         Husforsikring husforsikring = new Husforsikring(arligPremie.getText(), dato, Belop.getText(), Byggear.getText(),
                 Materiale.getText(), Kvadratmeter.getText(), InnboBelop.getText(), Adresse.getText(), BoligType.getText(),
                 Standard.getText(), BygningBelop.getText(), Betingelser.getText());
-        Husforsikring.nyForsikring(husforsikring);
-    */}
+        Husforsikring.nyHusforsikring(husforsikring);
 
 
 }

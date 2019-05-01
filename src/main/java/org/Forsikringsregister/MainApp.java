@@ -13,6 +13,11 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
+        /*String mittNavn = "Per";
+        String dittNavn = mittNavn;
+        mittNavn = "Ole";
+        System.out.println(mittNavn + dittNavn);*/
+
         Parent root = FXMLLoader.load(getClass().getResource("HovedScene.fxml"));
 
         Scene scene = new Scene(root);

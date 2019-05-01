@@ -6,13 +6,13 @@ org\Forsikringsregister\IO\skrivCsv.class
 org\Forsikringsregister\Programlogikk\Skademelding.class
 module-info.class
 org\Forsikringsregister\Exceptions\InvalidFormatException.class
-org\Forsikringsregister\Kontrollere\BaatForsikringKontroller.class
 org\Forsikringsregister\Programlogikk\Batforsikring.class
 org\Forsikringsregister\IO\Reader.class
 org\Forsikringsregister\Programlogikk\Fritidsboligforsikring.class
 org\Forsikringsregister\Programlogikk\Reiseforsikring.class
 org\Forsikringsregister\Programlogikk\Kunderegister.class
 org\Forsikringsregister\IO\Writer.class
+org\Forsikringsregister\Kontrollere\BatForsikringKontroller.class
 org\Forsikringsregister\Kontrollere\NyKundeKontroller.class
 org\Forsikringsregister\Kontrollere\SkadeMeldingKontroller.class
 org\Forsikringsregister\IO\lesJobj.class

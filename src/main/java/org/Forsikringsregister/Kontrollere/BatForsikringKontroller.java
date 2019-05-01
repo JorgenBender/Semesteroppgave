@@ -4,7 +4,6 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import org.Forsikringsregister.Programlogikk.Batforsikring;
 
 import java.time.LocalDate;
 
@@ -67,19 +66,4 @@ public class BaatForsikringKontroller extends Kontroller {
         Stage Baatforsikring = (Stage) Avbryt.getScene().getWindow();
         Baatforsikring.close();
     }
-
-    @FXML
-    void nyLagring(ActionEvent event) {
-        LocalDate dato;
-        if (Idag.isSelected()) {
-            dato = LocalDate.now();
-        } else {
-            dato = Dato.getValue();
-        }/*
-        Batforsikring batforsikring = new Batforsikring(ArligPremie.getText(), Belop.getText(), RegNummer.getText(),
-                LengdeFot.getText(), Eier.getText(), Battype.getText(), Arsmodell.getText(), MotorType.getText(),
-                MotorStyrke.getText(), dato, Modell.getText(), Betingelser.getText());
-        Batforsikring.nyForsikring(batforsikring);
-    */}
 }
-
