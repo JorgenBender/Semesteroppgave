@@ -1,11 +1,10 @@
 package org.Forsikringsregister.Kontrollere;
 
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 import org.Forsikringsregister.Exceptions.InvalidFormatException;
 import org.Forsikringsregister.IO.lesCsv;
@@ -13,13 +12,12 @@ import org.Forsikringsregister.IO.lesJobj;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Kunderegister;
 import java.io.IOException;
-import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class ImporterKundeRegisterKontroller extends Kontroller{
 
     @FXML
-    private ChoiceBox<String> ja;
+    private ComboBox<String> ja;
 
     @FXML
     private  Button nei;
@@ -62,16 +60,7 @@ public class ImporterKundeRegisterKontroller extends Kontroller{
     @FXML
     void nei (ActionEvent event) {
 
-        ObservableList<Kunde> kundeliste = FXCollections.observableArrayList();
-        kundeliste.addAll(
-                new Kunde("Ola Nordmann", LocalDate.now(),"LOLhei 1","123"),
-                new Kunde("Lolo",LocalDate.now(),"rytfui","uyu"),
-                new Kunde("d65c7v8g9",LocalDate.now(),"s54x6c7v8b","vt67g"),
-                new Kunde("Ola Nordmann",LocalDate.now(),"nkibug877","2345678987654"),
-                new Kunde("Ola Kuksuger",LocalDate.now(),"bug79","b78")
-        );
-
-        Kunderegister.setKundeliste(kundeliste/*FXCollections.observableArrayList(new ArrayList<Kunde>())*/);
+        Kunderegister.setKundeliste(FXCollections.observableArrayList(new ArrayList<Kunde>()));
         Stage stage = (Stage) nei.getScene().getWindow();
         stage.close();
 

@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.NyKundeKontroller">
+<AnchorPane prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.NyKundeKontroller">
    <children>
       <TextField fx:id="nyKundeNavn" layoutX="186.0" layoutY="204.0" promptText="Navn" />
       <TextField fx:id="nyKundeFakturaAdresse" layoutX="186.0" layoutY="255.0" promptText="Faktureringsadresse" />
@@ -22,7 +22,7 @@
          </font>
       </Label>
       <Button fx:id="nyKundeRegistrer" layoutX="186.0" layoutY="385.0" mnemonicParsing="false" onAction="#nyRegistrering" text="Registrer" />
+      <Button fx:id="avbryt" layoutX="284.0" layoutY="386.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" />
       <Pane prefHeight="460.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
-      <Button layoutX="284.0" layoutY="386.0" mnemonicParsing="false" text="Avbryt" />
    </children>
 </AnchorPane>

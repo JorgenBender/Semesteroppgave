@@ -1,33 +1,35 @@
 package org.Forsikringsregister.Kontrollere;
 
-import javafx.beans.InvalidationListener;
-import javafx.collections.ListChangeListener;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Modality;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Kunderegister;
-
 import java.io.IOException;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.time.LocalDate;
 
-
-public class HovedSceneKontroller extends Kontroller{
+public class HovedSceneKontroller extends Kontroller {
 
     @FXML
     private Button opprettKunde;
-
     @FXML
-    private Button register;
+    private Button importerKundeliste;
+    @FXML
+    private TableView<Kunde> tableView;
+    @FXML
+    private TableColumn<Kunde, String> navn;
+    @FXML
+    private TableColumn<Kunde, LocalDate> datoKundeforhold;
+    @FXML
+    private TableColumn<Kunde, String> fakturaadresse;
+    @FXML
+    private TableColumn<Kunde, String> forsikringsnummer;
+    @FXML
+    private TableColumn<Kunde, String> antallForsikringer;
 
     @FXML
     void opprettKunde(ActionEvent event) {
@@ -41,28 +43,28 @@ public class HovedSceneKontroller extends Kontroller{
             System.err.println(e.getMessage());
         }
     }
-
     @FXML
-    void visRegister(ActionEvent event) {
-
+    void importerKundeliste (ActionEvent event) {
         try {
-            Stage visRegister = openStage("../Kundeliste.fxml");
-            visRegister.showAndWait();
-        }
-        catch (IOException e){
+            Stage importerKunde = openStage("../ImporterKundeRegister.fxml");
+            importerKunde.showAndWait();
+        } catch (IOException e) {
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
         }
     }
-    public void initialize() {
-        try {
-           Stage importerKunde = openStage("../ImporterKundeRegister.fxml");
-           importerKunde.showAndWait();
-        }
-        catch (IOException e){
-            System.err.println("Cant load new window");
-            System.err.println(e.getMessage());
-        }
+    /*@FXML
+    void refresh(ActionEvent event){
+        //initialize();
+    }*/
 
+    public void initialize() {
+
+        navn.setCellValueFactory(new PropertyValueFactory<>("navn"));
+        datoKundeforhold.setCellValueFactory(new PropertyValueFactory<>("datoKundeforhold"));
+        fakturaadresse.setCellValueFactory(new PropertyValueFactory<>("fakturaadresse"));
+        forsikringsnummer.setCellValueFactory(new PropertyValueFactory<>("forsikringsnummer"));
+        antallForsikringer.setCellValueFactory(new PropertyValueFactory<>("antallForsikringer"));
+        tableView.getItems().setAll(Kunderegister.getKundeliste());
     }
 }

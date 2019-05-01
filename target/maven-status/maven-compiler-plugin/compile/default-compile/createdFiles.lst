@@ -3,7 +3,6 @@ org\Forsikringsregister\Programlogikk\Kunde.class
 org\Forsikringsregister\Kontrollere\Kontroller.class
 org\Forsikringsregister\IO\lesCsv.class
 org\Forsikringsregister\IO\skrivCsv.class
-org\Forsikringsregister\Kontrollere\KundelisteKontroller.class
 org\Forsikringsregister\Programlogikk\Skademelding.class
 module-info.class
 org\Forsikringsregister\Exceptions\InvalidFormatException.class

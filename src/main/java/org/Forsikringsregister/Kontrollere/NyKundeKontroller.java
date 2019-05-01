@@ -3,6 +3,7 @@ package org.Forsikringsregister.Kontrollere;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 import org.Forsikringsregister.IO.*;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Kunderegister;
@@ -31,6 +32,9 @@ public class NyKundeKontroller extends Kontroller{
     private Button nyKundeRegistrer;
 
     @FXML
+    private Button avbryt;
+
+    @FXML
     void nyRegistrering (ActionEvent event){
 
         LocalDate dato;
@@ -42,14 +46,14 @@ public class NyKundeKontroller extends Kontroller{
         }
         Kunde kunde = new Kunde(nyKundeNavn.getText(), dato, nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText());
         Kunderegister.nyKunde(kunde);
-        skrivCsv skriver = new skrivCsv();
-        try {skriver.skrivKundeliste(Kunderegister.getKundeliste());}
-
-        catch (IOException e){
-
-        }
-        System.out.println(Kunderegister.getKundeliste().toString());
     }
+
+    @FXML
+    void avbryt (ActionEvent event){
+        Stage stage = (Stage) avbryt.getScene().getWindow();
+        stage.close();
+    }
+
 
     @FXML
     void iDagChecked (ActionEvent event){
