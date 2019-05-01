@@ -20,13 +20,6 @@ import java.time.LocalDate;
 
 public class HovedSceneKontroller extends Kontroller {
 
-    public Stage openStageKundeScene(Kunde kunde) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../KundeScene.fxml"));
-        fxmlLoader.setControllerFactory(c ->{ return new KundeSceneKontroller(kunde);});
-        Stage stage = loadStage(fxmlLoader);
-        return stage;
-    }
-
     @FXML
     private Button opprettKunde;
     @FXML
@@ -49,12 +42,15 @@ public class HovedSceneKontroller extends Kontroller {
         if (event.getClickCount() == 2) //Checking double click
         {
             try {
-                Stage visKunde = openStageKundeScene(tableView.getSelectionModel().getSelectedItem());
+                Stage visKunde = openStageSendKunde("../KundeScene.fxml",tableView.getSelectionModel().getSelectedItem());
                 visKunde.showAndWait();
             } catch (IOException e) {
                 System.err.println("Cant load new window");
                 System.err.println(e.getMessage());
+            } catch (NullPointerException e){
+                //Kan trykke på en tom tableview
             }
+
         }
     }
     @FXML

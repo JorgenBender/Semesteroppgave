@@ -4,10 +4,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.Forsikringsregister.Programlogikk.Kunde;
 
 import java.time.LocalDate;
 
 public class ReiseForsikringKontroller extends Kontroller {
+
+    private Kunde kunde;
+    public ReiseForsikringKontroller(Kunde kunde){
+        this.kunde=kunde;
+    }
 
     @FXML
     private TextField ArligPremie;
@@ -48,5 +54,6 @@ public class ReiseForsikringKontroller extends Kontroller {
         Stage Reiseforsikring = (Stage) Avbryt.getScene().getWindow();
         Reiseforsikring.close();
     }
-
+    public void initialize() {
+    }
 }

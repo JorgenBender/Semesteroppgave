@@ -51,4 +51,6 @@ public class SkadeMeldingKontroller extends Kontroller{
         Stage Skademelding = (Stage) Avbryt.getScene().getWindow();
         Skademelding.close();
     }
+    public void initialize() {
+    }
 }

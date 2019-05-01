@@ -4,11 +4,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import org.Forsikringsregister.Programlogikk.Husforsikring;
+import org.Forsikringsregister.Programlogikk.Kunde;
 
 import java.time.LocalDate;
 
 public class HusforsikringKontroller extends Kontroller{
+
+    private Kunde kunde;
+    public HusforsikringKontroller(Kunde kunde){
+        this.kunde=kunde;
+    }
 
     @FXML
     private TextField arligPremie;
@@ -68,13 +73,12 @@ public class HusforsikringKontroller extends Kontroller{
         HusForsikring.close();
     }
 
-    @FXML
-    void nyLagring (ActionEvent event){
+    /*@FXML
+    void nyLagring (ActionEvent event) {
         LocalDate dato;
-        if(Idag.isSelected()){
+        if (Idag.isSelected()) {
             dato = LocalDate.now();
-        }
-        else{
+        } else {
             dato = Dato.getValue();
         }
         Husforsikring husforsikring = new Husforsikring(arligPremie.getText(), dato, Belop.getText(), Byggear.getText(),
@@ -82,5 +86,7 @@ public class HusforsikringKontroller extends Kontroller{
                 Standard.getText(), BygningBelop.getText(), Betingelser.getText());
         Husforsikring.nyHusforsikring(husforsikring);
 
-
+    }*/
+    public void initialize() {
+    }
 }

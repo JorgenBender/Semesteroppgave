@@ -1,20 +1,25 @@
 package org.Forsikringsregister.Kontrollere;
 
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-
-
+import org.Forsikringsregister.Programlogikk.Kunde;
 import java.io.IOException;
 
 public class Kontroller {
 
     public Stage openStage(String resource) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(resource));
+        Stage stage = loadStage(fxmlLoader);
+        return stage;
+    }
+
+    public Stage openStageSendKunde(String resource, Kunde kunde) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(resource));
+        fxmlLoader.setControllerFactory(c ->{ return new KundeSceneKontroller(kunde);});
         Stage stage = loadStage(fxmlLoader);
         return stage;
     }

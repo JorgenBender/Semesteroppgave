@@ -14,10 +14,11 @@ import java.io.IOException;
 
 public class KundeSceneKontroller extends Kontroller {
 
-    Kunde kunde;
+    private Kunde kunde;
     public KundeSceneKontroller(Kunde kunde){
         this.kunde=kunde;
     }
+    public Kunde getKunde(){return this.kunde;}
 
     @FXML
     private Label kundenavn;
@@ -34,15 +35,55 @@ public class KundeSceneKontroller extends Kontroller {
 
     @FXML
     public void selectForsikring(MouseEvent event) {
-        if (event.getClickCount() == 1) //Checking double click
-        {
-            try{
-                forsikringsinfo.setText(tableView.getSelectionModel().getSelectedItem().toString());
+        try{
+            forsikringsinfo.setText(tableView.getSelectionModel().getSelectedItem().toString());
             }
-            catch(NullPointerException e){
-
+        catch(NullPointerException e){
+            //Hvis man trykker på et tom forsikring kommer NullPointerException
             }
+    }
+    public void nyForsikring(){
 
+        switch (nyForsikring.getValue()){
+            case "Båtforsikring":
+                try{
+                    Stage stage = openStageSendKunde("../Batforsikring.fxml",getKunde());
+                    stage.showAndWait();
+                }
+                catch(IOException e){
+                    System.err.println("Cant load new window");
+                    System.err.println(e.getMessage()+e.getCause()+e.getStackTrace());
+                }
+                break;
+            case "Husforsikring":
+                try{
+                    Stage stage = openStageSendKunde("../Husforsikring.fxml",getKunde());
+                }
+                catch(IOException e){
+                    System.err.println("Cant load new window");
+                    System.err.println(e.getMessage());
+                }
+                break;
+            case "Fritidsboligforsikring":
+                try{
+                    Stage stage = openStageSendKunde("../Fritidsboligforsikring.fxml",getKunde());
+                    stage.show();
+                }
+                catch(IOException e){
+                    System.err.println("Cant load new window");
+                    System.err.println(e.getMessage());
+                }
+                break;
+            case "Rieseforsikring":
+                try{
+                    Stage stage = openStageSendKunde("../Reiseforsikring.fxml",getKunde());
+                    stage.show();
+                }
+                catch(IOException e){
+                    System.err.println("Cant load new window");
+                    System.err.println(e.getMessage());
+                }
+                break;
         }
     }
 
@@ -50,6 +91,12 @@ public class KundeSceneKontroller extends Kontroller {
 
         kundeinfo.setText(kunde.toString());
         kundenavn.setText(kunde.getNavn());
+        nyForsikring.getItems().addAll(
+                "Båtforsikring",
+                    "Husforsikring",
+                    "Fritidsboligforsikrign",
+                    "Reiseforsikring");
+        nyForsikring.setOnAction(Event -> nyForsikring());
 
         forsikringstype.setCellValueFactory(new PropertyValueFactory<>("forsikringstype"));
         ObservableList<Forsikring> forsikringer = FXCollections.observableArrayList(kunde.getForsikringer());

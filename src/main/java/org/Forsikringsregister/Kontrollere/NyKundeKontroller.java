@@ -4,11 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import org.Forsikringsregister.IO.*;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Kunderegister;
 
-import java.io.IOException;
 import java.time.LocalDate;
 
 public class NyKundeKontroller extends Kontroller{
@@ -63,8 +61,6 @@ public class NyKundeKontroller extends Kontroller{
     }
 
     public void initialize() {
-
-        //System.out.println(Kunderegister.getKundeliste().size());
 
     }
 }
