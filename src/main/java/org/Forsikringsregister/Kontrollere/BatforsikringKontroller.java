@@ -8,10 +8,10 @@ import org.Forsikringsregister.Programlogikk.Kunde;
 
 import java.time.LocalDate;
 
-public class HusforsikringKontroller extends Kontroller{
+public class BatforsikringKontroller extends Kontroller{
 
     private Kunde kunde;
-    public HusforsikringKontroller(Kunde kunde){
+    public BatforsikringKontroller(Kunde kunde){
         this.kunde=kunde;
     }
     public Kunde getKunde(){return this.kunde;}
@@ -23,28 +23,28 @@ public class HusforsikringKontroller extends Kontroller{
     private TextField belop;
 
     @FXML
-    private TextField byggear;
+    private TextField regNummer;
 
     @FXML
-    private TextField materiale;
+    private TextField lengdeFot;
 
     @FXML
-    private TextField kvadratmeter;
+    private TextField eier;
 
     @FXML
-    private TextField innboBelop;
+    private TextField battype;
 
     @FXML
-    private TextField adresse;
+    private TextField arsmodell;
 
     @FXML
-    private TextField boligType;
+    private TextField motorType;
 
     @FXML
-    private TextField standard;
+    private TextField motorStyrke;
 
     @FXML
-    private TextField bygningBelop;
+    private TextField modell;
 
     @FXML
     private DatePicker dato;
