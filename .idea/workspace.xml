@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1d3d127-1fde-4383-9442-c1f9f2aa0615" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="c1d3d127-1fde-4383-9442-c1f9f2aa0615" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +14,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/KundeScene.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="10" column="210" selection-start-line="10" selection-start-column="210" selection-end-line="10" selection-end-column="210" />
+            <state relative-caret-position="275">
+              <caret line="11" column="210" selection-start-line="11" selection-start-column="210" selection-end-line="11" selection-end-column="210" />
             </state>
           </provider>
           <provider editor-type-id="JavaFX-Scene-Builder" />
@@ -204,7 +202,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556714542357" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556714658198" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -249,17 +247,24 @@
       <option name="project" value="LOCAL" />
       <updated>1556714318870</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Mere Kundescenetull">
+      <created>1556714673133</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556714673133</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61527000" />
+    <option name="totallyTimeSpent" value="61778000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23945946" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23945946" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -269,7 +274,7 @@
       <window_info anchor="bottom" id="Messages" order="0" weight="0.3291714" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.36095345" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.21096544" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49945945" visible="true" weight="0.21096544" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39954597" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -277,7 +282,7 @@
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.3291714" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32896304" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="11" sideWeight="0.50054055" side_tool="true" visible="true" weight="0.21096544" />
       <window_info anchor="bottom" id="Version Control" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -295,7 +300,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Kundescenetull" />
-    <option name="LAST_COMMIT_MESSAGE" value="Kundescenetull" />
+    <MESSAGE value="Mere Kundescenetull" />
+    <option name="LAST_COMMIT_MESSAGE" value="Mere Kundescenetull" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/KunderegisterIO.java" />
@@ -615,13 +621,6 @@
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Programlogikk/Batforsikring.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-110">
@@ -653,10 +652,17 @@
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/Forsikringsregister/Kontrollere/HovedSceneKontroller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/org/Forsikringsregister/KundeScene.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="10" column="210" selection-start-line="10" selection-start-column="210" selection-end-line="10" selection-end-column="210" />
+        <state relative-caret-position="275">
+          <caret line="11" column="210" selection-start-line="11" selection-start-column="210" selection-end-line="11" selection-end-column="210" />
         </state>
       </provider>
       <provider editor-type-id="JavaFX-Scene-Builder" />
