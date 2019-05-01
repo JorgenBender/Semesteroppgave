@@ -1,23 +1,26 @@
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\module-info.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\IOInterface.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Batforsikring.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\ReiseForsikringKontroller.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\OpprettKundeKontroller.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Forsikring.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\HusforsikringKontroller.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\skrivJobj.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Fritidsboligforsikring.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Kunderegister.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\HovedSceneKontroller.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\BaatForsikringKontroller.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Skademelding.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\lesJobj.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\ImporterKundeRegisterKontroller.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\SkadeMeldingKontroller.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Kunde.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\MainApp.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\KunderegisterIO.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Husforsikring.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\lesCsv.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Reiseforsikring.java
-C:\Users\runar\OneDrive\Dokumenter\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\skrivCsv.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Kunde.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Forsikring.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\Reader.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\KundelisteKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\ImporterKundeRegisterKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\lesJobj.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Batforsikring.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Kunderegister.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\lesCsv.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\HusforsikringKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Fritidsboligforsikring.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\SkadeMeldingKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\HovedSceneKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Husforsikring.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\Writer.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\skrivJobj.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\ReiseForsikringKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Reiseforsikring.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\MainApp.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\NyKundeKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\Kontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\BaatForsikringKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\skrivCsv.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Exceptions\InvalidFormatException.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Skademelding.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\module-info.java

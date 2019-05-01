@@ -1,21 +1,21 @@
 package org.Forsikringsregister.Programlogikk;
 
-import java.util.ArrayList;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Kunderegister {
 
-    private static ArrayList<Kunde> kundeliste = new ArrayList<>(); // FXCollections.observableArrayList();
-
+    private static ObservableList<Kunde> kundeliste = FXCollections.observableArrayList();
 
     public static void nyKunde(Kunde kunde){
         kundeliste.add(kunde);
     }
 
-    public static ArrayList<Kunde> getKundeliste(){
+    public static ObservableList<Kunde> getKundeliste(){
         return kundeliste;
     }
 
-    public static void setKundeliste(ArrayList<Kunde> enKundeliste){
+    public static void setKundeliste(ObservableList<Kunde> enKundeliste){
         kundeliste = enKundeliste;
     }
 
@@ -23,11 +23,8 @@ public class Kunderegister {
     public String toString(){
         String out = "";
         for(Kunde kunde : kundeliste){
-            out += kunde + "\n";
+            out += kunde.toString() + "\n";
         }
         return out;
     }
-
-
-    //public Kunderegister() { kundeliste.addListener(new InvalidationListener() { @Override public void invalidated(Observable observable) { KunderegisterIO.exporterKundeliste(kundeliste());; }});}
 }

@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="130.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.ImporterKundeRegisterKontroller">
+<AnchorPane prefHeight="130.0" prefWidth="470.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.ImporterKundeRegisterKontroller">
    <children>
-      <Button fx:id="ja" layoutX="321.0" layoutY="79.0" mnemonicParsing="false" onAction="#ja" text="Ja" />
-      <Button fx:id="nei" layoutX="218.0" layoutY="79.0" mnemonicParsing="false" onAction="#nei" text="Nei" />
+      <ChoiceBox fx:id="ja" layoutX="259.0" layoutY="79.0" prefWidth="150.0" />
+      <Button fx:id="nei" layoutX="175.0" layoutY="79.0" mnemonicParsing="false" onAction="#nei" text="Nei" />
       <Label layoutX="141.0" layoutY="29.0" prefHeight="36.0" prefWidth="289.0" text="Ønsker du å importere kundeliste fra fil?" textAlignment="CENTER">
          <font>
             <Font size="16.0" />

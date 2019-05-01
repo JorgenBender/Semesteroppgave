@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.OpprettKundeKontroller">
+<AnchorPane prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.NyKundeKontroller">
    <children>
       <TextField fx:id="nyKundeNavn" layoutX="186.0" layoutY="204.0" promptText="Navn" />
       <TextField fx:id="nyKundeFakturaAdresse" layoutX="186.0" layoutY="255.0" promptText="Faktureringsadresse" />

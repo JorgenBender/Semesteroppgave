@@ -1,5 +1,8 @@
 package org.Forsikringsregister.Kontrollere;
 
+import javafx.beans.InvalidationListener;
+import javafx.collections.ListChangeListener;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,49 +11,58 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.Forsikringsregister.Programlogikk.Kunde;
+import org.Forsikringsregister.Programlogikk.Kunderegister;
+
+import java.io.IOException;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 
-public class HovedSceneKontroller{
+public class HovedSceneKontroller extends Kontroller{
 
     @FXML
-    private Button k;
+    private Button opprettKunde;
 
     @FXML
     private Button register;
 
     @FXML
-    void action(ActionEvent event) {
+    void opprettKunde(ActionEvent event) {
 
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../OpprettKunde.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage regKunde = new Stage();
-            regKunde.setScene(new Scene(root));
-            regKunde.initModality(Modality.APPLICATION_MODAL);
-            regKunde.showAndWait();
+            Stage opprettKunde = openStage("../NyKunde.fxml");
+            opprettKunde.showAndWait();
         }
-        catch (Exception e){
+        catch (IOException e){
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
-
-
         }
+    }
 
+    @FXML
+    void visRegister(ActionEvent event) {
+
+        try {
+            Stage visRegister = openStage("../Kundeliste.fxml");
+            visRegister.showAndWait();
+        }
+        catch (IOException e){
+            System.err.println("Cant load new window");
+            System.err.println(e.getMessage());
+        }
     }
     public void initialize() {
         try {
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../ImporterKundeRegister.fxml"));
-            Parent root = fxmlLoader.load();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.showAndWait();
-
+           Stage importerKunde = openStage("../ImporterKundeRegister.fxml");
+           importerKunde.showAndWait();
         }
-        catch (Exception e){
+        catch (IOException e){
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
-
         }
+
     }
 }
