@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Batforsikring extends Forsikring implements Serializable {
+    private String forsikringstype = "Batforsikring";
     private String eier;
     private String registreringsnummer;
     private String battype;
@@ -67,6 +68,8 @@ public class Batforsikring extends Forsikring implements Serializable {
     public String getMotorstyrke() {
         return motorstyrke;
     }
+
+    public String getForsikringstype() { return forsikringstype; }
 
     @Override
     public String toString(){

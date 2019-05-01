@@ -5,6 +5,7 @@ import java.time.LocalDate;  // import the LocalDate class
 
 public class Husforsikring extends Forsikring implements Serializable {
 
+    private String forsikringstype = "Husforsikring";
     private String adresse;
     private String byggear;
     private String boligtype;
@@ -68,6 +69,8 @@ public class Husforsikring extends Forsikring implements Serializable {
     public int getForsikringsbelopInnbo() {
         return forsikringsbelopInnbo;
     }
+
+    public String getForsikringstype() { return forsikringstype; }
 
     @Override
     public String toString(){

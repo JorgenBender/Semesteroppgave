@@ -41,6 +41,7 @@ public class HovedSceneKontroller extends Kontroller {
         catch (IOException e){
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
+            tableView.getItems().setAll(Kunderegister.getKundeliste());
         }
     }
     @FXML

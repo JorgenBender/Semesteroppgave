@@ -7,6 +7,7 @@ import java.time.LocalDate;
 
 public class Reiseforsikring extends Forsikring implements Serializable {
 
+    private String forsikringstype = "Reiseforsikring";
     private String forsikringsOmrade;
     private int forsikringsSum;
 
@@ -24,6 +25,8 @@ public class Reiseforsikring extends Forsikring implements Serializable {
     public int getForsikringsSum() {
         return forsikringsSum;
     }
+
+    public String getForsikringstype() { return forsikringstype; }
 
     @Override
     public String toString(){
