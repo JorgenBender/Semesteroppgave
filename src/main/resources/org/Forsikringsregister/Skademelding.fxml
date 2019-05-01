@@ -14,11 +14,11 @@
       <Pane prefHeight="400.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
       <Label layoutX="140.0" layoutY="29.0" text="Opprettelse av skademelding" />
       <TextField fx:id="SkadeNummer" layoutX="140.0" layoutY="73.0" promptText="Skadenummer" />
-      <TextField fx:id="TakseringsBeløp" layoutX="140.0" layoutY="108.0" promptText="Takseringsbeløp" />
+      <TextField fx:id="TakseringsBelop" layoutX="140.0" layoutY="108.0" promptText="Takseringsbeløp" />
       <TextField fx:id="Type" layoutX="140.0" layoutY="143.0" promptText="Type skade" />
       <DatePicker fx:id="Dato" layoutX="339.0" layoutY="73.0" prefHeight="25.0" prefWidth="149.0" promptText="Dato for skade" />
-      <TextField fx:id="UtbetaltBeløp" layoutX="339.0" layoutY="108.0" promptText="Utbetalt erstatningsbeløp" />
-      <Button fx:id="Lagre" layoutX="237.0" layoutY="294.0" mnemonicParsing="false" text="Lagre" />
+      <TextField fx:id="UtbetaltBelop" layoutX="339.0" layoutY="108.0" promptText="Utbetalt erstatningsbeløp" />
+      <Button fx:id="Lagre" layoutX="237.0" layoutY="294.0" mnemonicParsing="false" onAction="#nyLagring" text="Lagre" />
       <Button fx:id="Avbryt" layoutX="339.0" layoutY="294.0" mnemonicParsing="false" onAction="#avbrytScene" text="Avbryt" />
       <CheckBox fx:id="Idag" layoutX="499.0" layoutY="77.0" mnemonicParsing="false" onAction="#IDagChecked" text="I dag" />
       <TextArea fx:id="Beskrivelse" layoutX="339.0" layoutY="143.0" prefHeight="62.0" prefWidth="149.0" promptText="Beskrivelse av skaden" />

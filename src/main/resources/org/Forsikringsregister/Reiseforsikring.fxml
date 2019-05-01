@@ -20,7 +20,7 @@
       <CheckBox fx:id="Idag" layoutX="493.0" layoutY="96.0" mnemonicParsing="false" onAction="#IDagChecked" text="I dag" />
       <TextArea fx:id="Omrade" layoutX="144.0" layoutY="168.0" prefHeight="55.0" prefWidth="149.0" promptText="Forsikringsområde" />
       <TextArea fx:id="Betingelser" layoutX="336.0" layoutY="168.0" prefHeight="55.0" prefWidth="149.0" promptText="Forsikringsbetingelser" />
-      <Button fx:id="Lagre" layoutX="241.0" layoutY="301.0" mnemonicParsing="false" text="Lagre" />
+      <Button fx:id="Lagre" layoutX="241.0" layoutY="301.0" mnemonicParsing="false" onAction="#nyLagring" text="Lagre" />
       <Button fx:id="Avbryt" layoutX="336.0" layoutY="301.0" mnemonicParsing="false" onAction="#avbrytScene" text="Avbryt" />
    </children>
 </AnchorPane>

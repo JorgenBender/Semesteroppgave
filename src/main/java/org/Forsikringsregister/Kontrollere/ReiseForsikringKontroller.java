@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.Forsikringsregister.Programlogikk.Reiseforsikring;
 
 import java.time.LocalDate;
 
@@ -48,5 +49,19 @@ public class ReiseForsikringKontroller extends Kontroller {
         Stage Reiseforsikring = (Stage) Avbryt.getScene().getWindow();
         Reiseforsikring.close();
     }
+
+    @FXML
+    void nyLagring (ActionEvent event) {
+        LocalDate dato;
+        if (Idag.isSelected()) {
+            dato = LocalDate.now();
+        } else {
+            dato = Dato.getValue();
+        }/*
+        Reiseforsikring reiseforsikring = new Reiseforsikring(ArligPremie.getText(), Belop.getText(), Sum.getText(),
+                dato, Omrade.getText(), Betingelser.getText());
+        Reiseforsikring.nyForsikring(reiseforsikring);
+    */}
+
 
 }

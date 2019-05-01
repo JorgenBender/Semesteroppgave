@@ -25,7 +25,7 @@
       <TextField fx:id="Standard" layoutX="347.0" layoutY="175.0" promptText="Standard" />
       <TextArea fx:id="Betingelser" layoutX="347.0" layoutY="207.0" prefHeight="59.0" prefWidth="149.0" promptText="Forsikringsbetingelser" />
       <Button fx:id="Avbryt" layoutX="347.0" layoutY="339.0" mnemonicParsing="false" onAction="#avbrytScene" text="Avbryt" />
-      <Button fx:id="Lagre" layoutX="248.0" layoutY="339.0" mnemonicParsing="false" text="Lagre" />
+      <Button fx:id="Lagre" layoutX="248.0" layoutY="339.0" mnemonicParsing="false" onAction="#nyLagring" text="Lagre" />
       <Label layoutX="151.0" layoutY="26.0" text="Opprettelse av fritidsboligforsikring" />
       <CheckBox fx:id="Idag" layoutX="505.0" layoutY="79.0" mnemonicParsing="false" text="I dag" />
    </children>
