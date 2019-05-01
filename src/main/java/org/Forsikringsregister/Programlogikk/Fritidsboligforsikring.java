@@ -5,6 +5,7 @@ import java.time.LocalDate;
 
 public class Fritidsboligforsikring extends Husforsikring implements Serializable {
 
+    private String forsikringstype = "Fritidsboligforsikring";
     public Fritidsboligforsikring(int arligPremie,
                                   int forsikringsbelop,
                                   LocalDate opprettetDato,
@@ -30,6 +31,10 @@ public class Fritidsboligforsikring extends Husforsikring implements Serializabl
                 forsikringsbelopBygning,
                 forsikringsbelopInnbo);
     }
+
+    @Override
+    public String getForsikringstype() { return forsikringstype; }
+
     @Override
     public String toCsv(){
         return String.format("%Fritidsboligforsikring;s;%s;%s;%s;%s;%s;%d;%d;%d",

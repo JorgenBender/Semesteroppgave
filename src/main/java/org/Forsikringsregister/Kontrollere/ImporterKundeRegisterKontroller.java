@@ -54,7 +54,6 @@ public class ImporterKundeRegisterKontroller extends Kontroller{
                     stage.close();}
                 break;
         }
-
     }
 
     @FXML
