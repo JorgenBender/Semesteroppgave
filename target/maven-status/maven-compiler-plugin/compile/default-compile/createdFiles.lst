@@ -13,12 +13,12 @@ org\Forsikringsregister\Programlogikk\Fritidsboligforsikring.class
 org\Forsikringsregister\Programlogikk\Reiseforsikring.class
 org\Forsikringsregister\Programlogikk\Kunderegister.class
 org\Forsikringsregister\IO\Writer.class
+org\Forsikringsregister\Kontrollere\NyKundeKontroller.class
 org\Forsikringsregister\Kontrollere\SkadeMeldingKontroller.class
 org\Forsikringsregister\IO\lesJobj.class
 org\Forsikringsregister\Programlogikk\Husforsikring.class
 org\Forsikringsregister\MainApp.class
 org\Forsikringsregister\Kontrollere\HusforsikringKontroller.class
-org\Forsikringsregister\Kontrollere\OpprettKundeKontroller.class
 org\Forsikringsregister\Kontrollere\ReiseForsikringKontroller.class
 org\Forsikringsregister\IO\skrivJobj.class
 org\Forsikringsregister\Kontrollere\ImporterKundeRegisterKontroller.class

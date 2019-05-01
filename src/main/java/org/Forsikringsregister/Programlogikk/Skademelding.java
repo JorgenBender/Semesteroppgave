@@ -57,6 +57,10 @@ public class Skademelding implements Serializable {
         return utbetalt_erstatningsbelop;
     }
 
+    public void setUtbetalt_erstatningsbelop(int utbetalt_erstatningsbelop) {
+        this.utbetalt_erstatningsbelop = utbetalt_erstatningsbelop;
+    }
+
     @Override
     public String toString(){
         return String.format("Skademelding:\n Skadedato: %s\n Skadenummer: %s\n Skadetype: %s\n" +
@@ -65,7 +69,7 @@ public class Skademelding implements Serializable {
                             getVitner_kontaktinformasjon(), getTakseringsbelop(), getUtbetalt_erstatningsbelop());
     }
     public String toCsv(){
-        return String.format("%s;%s;%s;%s;%s;%d;%d",
+        return String.format("%Skademelding;s;%s;%s;%s;%s;%d;%d",
                 getSkadeDato().toString(),getSkadenummer(), getSkadeType(), getSkadeBeskrivelse(),
                 getVitner_kontaktinformasjon(), getTakseringsbelop(), getUtbetalt_erstatningsbelop());
     }

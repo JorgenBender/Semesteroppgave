@@ -16,8 +16,10 @@ public class Kontroller {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(resource));
         Parent root = fxmlLoader.load();
         Image icon = new Image(getClass().getResourceAsStream("../cosmetic/icon.png"));
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("../cosmetic/styles.css").toExternalForm());
         Stage stage = new Stage();
-        stage.setScene(new Scene(root));
+        stage.setScene(scene);
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.getIcons().add(icon);
         return stage;

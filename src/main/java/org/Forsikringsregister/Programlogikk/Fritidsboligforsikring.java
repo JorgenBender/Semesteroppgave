@@ -10,7 +10,7 @@ public class Fritidsboligforsikring extends Husforsikring implements Serializabl
                                   LocalDate opprettetDato,
                                   String betingelser,
                                   String adresse,
-                                  LocalDate byggear,
+                                  String byggear,
                                   String boligtype,
                                   String byggemateriale,
                                   String standard,
@@ -29,5 +29,11 @@ public class Fritidsboligforsikring extends Husforsikring implements Serializabl
                 kvadratmeter,
                 forsikringsbelopBygning,
                 forsikringsbelopInnbo);
+    }
+    @Override
+    public String toCsv(){
+        return String.format("%Fritidsboligforsikring;s;%s;%s;%s;%s;%s;%d;%d;%d",
+                super.toCsv(),getAdresse(), getByggear().toString(),getBoligtype(),getByggemateriale(),
+                getStandard(),getKvadratmeter(),getForsikringsbelopBygning(),getForsikringsbelopInnbo());
     }
 }

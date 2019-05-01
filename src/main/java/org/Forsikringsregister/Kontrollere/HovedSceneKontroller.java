@@ -24,7 +24,7 @@ public class HovedSceneKontroller extends Kontroller{
     void opprettKunde(ActionEvent event) {
 
         try {
-            Stage opprettKunde = openStage("../OpprettKunde.fxml");
+            Stage opprettKunde = openStage("../NyKunde.fxml");
             opprettKunde.showAndWait();
         }
         catch (IOException e){

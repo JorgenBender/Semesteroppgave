@@ -1,12 +1,12 @@
 package org.Forsikringsregister.IO;
 
 
+import javafx.collections.ObservableList;
 import org.Forsikringsregister.Programlogikk.Kunde;
-
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 public interface Writer {
-    void skrivKundeliste(ArrayList<Kunde> kundeliste) throws IOException;
+    void skrivKundeliste(ObservableList<Kunde> kundeliste) throws IOException;
 }
 

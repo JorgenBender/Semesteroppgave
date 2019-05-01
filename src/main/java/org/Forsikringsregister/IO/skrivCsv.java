@@ -1,5 +1,6 @@
 package org.Forsikringsregister.IO;
 
+import javafx.collections.ObservableList;
 import javafx.stage.FileChooser;
 import org.Forsikringsregister.Programlogikk.Kunde;
 
@@ -10,7 +11,7 @@ import java.util.ArrayList;
 
 public class skrivCsv implements Writer{
     @Override
-    public void skrivKundeliste(ArrayList<Kunde> kundeliste) throws IOException {
+    public void skrivKundeliste(ObservableList<Kunde> kundeliste) throws IOException {
         PrintWriter writer = null;
         FileChooser fileChooser = new FileChooser();
         fileChooser.setInitialDirectory(new File(("data/")));

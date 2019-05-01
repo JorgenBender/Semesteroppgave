@@ -8,8 +8,9 @@ import java.util.ArrayList;
 public class Kunde implements Serializable {
     private static final long serialVersionUID = 2;
 
-    private LocalDate datoKundeforhold;
+
     private String navn;
+    private LocalDate datoKundeforhold;
     private String fakturaadresse;
     private String forsikringsnummer;
 
@@ -18,7 +19,7 @@ public class Kunde implements Serializable {
     private ArrayList<String> ubetalteErstatninger;
 
 
-    public Kunde(LocalDate datoKundeforhold, String navn, String fakturaadresse, String forsikringsnummer) {
+    public Kunde(String navn, LocalDate datoKundeforhold, String fakturaadresse, String forsikringsnummer) {
         this.datoKundeforhold = datoKundeforhold;
         this.navn = navn;
         this.fakturaadresse = fakturaadresse;
@@ -46,6 +47,10 @@ public class Kunde implements Serializable {
 
     public void addUbetalteErstatninger(String nyErstatning) { this.ubetalteErstatninger.add(nyErstatning); }
 
+    public void setUbetalteErstatninger(ArrayList<String> ubetalteErstatninger) {
+        this.ubetalteErstatninger = ubetalteErstatninger;
+    }
+
     @Override
     public String toString() {
         return String.format("%s ble kunde %s har faktureringsadresse: %s og forsikringsnummer: %s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer());
@@ -60,11 +65,11 @@ public class Kunde implements Serializable {
         for(Skademelding skademelding: getSkademeldinger()){
             forsikringer += skademelding.toCsv();
         }
-        String ubetalteErstatninger = "";
+        String ubetalteErstatninger = "Erstatning;";
         for(String erstatning: getUbetalteErstatninger()){
             ubetalteErstatninger += erstatning +";";
         }
 
-        return String.format("%s;%s;%s;%s;\n%s;\n%s;\n%s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer(),forsikringer,skademeldinger,ubetalteErstatninger);
+        return String.format("Kunde;%s;%s;%s;%s;\n%s;\n%s;\n%s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer(),forsikringer,skademeldinger,ubetalteErstatninger);
     }
 }

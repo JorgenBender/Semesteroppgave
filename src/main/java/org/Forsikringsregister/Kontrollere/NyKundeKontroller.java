@@ -10,7 +10,7 @@ import org.Forsikringsregister.Programlogikk.Kunderegister;
 import java.io.IOException;
 import java.time.LocalDate;
 
-public class OpprettKundeKontroller extends Kontroller{
+public class NyKundeKontroller extends Kontroller{
 
     @FXML
     private DatePicker nyKundeRegDato;
@@ -40,7 +40,7 @@ public class OpprettKundeKontroller extends Kontroller{
         else{
             dato = nyKundeRegDato.getValue();
         }
-        Kunde kunde = new Kunde(dato, nyKundeNavn.getText(), nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText());
+        Kunde kunde = new Kunde(nyKundeNavn.getText(), dato, nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText());
         Kunderegister.nyKunde(kunde);
         skrivCsv skriver = new skrivCsv();
         try {skriver.skrivKundeliste(Kunderegister.getKundeliste());}
