@@ -68,7 +68,7 @@ public class HusforsikringKontroller extends Kontroller{
         HusForsikring.close();
     }
 
-    @FXML
+    /*@FXML
     void nyLagring (ActionEvent event){
         LocalDate dato;
         if(Idag.isSelected()){
@@ -82,5 +82,5 @@ public class HusforsikringKontroller extends Kontroller{
                 Standard.getText(), BygningBelop.getText(), Betingelser.getText());
         Husforsikring.nyHusforsikring(husforsikring);
 
-
+     */
 }
