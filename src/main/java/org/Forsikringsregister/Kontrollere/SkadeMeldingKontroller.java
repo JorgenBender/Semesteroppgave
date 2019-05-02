@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.Forsikringsregister.NumberParser;
 import org.Forsikringsregister.Programlogikk.Skademelding;
 
 import java.time.LocalDate;
@@ -40,9 +41,9 @@ public class SkadeMeldingKontroller extends Kontroller{
             dato = LocalDate.now();
         } else {
             dato = Dato.getValue();
-        }/*
-        Skademelding skademelding = new Skademelding(dato, SkadeNummer.getText(), Type.getText(), Beskrivelse.getText(),
-                KontaktInfo.getText(), TakseringsBelop.getText(), UtbetaltBelop.getText());
-        Skademelding.nySkademelding(skademelding);
-    */}
+        }
+        int takseringsbelopInt = NumberParser.parseNumber(TakseringsBelop.getText(),"Takseringsbeløp er ikke et tall");
+        int utbetalt_erstatningsbelopInt = NumberParser.parseNumber(UtbetaltBelop.getText(),"Utbetalt erstatningsbeløp er ikke et tall");
+        Skademelding skademelding = new Skademelding(dato,SkadeNummer.getText(),Type.getText(),Beskrivelse.getText(),KontaktInfo.getText(),takseringsbelopInt);
+    }
 }
