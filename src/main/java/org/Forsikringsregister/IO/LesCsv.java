@@ -112,9 +112,8 @@ public class LesCsv implements Reader {
     }
 
     private static Fritidsboligforsikring parseFritidsboligforsikring(String[] lineArr, int lineNumber) throws InvalidFormatException {
-
         if (lineArr.length != 13) {
-            throw new InvalidFormatException("Feil Format på Batforsikring i linje:" + lineNumber);
+            throw new InvalidFormatException("Feil Format på Fritidsboligforsikring i linje:" + lineNumber);
         }
         LocalDate dato = LocalDate.parse(lineArr[3], mittFormat);
         Fritidsboligforsikring fritidsboligforsikring = new Fritidsboligforsikring(
@@ -136,14 +135,32 @@ public class LesCsv implements Reader {
     }
 
     private static Husforsikring parseHusforsikring(String[] lineArr, int lineNumber) throws InvalidFormatException {
-        Husforsikring husforsikring = (Husforsikring) parseFritidsboligforsikring(lineArr, lineNumber);
+        if (lineArr.length != 13) {
+            throw new InvalidFormatException("Feil Format på Fritidsboligforsikring i linje:" + lineNumber);
+        }
+        LocalDate dato = LocalDate.parse(lineArr[3], mittFormat);
+        Husforsikring husforsikring = new Husforsikring(
+                NumberParser.parseNumber(lineArr[1], "Feil Format på arlig premie i linje:" + lineNumber),
+                NumberParser.parseNumber(lineArr[2], "Feil Format på forsikringsbelop i linje:" + lineNumber),
+                dato,
+                lineArr[4],
+                lineArr[5],
+                lineArr[6],
+                lineArr[7],
+                lineArr[8],
+                lineArr[9],
+                NumberParser.parseNumber(lineArr[10], "Feil Format på kvadratmeter i linje:" + lineNumber),
+                NumberParser.parseNumber(lineArr[11], "Feil Format på forsikringsbeløp(hus) i linje:" + lineNumber),
+                NumberParser.parseNumber(lineArr[12], "Feil Format på forsikringsbeløp(innbo) i linje:" + lineNumber)
+        );
+
         return husforsikring;
     }
 
     private static Reiseforsikring parseReiseforsikring(String[] lineArr, int lineNumber) throws InvalidFormatException {
 
         if (lineArr.length != 7) {
-            throw new InvalidFormatException("Feil Format på Batforsikring i linje:" + lineNumber);
+            throw new InvalidFormatException("Feil Format på Reiseforsikring i linje:" + lineNumber);
         }
         LocalDate dato = LocalDate.parse(lineArr[3], mittFormat);
         Reiseforsikring reiseforsikring = new Reiseforsikring(
@@ -161,7 +178,7 @@ public class LesCsv implements Reader {
     private static Skademelding parseSkademelding(String[] lineArr, int lineNumber) throws InvalidFormatException {
 
         if (lineArr.length != 7) {
-            throw new InvalidFormatException("Feil Format på Batforsikring i linje:" + lineNumber);
+            throw new InvalidFormatException("Feil Format på Skademelding i linje:" + lineNumber);
         }
         LocalDate dato = LocalDate.parse(lineArr[1], mittFormat);
         Skademelding skademelding = new Skademelding(

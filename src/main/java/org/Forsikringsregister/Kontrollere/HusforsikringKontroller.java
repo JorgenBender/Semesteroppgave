@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.Forsikringsregister.NumberParser;
+import org.Forsikringsregister.Programlogikk.Fritidsboligforsikring;
 import org.Forsikringsregister.Programlogikk.Husforsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
 
@@ -22,6 +23,7 @@ public class HusforsikringKontroller extends Kontroller {
         return this.kunde;
     }
 
+    @FXML private Label tittel;
     @FXML
     private TextField arligPremie;
     @FXML
@@ -84,23 +86,22 @@ public class HusforsikringKontroller extends Kontroller {
         int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(), "Årlig premie er ikke et tall");
         int belopInt = NumberParser.parseNumber(belop.getText(), "Beløp er ikke et tall");
         int kvadratmeterInt = NumberParser.parseNumber(kvadratmeter.getText(), "Kvadratmeter er ikke et tall");
-        int bygningBeløpInt = NumberParser.parseNumber(bygningBelop.getText(), "Forsikringsbeløp bygning er ikke et tall");
-        int innboBeløpInt = NumberParser.parseNumber(innboBelop.getText(), "Forsikringsbeløp innbo er ikke et tall");
+        int bygningBelopInt = NumberParser.parseNumber(bygningBelop.getText(), "Forsikringsbeløp bygning er ikke et tall");
+        int innboBelopInt = NumberParser.parseNumber(innboBelop.getText(), "Forsikringsbeløp innbo er ikke et tall");
 
 
-        Husforsikring husforsikring = new Husforsikring(arligPremieInt,
-                                                        belopInt, dato,
-                                                        betingelser.getText(),
-                                                        adresse.getText(),
-                                                        byggear.getText(),
-                                                        boligType.getText(),
-                                                        materiale.getText(),
-                                                        standard.getText(),
-                                                        kvadratmeterInt,
-                                                        bygningBeløpInt,
-                                                        innboBeløpInt
-        );
-
+        Husforsikring husforsikring= new Husforsikring(arligPremieInt,
+                                                    belopInt, dato,
+                                                    betingelser.getText(),
+                                                    adresse.getText(),
+                                                    byggear.getText(),
+                                                      boligType.getText(),
+                                                      materiale.getText(),
+                                                      standard.getText(),
+                                                      kvadratmeterInt,
+                                                      bygningBelopInt,
+                                                      innboBelopInt
+);
         kunde.addForsikring(husforsikring);
     }
 

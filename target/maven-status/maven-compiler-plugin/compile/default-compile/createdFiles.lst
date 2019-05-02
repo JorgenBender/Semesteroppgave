@@ -3,6 +3,7 @@ org\Forsikringsregister\Programlogikk\Kunde.class
 org\Forsikringsregister\Kontrollere\Kontroller.class
 org\Forsikringsregister\IO\InputcsvThread.class
 org\Forsikringsregister\Programlogikk\Skademelding.class
+org\Forsikringsregister\IO\LesCsv.class
 module-info.class
 org\Forsikringsregister\Exceptions\InvalidFormatException.class
 org\Forsikringsregister\NumberParser.class
