@@ -32,7 +32,7 @@ public class Kontroller {
                 fxmlLoader.setControllerFactory(c ->{ return new HusforsikringKontroller(kunde);});
                 break;
             case "../Fritidsboligforsikring.fxml":
-                fxmlLoader.setControllerFactory(c ->{ return new HusforsikringKontroller(kunde);});
+                fxmlLoader.setControllerFactory(c ->{ return new Fritidsboligforsikringkontroller(kunde);});
                 break;
             case "../Reiseforsikring.fxml":
                 fxmlLoader.setControllerFactory(c ->{ return new ReiseforsikringKontroller(kunde);});
