@@ -15,7 +15,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-public class LesCsv extends Task<Void> implements Reader {
+public class LesCsv implements Reader {
 
     private static DateTimeFormatter mittFormat = DateTimeFormatter.ofPattern("yyyy-DD-mm");
 
@@ -65,7 +65,8 @@ public class LesCsv extends Task<Void> implements Reader {
                         break;
                 }
             }
-        } finally {
+        }
+        finally {
             if (reader != null) {
                 reader.close();
             }
@@ -194,21 +195,5 @@ public class LesCsv extends Task<Void> implements Reader {
         }
 
         return number;
-    }
-
-    @Override
-    protected Void call() throws Exception {
-        try {
-            lesKundeliste();
-        } catch (Exception e) {
-            System.out.println("Noe gikk galt"+e.getMessage()+e.getCause());
-        }
-
-        return null;
-    }
-
-    @Override
-    protected void succeeded(){
-        System.out.println("Succeeded");
     }
 }

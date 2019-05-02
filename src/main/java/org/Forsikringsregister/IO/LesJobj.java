@@ -12,7 +12,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 
-public class LesJobj extends Task<Void> implements Reader{
+public class LesJobj implements Reader{
 
     private File file;
 
@@ -35,14 +35,4 @@ public class LesJobj extends Task<Void> implements Reader{
         }
         return importertListe;
     }
-
-    @Override
-    protected Void call() throws Exception {
-        try { lesKundeliste(); }
-        catch (Exception e) {}
-        return null;
-    }
-
-    @Override
-    protected void succeeded(){}
 }

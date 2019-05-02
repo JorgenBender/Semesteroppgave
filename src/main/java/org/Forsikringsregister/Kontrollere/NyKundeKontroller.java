@@ -30,6 +30,8 @@ public class NyKundeKontroller extends Kontroller{
             dato = nyKundeRegDato.getValue();
         }
         Kunderegister.nyKunde(new Kunde(nyKundeNavn.getText(), dato, nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText()));
+        Stage stage = (Stage)nyKundeRegistrer.getScene().getWindow();
+        stage.close();
     }
 
     @FXML

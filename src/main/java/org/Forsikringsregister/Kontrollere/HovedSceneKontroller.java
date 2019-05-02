@@ -74,21 +74,20 @@ public class HovedSceneKontroller extends Kontroller {
         String extension = "";
         int i = file.getName().lastIndexOf('.');
         if (i > 0) {
-            extension = file.getName().substring(i+1);
+            extension = file.getName().substring(i + 1);
         }
-        switch (extension){
+        switch (extension) {
             case "csv":
-                task = new LesCsv(file);
+                task = new InputcsvThread(this::initialize, file);
                 service.execute(task);
                 break;
             case "jobj":
-                task = new LesJobj(file);
+                LesJobj jobjLeser = new LesJobj(file);
+                task = new InputjobjThread(this::initialize, file);
                 service.execute(task);
                 break;
         }
-        initialize();
     }
-
     @FXML
     public void selectKunde(MouseEvent event) {
         if (event.getClickCount() == 2) //Checking double click
@@ -115,8 +114,8 @@ public class HovedSceneKontroller extends Kontroller {
         catch (IOException e){
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
-            initialize();
         }
+        tableView.getItems().setAll(Kunderegister.getKundeliste());
     }
 
     public void initialize() {

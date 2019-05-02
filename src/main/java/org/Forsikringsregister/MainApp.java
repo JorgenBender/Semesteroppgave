@@ -2,6 +2,8 @@ package org.Forsikringsregister;
 
 import javafx.application.Application;
 import static javafx.application.Application.launch;
+
+import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -13,10 +15,6 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        /*String mittNavn = "Per";
-        String dittNavn = mittNavn;
-        mittNavn = "Ole";
-        System.out.println(mittNavn + dittNavn);*/
 
         Parent root = FXMLLoader.load(getClass().getResource("HovedScene.fxml"));
 
@@ -27,6 +25,9 @@ public class MainApp extends Application {
         Image icon = new Image(getClass().getResourceAsStream("cosmetic/icon.png"));
         stage.getIcons().add(icon);
         stage.setScene(scene);
+        stage.setOnCloseRequest(e ->
+                System.exit(0)
+        );
         stage.show();
     }
 

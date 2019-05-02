@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import org.Forsikringsregister.Exceptions.InvalidFormatException;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import java.io.IOException;
 
@@ -50,6 +51,16 @@ public class Kontroller {
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.getIcons().add(icon);
         return stage;
+    }
+    private static int parseNumber(String str, String errorMessage) throws InvalidFormatException {
+        int number;
+        try {
+            number = Integer.parseInt(str);
+        } catch (NumberFormatException e) {
+            throw new InvalidFormatException(errorMessage);
+        }
+
+        return number;
     }
 
 }

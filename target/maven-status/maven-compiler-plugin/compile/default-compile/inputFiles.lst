@@ -6,6 +6,7 @@ C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsi
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Batforsikring.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Kunderegister.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\LesCsv.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\InputcsvThread.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\HusforsikringKontroller.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Fritidsboligforsikring.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\BatforsikringKontroller.java
@@ -13,6 +14,7 @@ C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsi
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\HovedSceneKontroller.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Husforsikring.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\Writer.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\InputjobjThread.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\SkrivJobj.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\ReiseforsikringKontroller.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Reiseforsikring.java
