@@ -80,7 +80,8 @@ public class Batforsikring extends Forsikring implements Serializable {
     }
     @Override
     public String toCsv(){
-        return String.format("Batforsikring;%s;%s;%s;%s;%s;%d;%s;%s;%s",
+        return String.format("%s;%s;%s;%s;%s;%s;%d;%s;%s;%s",
+                getForsikringstype(),
                 super.toCsv(),getEier(), getRegistreringsnummer(),getBattype(),getModell(),
                 getLengdeFot(),getArsmodell(),getMotortype(),getMotorstyrke());
     }

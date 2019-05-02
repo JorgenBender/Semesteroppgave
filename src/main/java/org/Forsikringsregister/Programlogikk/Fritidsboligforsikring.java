@@ -37,7 +37,8 @@ public class Fritidsboligforsikring extends Husforsikring implements Serializabl
 
     @Override
     public String toCsv(){
-        return String.format("%Fritidsboligforsikring;s;%s;%s;%s;%s;%s;%d;%d;%d",
+        return String.format("%s;%s;%s;%s;%s;%s;%s;%d;%d;%d",
+                getForsikringstype(),
                 super.toCsv(),getAdresse(), getByggear().toString(),getBoligtype(),getByggemateriale(),
                 getStandard(),getKvadratmeter(),getForsikringsbelopBygning(),getForsikringsbelopInnbo());
     }

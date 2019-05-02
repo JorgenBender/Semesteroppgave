@@ -19,7 +19,7 @@ public class Kunde implements Serializable {
 
     private int antallForsikringer = 0;
 
-    public Kunde(String navn, LocalDate datoKundeforhold, String fakturaadresse, String forsikringsnummer) {
+    public Kunde(LocalDate datoKundeforhold, String navn, String fakturaadresse, String forsikringsnummer) {
         this.datoKundeforhold = datoKundeforhold;
         this.navn = navn;
         this.fakturaadresse = fakturaadresse;
@@ -61,11 +61,11 @@ public class Kunde implements Serializable {
 
         String forsikringer = "";
         for(Forsikring forsikring: getForsikringer()){
-            forsikringer += "\nForsikring;" + forsikring.toCsv();
+            forsikringer += "\n"+ forsikring.toCsv();
         }
         String skademeldinger = "";
         for(Skademelding skademelding: getSkademeldinger()){
-            forsikringer += "\nSkademelding;" + skademelding.toCsv();
+            forsikringer += "\n" + skademelding.toCsv();
         }
         String ubetalteErstatninger = "";
         for(String erstatning: getUbetalteErstatninger()){
@@ -75,6 +75,6 @@ public class Kunde implements Serializable {
             ubetalteErstatninger += erstatning +";";
         }
 
-        return String.format("Kunde;%s;%s;%s;%s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer())+forsikringer+skademeldinger+ubetalteErstatninger;
+        return String.format("Kunde;%s;%s;%s;%s", getDatoKundeforhold().toString(), getNavn(), getFakturaadresse(), getForsikringsnummer())+forsikringer+skademeldinger+ubetalteErstatninger;
     }
 }
