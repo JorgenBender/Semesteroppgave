@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.Forsikringsregister.Programlogikk.Husforsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
 
 import java.time.LocalDate;
@@ -54,10 +55,10 @@ public class HusforsikringKontroller extends Kontroller{
             dato = this.dato.getValue();
         }
         /*
-        Husforsikring husforsikring = new Husforsikring(arligPremie.getText(), dato, Belop.getText(), Byggear.getText(),
-                Materiale.getText(), Kvadratmeter.getText(), InnboBelop.getText(), Adresse.getText(), BoligType.getText(),
-                Standard.getText(), BygningBelop.getText(), Betingelser.getText());
-        Husforsikring.nyHusforsikring(husforsikring);
+        Husforsikring husforsikring = new Husforsikring(arligPremie.getText(), belop.getText(), dato,
+                betingelser.getText(), adresse.getText(), byggear.getText(), boligType.getText(), materiale.getText(),
+                standard.getText(), kvadratmeter.getText(), bygningBelop.getText(), innboBelop.getText());
+        Husforsikring.nyForsikring(husforsikring);
         */
     }
     public void initialize(){

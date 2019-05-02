@@ -4,7 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.Forsikringsregister.Programlogikk.Husforsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
+import org.Forsikringsregister.Programlogikk.Reiseforsikring;
 
 import java.time.LocalDate;
 
@@ -48,10 +50,9 @@ public class ReiseforsikringKontroller extends Kontroller {
             dato = this.dato.getValue();
         }
         /*
-        Husforsikring husforsikring = new Husforsikring(arligPremie.getText(), dato, Belop.getText(), Byggear.getText(),
-                Materiale.getText(), Kvadratmeter.getText(), InnboBelop.getText(), Adresse.getText(), BoligType.getText(),
-                Standard.getText(), BygningBelop.getText(), Betingelser.getText());
-        Husforsikring.nyHusforsikring(husforsikring);
+        Reiseforsikring reiseforsikring = new Reiseforsikring(arligPremie.getText(), belop.getText(), dato,
+                betingelser.getText(), omrade.getText(), sum.getText());
+        Reiseforsikring.nyForsikring(reiseforsikring);
         */
     }
     public void initialize(){

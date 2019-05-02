@@ -75,7 +75,7 @@ public class KundeSceneKontroller extends Kontroller {
                     System.err.println(e.getMessage());
                 }
                 break;
-            case "Rieseforsikring":
+            case "Reiseforsikring":
                 try{
                     Stage stage = openStageSendKunde("../Reiseforsikring.fxml",getKunde());
                     stage.showAndWait();
@@ -95,7 +95,7 @@ public class KundeSceneKontroller extends Kontroller {
         nyForsikring.getItems().addAll(
                 "Båtforsikring",
                     "Husforsikring",
-                    "Fritidsboligforsikrign",
+                    "Fritidsboligforsikring",
                     "Reiseforsikring");
         nyForsikring.setOnAction(Event -> nyForsikring());
 

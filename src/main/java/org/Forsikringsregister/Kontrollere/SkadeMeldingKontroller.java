@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.Forsikringsregister.Programlogikk.Skademelding;
 
 import java.time.LocalDate;
 
@@ -31,4 +32,17 @@ public class SkadeMeldingKontroller extends Kontroller{
         Stage Skademelding = (Stage) Avbryt.getScene().getWindow();
         Skademelding.close();
     }
+
+    @FXML
+    void nyLagring(ActionEvent event){
+        LocalDate dato;
+        if (Idag.isSelected()) {
+            dato = LocalDate.now();
+        } else {
+            dato = Dato.getValue();
+        }/*
+        Skademelding skademelding = new Skademelding(dato, SkadeNummer.getText(), Type.getText(), Beskrivelse.getText(),
+                KontaktInfo.getText(), TakseringsBelop.getText(), UtbetaltBelop.getText());
+        Skademelding.nySkademelding(skademelding);
+    */}
 }

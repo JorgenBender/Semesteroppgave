@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.Forsikringsregister.Programlogikk.Batforsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
 
 import java.time.LocalDate;
@@ -54,14 +55,13 @@ public class BatforsikringKontroller extends Kontroller{
             dato = LocalDate.now();
         } else {
             dato = this.dato.getValue();
-        }
-        /*
-        Husforsikring husforsikring = new Husforsikring(arligPremie.getText(), dato, Belop.getText(), Byggear.getText(),
-                Materiale.getText(), Kvadratmeter.getText(), InnboBelop.getText(), Adresse.getText(), BoligType.getText(),
-                Standard.getText(), BygningBelop.getText(), Betingelser.getText());
-        Husforsikring.nyHusforsikring(husforsikring);
-        */
-    }
+        }/*
+        Batforsikring batforsikring = new Batforsikring(arligPremie.getText(), belop.getText(), dato,
+                betingelser.getText(), eier.getText(), regNummer.getText(), battype.getText(), modell.getText(),
+                lengdeFot.getText(), arsmodell.getText(), motorType.getText(), motorStyrke.getText());
+        Batforsikring.addForsikring(batforsikring);
+        */}
+
     public void initialize(){
     }
 }
