@@ -86,6 +86,9 @@ public class KundeSceneKontroller extends Kontroller {
                 }
                 break;
         }
+        ObservableList<Forsikring> forsikringer = FXCollections.observableArrayList(kunde.getForsikringer());
+        tableView.getItems().setAll(forsikringer);
+
     }
 
     public void initialize(){

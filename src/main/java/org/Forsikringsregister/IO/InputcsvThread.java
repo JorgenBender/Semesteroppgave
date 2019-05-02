@@ -20,7 +20,6 @@ public class InputcsvThread extends Task<Void> {
         try {
             LesCsv csvLeser = new LesCsv(file);
             Kunderegister.setKundeliste(csvLeser.lesKundeliste());
-            System.out.println("Reeeeeee");
         }
         catch (Exception e) {
             System.out.println("Noe gikk galt"+e.getMessage()+e.getCause());
@@ -28,7 +27,6 @@ public class InputcsvThread extends Task<Void> {
 
         return null;
     }
-
     @Override
     protected void succeeded(){
         doneFunc.run();

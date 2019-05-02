@@ -6,6 +6,7 @@ org\Forsikringsregister\Programlogikk\Skademelding.class
 org\Forsikringsregister\IO\LesCsv.class
 module-info.class
 org\Forsikringsregister\Exceptions\InvalidFormatException.class
+org\Forsikringsregister\NumberParser.class
 org\Forsikringsregister\Programlogikk\Batforsikring.class
 org\Forsikringsregister\IO\Reader.class
 org\Forsikringsregister\Programlogikk\Fritidsboligforsikring.class
