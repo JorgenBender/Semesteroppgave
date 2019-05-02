@@ -11,11 +11,11 @@
 
 <AnchorPane prefHeight="460.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.NyKundeKontroller">
    <children>
+      <DatePicker fx:id="nyKundeRegDato" layoutX="186.0" layoutY="151.0" prefHeight="31.0" prefWidth="149.0" promptText="Dato for registrering" />
+      <CheckBox fx:id="iDag" layoutX="362.0" layoutY="158.0" mnemonicParsing="false" onAction="#iDagChecked" text="I dag" />
       <TextField fx:id="nyKundeNavn" layoutX="186.0" layoutY="204.0" promptText="Navn" />
       <TextField fx:id="nyKundeFakturaAdresse" layoutX="186.0" layoutY="255.0" promptText="Faktureringsadresse" />
       <TextField fx:id="nyKundeForsikringsnummer" layoutX="186.0" layoutY="299.0" promptText="Forsikringsnummer" />
-      <DatePicker fx:id="nyKundeRegDato" layoutX="186.0" layoutY="151.0" prefHeight="31.0" prefWidth="149.0" promptText="Dato for registrering" />
-      <CheckBox fx:id="iDag" layoutX="362.0" layoutY="158.0" mnemonicParsing="false" onAction="#iDagChecked" text="I dag" />
       <Label layoutX="148.0" layoutY="27.0" prefHeight="57.0" prefWidth="305.0" text="Registrer ny kunde" textAlignment="CENTER">
          <font>
             <Font size="36.0" />

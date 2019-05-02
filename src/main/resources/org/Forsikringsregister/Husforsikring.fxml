@@ -8,26 +8,30 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.HusforsikringKontroller">
    <children>
       <Pane prefHeight="400.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
-      <Label layoutX="153.0" layoutY="23.0" prefHeight="17.0" prefWidth="197.0" text="Opprettelse av Hus- Innboforsikring" />
+      <Label layoutX="153.0" layoutY="23.0" prefHeight="27.0" prefWidth="313.0" text="Opprettelse av Hus- Innboforsikring">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
       <TextField fx:id="arligPremie" layoutX="147.0" layoutY="65.0" promptText="Årlig premie" />
       <TextField fx:id="belop" layoutX="147.0" layoutY="97.0" promptText="Forsikringsbeløp" />
       <TextField fx:id="byggear" layoutX="147.0" layoutY="129.0" promptText="Byggeår" />
       <TextField fx:id="materiale" layoutX="147.0" layoutY="162.0" promptText="Byggemateriale" />
       <TextField fx:id="kvadratmeter" layoutX="147.0" layoutY="194.0" promptText="Antall kvadratmeter" />
       <TextField fx:id="innboBelop" layoutX="147.0" layoutY="226.0" promptText="Forsikringsbeløp innbo" />
+      <TextField fx:id="bygningBelop" layoutX="147.0" layoutY="258.0" promptText="Forsikringsbeløp bygning" />
+      <DatePicker fx:id="dato" layoutX="356.0" layoutY="65.0" prefHeight="25.0" prefWidth="149.0" promptText="Dato opprettet" />
+      <CheckBox fx:id="iDag" layoutX="512.0" layoutY="69.0" mnemonicParsing="false" onAction="#iDag" text="I dag" />
       <TextField fx:id="adresse" layoutX="356.0" layoutY="97.0" promptText="Adresse" />
       <TextField fx:id="boligType" layoutX="356.0" layoutY="129.0" promptText="Boligtype" />
       <TextField fx:id="standard" layoutX="356.0" layoutY="162.0" promptText="Standard" />
-      <TextField fx:id="bygningBelop" layoutX="147.0" layoutY="258.0" promptText="Forsikringsbeløp bygning" />
       <TextArea fx:id="betingelser" layoutX="356.0" layoutY="195.0" prefHeight="58.0" prefWidth="185.0" promptText="Forsikringsbetingelser" />
-      <DatePicker fx:id="dato" layoutX="356.0" layoutY="65.0" prefHeight="25.0" prefWidth="149.0" promptText="Dato opprettet" />
-      <Button fx:id="avbryt" layoutX="356.0" layoutY="339.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" />
       <Button fx:id="lagre" layoutX="248.0" layoutY="339.0" mnemonicParsing="false" onAction="#lagre" text="Lagre" />
-      <CheckBox fx:id="iDag" layoutX="512.0" layoutY="69.0" mnemonicParsing="false" onAction="#iDag" text="I dag" />
+      <Button fx:id="avbryt" layoutX="356.0" layoutY="339.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" />
 
    </children>
 </AnchorPane>
