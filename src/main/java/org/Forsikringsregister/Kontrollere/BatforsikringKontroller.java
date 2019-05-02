@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.Forsikringsregister.NumberParser;
 import org.Forsikringsregister.Programlogikk.Batforsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
 
@@ -55,12 +56,26 @@ public class BatforsikringKontroller extends Kontroller{
             dato = LocalDate.now();
         } else {
             dato = this.dato.getValue();
-        }/*
-        Batforsikring batforsikring = new Batforsikring(arligPremie.getText(), belop.getText(), dato,
-                betingelser.getText(), eier.getText(), regNummer.getText(), battype.getText(), modell.getText(),
-                lengdeFot.getText(), arsmodell.getText(), motorType.getText(), motorStyrke.getText());
-        Batforsikring.addForsikring(batforsikring);
-        */}
+        }
+        int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(),"Årlig premie er ikke et tall");
+        int belopInt = NumberParser.parseNumber(belop.getText(),"Beløp er ikke et tall");
+        int lengdeFotInt = NumberParser.parseNumber(lengdeFot.getText(),"Lengde er ikke et tall");
+
+
+        Batforsikring batforsikring = new Batforsikring(arligPremieInt,
+                                                        belopInt, dato,
+                                                        betingelser.getText(),
+                                                        eier.getText(),
+                                                        regNummer.getText(),
+                                                        battype.getText(),
+                                                        modell.getText(),
+                                                        lengdeFotInt,
+                                                        arsmodell.getText(),
+                                                        motorType.getText(),
+                                                        motorStyrke.getText()
+        );
+        kunde.addForsikring(batforsikring);
+        }
 
     public void initialize(){
     }

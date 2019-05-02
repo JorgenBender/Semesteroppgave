@@ -103,6 +103,7 @@ public class HovedSceneKontroller extends Kontroller {
             }
 
         }
+        tableView.getItems().setAll(Kunderegister.getKundeliste());
     }
     @FXML
     void opprettKunde(ActionEvent event) {
