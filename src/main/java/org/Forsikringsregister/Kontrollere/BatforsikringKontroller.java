@@ -59,7 +59,7 @@ public class BatforsikringKontroller extends Kontroller{
         Batforsikring batforsikring = new Batforsikring(arligPremie.getText(), belop.getText(), dato,
                 betingelser.getText(), eier.getText(), regNummer.getText(), battype.getText(), modell.getText(),
                 lengdeFot.getText(), arsmodell.getText(), motorType.getText(), motorStyrke.getText());
-        Batforsikring.nyForsikring(batforsikring);
+        Batforsikring.addForsikring(batforsikring);
         */}
 
     public void initialize(){
