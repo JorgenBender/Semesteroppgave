@@ -2,6 +2,7 @@ package org.Forsikringsregister.IO;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.stage.FileChooser;
 import org.Forsikringsregister.Exceptions.InvalidFormatException;
 import org.Forsikringsregister.Programlogikk.*;
@@ -14,26 +15,30 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
-public class lesCsv implements Reader {
+public class LesCsv extends Task<Void> implements Reader {
 
     private static DateTimeFormatter mittFormat = DateTimeFormatter.ofPattern("yyyy-DD-mm");
 
+    private File file;
+
+    public LesCsv(File file) {
+        this.file = file;
+    }
+
     @Override
     public ObservableList<Kunde> lesKundeliste() throws IOException, InvalidFormatException {
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setInitialDirectory(new File(("data/")));
         ObservableList<Kunde> importertListe = FXCollections.observableArrayList();
         BufferedReader reader = null;
 
         try {
-            reader = new BufferedReader(new FileReader(fileChooser.showOpenDialog(null)));
+            reader = new BufferedReader(new FileReader(file));
             String line = null;
             int lineNumber = 0;
-            while((line=reader.readLine()) != null) {
+            while ((line = reader.readLine()) != null) {
                 lineNumber++;
                 String[] lineArr = line.split(";");
-                int lastIndex = importertListe.size()-1;
-                switch(lineArr[0]){
+                int lastIndex = importertListe.size() - 1;
+                switch (lineArr[0]) {
                     case "Kunde":
                         importertListe.add(parseKunde(lineArr, lineNumber));
                         break;
@@ -61,7 +66,7 @@ public class lesCsv implements Reader {
                 }
             }
         } finally {
-            if(reader != null) {
+            if (reader != null) {
                 reader.close();
             }
         }
@@ -71,59 +76,59 @@ public class lesCsv implements Reader {
 
     private static Kunde parseKunde(String[] lineArr, int lineNumber) throws InvalidFormatException {
 
-        if(lineArr.length != 5) {
-            throw new InvalidFormatException("Feil Format på Kunde i linje:"+lineNumber);
+        if (lineArr.length != 5) {
+            throw new InvalidFormatException("Feil Format på Kunde i linje:" + lineNumber);
         }
         LocalDate dato = LocalDate.parse(lineArr[2], mittFormat);
-        Kunde kunde = new Kunde(lineArr[1],dato,lineArr[3],lineArr[4]);
+        Kunde kunde = new Kunde(lineArr[1], dato, lineArr[3], lineArr[4]);
 
         return kunde;
     }
 
     private static Batforsikring parseBatforsikring(String[] lineArr, int lineNumber) throws InvalidFormatException {
 
-        if(lineArr.length != 13) {
+        if (lineArr.length != 13) {
             throw new InvalidFormatException("Feil Format på Batforsikring i linje:" + lineNumber);
         }
         LocalDate dato = LocalDate.parse(lineArr[3], mittFormat);
         Batforsikring batforsikring = new Batforsikring(
-                    parseNumber(lineArr[1],"Feil Format på arlig premie i linje:" + lineNumber),
-                    parseNumber(lineArr[2],"Feil Format på forsikringsbelop i linje:" + lineNumber),
-                    dato,
-                    lineArr[4],
-                    lineArr[5],
-                    lineArr[6],
-                    lineArr[7],
-                    lineArr[8],
-                    parseNumber(lineArr[1],"Feil Format på lengde i fot i linje:" + lineNumber),
-                    lineArr[10],
-                    lineArr[11],
-                    lineArr[12]
-                    );
+                parseNumber(lineArr[1], "Feil Format på arlig premie i linje:" + lineNumber),
+                parseNumber(lineArr[2], "Feil Format på forsikringsbelop i linje:" + lineNumber),
+                dato,
+                lineArr[4],
+                lineArr[5],
+                lineArr[6],
+                lineArr[7],
+                lineArr[8],
+                parseNumber(lineArr[1], "Feil Format på lengde i fot i linje:" + lineNumber),
+                lineArr[10],
+                lineArr[11],
+                lineArr[12]
+        );
 
         return batforsikring;
     }
 
     private static Fritidsboligforsikring parseFritidsboligforsikring(String[] lineArr, int lineNumber) throws InvalidFormatException {
 
-        if(lineArr.length != 13) {
+        if (lineArr.length != 13) {
             throw new InvalidFormatException("Feil Format på Batforsikring i linje:" + lineNumber);
         }
         LocalDate dato = LocalDate.parse(lineArr[3], mittFormat);
         Fritidsboligforsikring fritidsboligforsikring = new Fritidsboligforsikring(
-                    parseNumber(lineArr[1],"Feil Format på arlig premie i linje:" + lineNumber),
-                    parseNumber(lineArr[2],"Feil Format på forsikringsbelop i linje:" + lineNumber),
-                    dato,
-                    lineArr[4],
-                    lineArr[5],
-                    lineArr[6],
-                    lineArr[7],
-                    lineArr[8],
-                    lineArr[9],
-                    parseNumber(lineArr[10],"Feil Format på kvadratmeter i linje:" + lineNumber),
-                    parseNumber(lineArr[11],"Feil Format på forsikringsbeløp(hus) i linje:" + lineNumber),
-                    parseNumber(lineArr[12],"Feil Format på forsikringsbeløp(innbo) i linje:" + lineNumber)
-                    );
+                parseNumber(lineArr[1], "Feil Format på arlig premie i linje:" + lineNumber),
+                parseNumber(lineArr[2], "Feil Format på forsikringsbelop i linje:" + lineNumber),
+                dato,
+                lineArr[4],
+                lineArr[5],
+                lineArr[6],
+                lineArr[7],
+                lineArr[8],
+                lineArr[9],
+                parseNumber(lineArr[10], "Feil Format på kvadratmeter i linje:" + lineNumber),
+                parseNumber(lineArr[11], "Feil Format på forsikringsbeløp(hus) i linje:" + lineNumber),
+                parseNumber(lineArr[12], "Feil Format på forsikringsbeløp(innbo) i linje:" + lineNumber)
+        );
 
         return fritidsboligforsikring;
     }
@@ -135,36 +140,36 @@ public class lesCsv implements Reader {
 
     private static Reiseforsikring parseReiseforsikring(String[] lineArr, int lineNumber) throws InvalidFormatException {
 
-        if(lineArr.length != 7) {
+        if (lineArr.length != 7) {
             throw new InvalidFormatException("Feil Format på Batforsikring i linje:" + lineNumber);
         }
         LocalDate dato = LocalDate.parse(lineArr[3], mittFormat);
         Reiseforsikring reiseforsikring = new Reiseforsikring(
-                    parseNumber(lineArr[1],"Feil Format på arlig premie i linje:" + lineNumber),
-                    parseNumber(lineArr[2],"Feil Format på forsikringsbelop i linje:" + lineNumber),
-                    dato,
-                    lineArr[4],
-                    lineArr[5],
-                    parseNumber(lineArr[6],"Feil Format på Forsikringssum i linje:" + lineNumber)
-                    );
+                parseNumber(lineArr[1], "Feil Format på arlig premie i linje:" + lineNumber),
+                parseNumber(lineArr[2], "Feil Format på forsikringsbelop i linje:" + lineNumber),
+                dato,
+                lineArr[4],
+                lineArr[5],
+                parseNumber(lineArr[6], "Feil Format på Forsikringssum i linje:" + lineNumber)
+        );
 
         return reiseforsikring;
     }
 
     private static Skademelding parseSkademelding(String[] lineArr, int lineNumber) throws InvalidFormatException {
 
-        if(lineArr.length != 7) {
+        if (lineArr.length != 7) {
             throw new InvalidFormatException("Feil Format på Batforsikring i linje:" + lineNumber);
         }
         LocalDate dato = LocalDate.parse(lineArr[1], mittFormat);
         Skademelding skademelding = new Skademelding(
-                    dato,
-                    lineArr[2],
-                    lineArr[3],
-                    lineArr[4],
-                    lineArr[5],
-                    parseNumber(lineArr[6],"Feil Format på takseringsbelop i linje:" + lineNumber)
-                    );
+                dato,
+                lineArr[2],
+                lineArr[3],
+                lineArr[4],
+                lineArr[5],
+                parseNumber(lineArr[6], "Feil Format på takseringsbelop i linje:" + lineNumber)
+        );
 
         return skademelding;
     }
@@ -173,7 +178,7 @@ public class lesCsv implements Reader {
 
         ArrayList<String> erstatninger = new ArrayList<>();
 
-        for(String erstatning: lineArr){
+        for (String erstatning : lineArr) {
             erstatninger.add(erstatning);
         }
 
@@ -190,4 +195,17 @@ public class lesCsv implements Reader {
 
         return number;
     }
+
+    @Override
+    protected Void call() throws Exception {
+        try {
+            lesKundeliste();
+        } catch (Exception e) {
+        }
+
+        return null;
+    }
+
+    @Override
+    protected void succeeded(){}
 }

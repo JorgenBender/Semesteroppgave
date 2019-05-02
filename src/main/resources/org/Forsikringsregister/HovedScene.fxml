@@ -29,7 +29,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="Fil">
             <items>
-              <MenuItem mnemonicParsing="false" text="Lagre Som" />
+              <MenuItem fx:id="lagreSom" mnemonicParsing="false" onAction="#lagreSom" text="Lagre Som" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Edit">

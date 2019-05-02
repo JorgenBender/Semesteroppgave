@@ -16,32 +16,15 @@ public class ReiseforsikringKontroller extends Kontroller {
     }
     public Kunde getKunde(){return this.kunde;}
 
-    @FXML
-    private TextField arligPremie;
+    @FXML private TextField arligPremie;    @FXML private TextField belop;
 
-    @FXML
-    private TextField belop;
+    @FXML private TextField sum;            @FXML private DatePicker dato;
 
-    @FXML
-    private TextField sum;
+    @FXML private CheckBox iDag;            @FXML private TextArea omrade;
 
-    @FXML
-    private DatePicker dato;
+    @FXML private TextArea betingelser;     @FXML private Button lagre;
 
-    @FXML
-    private CheckBox iDag;
-
-    @FXML
-    private TextArea omrade;
-
-    @FXML
-    private TextArea betingelser;
-
-    @FXML
-    private Button lagre;
-
-    @FXML
-    private Button avbryt;
+    @FXML private Button avbryt;
 
     @FXML
     void iDag (ActionEvent event){

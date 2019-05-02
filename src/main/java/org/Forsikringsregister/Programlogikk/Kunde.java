@@ -6,8 +6,7 @@ import java.time.LocalDate;  // import the LocalDate class
 import java.util.ArrayList;
 
 public class Kunde implements Serializable {
-    private static final long serialVersionUID = 2;
-
+    private static final long serialVersionUID = 1;
 
     private String navn;
     private LocalDate datoKundeforhold;

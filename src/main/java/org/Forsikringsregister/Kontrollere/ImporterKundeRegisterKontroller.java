@@ -7,15 +7,15 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
 import org.Forsikringsregister.Exceptions.InvalidFormatException;
-import org.Forsikringsregister.IO.lesCsv;
-import org.Forsikringsregister.IO.lesJobj;
+import org.Forsikringsregister.IO.LesCsv;
+import org.Forsikringsregister.IO.LesJobj;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Kunderegister;
 import java.io.IOException;
 import java.util.ArrayList;
 
 public class ImporterKundeRegisterKontroller extends Kontroller{
-
+/*
     @FXML
     private ComboBox<String> ja;
 
@@ -28,7 +28,7 @@ public class ImporterKundeRegisterKontroller extends Kontroller{
 
         switch (ja.getValue()){
             case ".csv":
-                lesCsv leserCsv = new lesCsv();
+                LesCsv leserCsv = new LesCsv();
                 try{Kunderegister.setKundeliste(leserCsv.lesKundeliste());}
                 catch (IOException e){
                 }
@@ -41,7 +41,7 @@ public class ImporterKundeRegisterKontroller extends Kontroller{
                 stage.close();}
                 break;
             case ".jobj":
-                lesJobj leserJobj = new lesJobj();
+                LesJobj leserJobj = new LesJobj();
                 try{Kunderegister.setKundeliste(leserJobj.lesKundeliste());}
                 catch (IOException e){
                 }
@@ -70,6 +70,6 @@ public class ImporterKundeRegisterKontroller extends Kontroller{
                     ".jobj");
         ja.setOnAction(Event -> ja());
 
-    }
+    }*/
 }
 

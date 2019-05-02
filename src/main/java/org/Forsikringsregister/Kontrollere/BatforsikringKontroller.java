@@ -16,50 +16,23 @@ public class BatforsikringKontroller extends Kontroller{
     }
     public Kunde getKunde(){return this.kunde;}
 
-    @FXML
-    private TextField arligPremie;
+    @FXML private TextField arligPremie;    @FXML private TextField belop;
 
-    @FXML
-    private TextField belop;
+    @FXML private TextField regNummer;      @FXML private TextField lengdeFot;
 
-    @FXML
-    private TextField regNummer;
+    @FXML private TextField eier;           @FXML private TextField battype;
 
-    @FXML
-    private TextField lengdeFot;
+    @FXML private TextField arsmodell;      @FXML private TextField motorType;
 
-    @FXML
-    private TextField eier;
+    @FXML private TextField motorStyrke;    @FXML private TextField modell;
 
-    @FXML
-    private TextField battype;
+    @FXML private DatePicker dato;          @FXML private TextArea betingelser;
 
-    @FXML
-    private TextField arsmodell;
+    @FXML private CheckBox iDag;            @FXML private Button lagre;
 
-    @FXML
-    private TextField motorType;
+    @FXML private Button avbryt;
 
-    @FXML
-    private TextField motorStyrke;
 
-    @FXML
-    private TextField modell;
-
-    @FXML
-    private DatePicker dato;
-
-    @FXML
-    private TextArea betingelser;
-
-    @FXML
-    private CheckBox iDag;
-
-    @FXML
-    private Button lagre;
-
-    @FXML
-    private Button avbryt;
 
     @FXML
     void iDag (ActionEvent event){

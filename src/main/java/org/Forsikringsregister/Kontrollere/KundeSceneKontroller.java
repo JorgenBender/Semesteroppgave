@@ -11,7 +11,6 @@ import org.Forsikringsregister.Programlogikk.Forsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
 
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
 
 public class KundeSceneKontroller extends Kontroller {
 

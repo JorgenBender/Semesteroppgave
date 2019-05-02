@@ -16,50 +16,21 @@ public class HusforsikringKontroller extends Kontroller{
     }
     public Kunde getKunde(){return this.kunde;}
 
-    @FXML
-    private TextField arligPremie;
+    @FXML private TextField arligPremie;    @FXML private TextField belop;
 
-    @FXML
-    private TextField belop;
+    @FXML private TextField byggear;        @FXML private TextField materiale;
 
-    @FXML
-    private TextField byggear;
+    @FXML private TextField kvadratmeter;   @FXML private TextField innboBelop;
 
-    @FXML
-    private TextField materiale;
+    @FXML private TextField adresse;        @FXML private TextField boligType;
 
-    @FXML
-    private TextField kvadratmeter;
+    @FXML private TextField standard;       @FXML private TextField bygningBelop;
 
-    @FXML
-    private TextField innboBelop;
+    @FXML private DatePicker dato;          @FXML private TextArea betingelser;
 
-    @FXML
-    private TextField adresse;
+    @FXML private CheckBox iDag;            @FXML private Button lagre;
 
-    @FXML
-    private TextField boligType;
-
-    @FXML
-    private TextField standard;
-
-    @FXML
-    private TextField bygningBelop;
-
-    @FXML
-    private DatePicker dato;
-
-    @FXML
-    private TextArea betingelser;
-
-    @FXML
-    private CheckBox iDag;
-
-    @FXML
-    private Button lagre;
-
-    @FXML
-    private Button avbryt;
+    @FXML private Button avbryt;
 
     @FXML
     void iDag (ActionEvent event){
