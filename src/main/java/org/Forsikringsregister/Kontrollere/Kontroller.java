@@ -13,15 +13,31 @@ public class Kontroller {
 
     public Stage openStage(String resource) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(resource));
-        Stage stage = loadStage(fxmlLoader);
-        return stage;
+        return loadStage(fxmlLoader);
+
     }
 
     public Stage openStageSendKunde(String resource, Kunde kunde) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(resource));
-        fxmlLoader.setControllerFactory(c ->{ return new KundeSceneKontroller(kunde);});
-        Stage stage = loadStage(fxmlLoader);
-        return stage;
+
+        switch(resource){
+            case "../KundeScene.fxml":
+                fxmlLoader.setControllerFactory(c ->{ return new KundeSceneKontroller(kunde);});
+                break;
+            case "../Batforsikring.fxml":
+                fxmlLoader.setControllerFactory(c ->{ return new BatforsikringKontroller(kunde);});
+                break;
+            case "../Husforsikring.fxml":
+                fxmlLoader.setControllerFactory(c ->{ return new HusforsikringKontroller(kunde);});
+                break;
+            case "../Fritidsboligforsikring.fxml":
+                fxmlLoader.setControllerFactory(c ->{ return new HusforsikringKontroller(kunde);});
+                break;
+            case "../Reiseforsikring.fxml":
+                fxmlLoader.setControllerFactory(c ->{ return new ReiseforsikringKontroller(kunde);});
+                break;
+            }
+        return loadStage(fxmlLoader);
     }
 
     public Stage loadStage(FXMLLoader loader) throws IOException {

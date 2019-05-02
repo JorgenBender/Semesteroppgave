@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import org.Forsikringsregister.Exceptions.InvalidFormatException;
 import org.Forsikringsregister.Programlogikk.Kunde;
 
+import java.io.File;
 import java.io.IOException;
 
 

@@ -9,24 +9,24 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.BatForsikringKontroller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.BatforsikringKontroller">
    <children>
       <Pane prefHeight="400.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
-      <TextField fx:id="ArligPremie" layoutX="151.0" layoutY="67.0" promptText="Årlig premie" />
-      <TextField fx:id="Belop" layoutX="151.0" layoutY="102.0" promptText="Forsikringsbeløp" />
-      <TextField fx:id="RegNummer" layoutX="151.0" layoutY="136.0" promptText="Registreringsnummer" />
-      <TextField fx:id="LengdeFot" layoutX="151.0" layoutY="171.0" promptText="Lenge i fot" />
-      <DatePicker fx:id="Dato" layoutX="356.0" layoutY="67.0" prefHeight="25.0" prefWidth="149.0" promptText="Dato opprettet" />
-      <TextField fx:id="Eier" layoutX="356.0" layoutY="102.0" promptText="Eier" />
-      <TextField fx:id="Battype" layoutX="356.0" layoutY="136.0" promptText="Båttype" />
-      <TextField fx:id="Arsmodell" layoutX="356.0" layoutY="206.0" promptText="Årsmodell" />
-      <TextField fx:id="MotorType" layoutX="151.0" layoutY="206.0" promptText="Motortype" />
-      <TextArea fx:id="Betingelser" layoutX="355.0" layoutY="241.0" prefHeight="58.0" prefWidth="149.0" promptText="Forsikringsbetingelser" />
-      <Button fx:id="Lagre" layoutX="248.0" layoutY="320.0" mnemonicParsing="false" onAction="#nyLagring" text="Lagre" />
-      <Button fx:id="Avbryt" layoutX="356.0" layoutY="320.0" mnemonicParsing="false" onAction="#avbrytScene" text="Avbryt" />
       <Label layoutX="151.0" layoutY="26.0" text="Opprettelse av båtforsikring" />
-      <CheckBox fx:id="Idag" layoutX="512.0" layoutY="71.0" mnemonicParsing="false" onAction="#IDagChecked" text="I dag" />
-      <TextField fx:id="MotorStyrke" layoutX="151.0" layoutY="241.0" promptText="Motorstyrke" />
-      <TextField fx:id="Modell" layoutX="355.0" layoutY="171.0" promptText="Modell" />
+      <TextField fx:id="arligPremie" layoutX="151.0" layoutY="67.0" promptText="Årlig premie" />
+      <TextField fx:id="belop" layoutX="151.0" layoutY="102.0" promptText="Forsikringsbeløp" />
+      <TextField fx:id="regNummer" layoutX="151.0" layoutY="136.0" promptText="Registreringsnummer" />
+      <TextField fx:id="lengdeFot" layoutX="151.0" layoutY="171.0" promptText="Lenge i fot" />
+      <DatePicker fx:id="dato" layoutX="356.0" layoutY="67.0" prefHeight="25.0" prefWidth="149.0" promptText="Dato opprettet" />
+      <TextField fx:id="eier" layoutX="356.0" layoutY="102.0" promptText="Eier" />
+      <TextField fx:id="battype" layoutX="356.0" layoutY="136.0" promptText="Båttype" />
+      <TextField fx:id="arsmodell" layoutX="356.0" layoutY="206.0" promptText="Årsmodell" />
+      <TextField fx:id="motorType" layoutX="151.0" layoutY="206.0" promptText="Motortype" />
+      <TextField fx:id="motorStyrke" layoutX="151.0" layoutY="241.0" promptText="Motorstyrke" />
+      <TextField fx:id="modell" layoutX="355.0" layoutY="171.0" promptText="Modell" />
+      <TextArea fx:id="betingelser" layoutX="355.0" layoutY="241.0" prefHeight="58.0" prefWidth="185.0" promptText="Forsikringsbetingelser" />
+      <Button fx:id="lagre" layoutX="248.0" layoutY="320.0" mnemonicParsing="false" onAction="#lagre" text="Lagre" />
+      <Button fx:id="avbryt" layoutX="356.0" layoutY="320.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" />
+      <CheckBox fx:id="iDag" layoutX="512.0" layoutY="71.0" mnemonicParsing="false" onAction="#iDag" text="I dag" />
    </children>
 </AnchorPane>

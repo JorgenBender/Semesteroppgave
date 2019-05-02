@@ -11,26 +11,13 @@ import java.time.LocalDate;
 
 public class NyKundeKontroller extends Kontroller{
 
-    @FXML
-    private DatePicker nyKundeRegDato;
+    @FXML private DatePicker nyKundeRegDato;    @FXML private CheckBox iDag;
 
-    @FXML
-    private CheckBox iDag;
+    @FXML private TextField nyKundeNavn;        @FXML private TextField nyKundeFakturaAdresse;
 
-    @FXML
-    private TextField nyKundeNavn;
+    @FXML private Button avbryt;                @FXML private Button nyKundeRegistrer;
 
-    @FXML
-    private TextField nyKundeFakturaAdresse;
-
-    @FXML
-    private TextField nyKundeForsikringsnummer;
-
-    @FXML
-    private Button nyKundeRegistrer;
-
-    @FXML
-    private Button avbryt;
+    @FXML private TextField nyKundeForsikringsnummer;
 
     @FXML
     void nyRegistrering (ActionEvent event){
@@ -42,8 +29,7 @@ public class NyKundeKontroller extends Kontroller{
         else{
             dato = nyKundeRegDato.getValue();
         }
-        Kunde kunde = new Kunde(nyKundeNavn.getText(), dato, nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText());
-        Kunderegister.nyKunde(kunde);
+        Kunderegister.nyKunde(new Kunde(nyKundeNavn.getText(), dato, nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText()));
     }
 
     @FXML

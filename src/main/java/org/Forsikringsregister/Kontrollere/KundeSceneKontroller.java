@@ -52,12 +52,13 @@ public class KundeSceneKontroller extends Kontroller {
                 }
                 catch(IOException e){
                     System.err.println("Cant load new window");
-                    System.err.println(e.getMessage()+e.getCause()+e.getStackTrace());
+                    System.err.println(e.getMessage()+e.getCause());
                 }
                 break;
             case "Husforsikring":
                 try{
                     Stage stage = openStageSendKunde("../Husforsikring.fxml",getKunde());
+                    stage.showAndWait();
                 }
                 catch(IOException e){
                     System.err.println("Cant load new window");
@@ -67,7 +68,7 @@ public class KundeSceneKontroller extends Kontroller {
             case "Fritidsboligforsikring":
                 try{
                     Stage stage = openStageSendKunde("../Fritidsboligforsikring.fxml",getKunde());
-                    stage.show();
+                    stage.showAndWait();
                 }
                 catch(IOException e){
                     System.err.println("Cant load new window");
@@ -77,7 +78,7 @@ public class KundeSceneKontroller extends Kontroller {
             case "Rieseforsikring":
                 try{
                     Stage stage = openStageSendKunde("../Reiseforsikring.fxml",getKunde());
-                    stage.show();
+                    stage.showAndWait();
                 }
                 catch(IOException e){
                     System.err.println("Cant load new window");

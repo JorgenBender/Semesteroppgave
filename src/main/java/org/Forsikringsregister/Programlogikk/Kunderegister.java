@@ -19,8 +19,7 @@ public class Kunderegister {
         kundeliste = enKundeliste;
     }
 
-    @Override
-    public String toString(){
+    public static String toAString(){
         String out = "";
         for(Kunde kunde : kundeliste){
             out += kunde.toString() + "\n";
