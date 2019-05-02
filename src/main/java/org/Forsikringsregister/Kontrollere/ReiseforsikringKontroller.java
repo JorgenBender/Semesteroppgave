@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.Forsikringsregister.NumberParser;
 import org.Forsikringsregister.Programlogikk.Husforsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Reiseforsikring;
@@ -49,11 +50,19 @@ public class ReiseforsikringKontroller extends Kontroller {
         } else {
             dato = this.dato.getValue();
         }
-        /*
-        Reiseforsikring reiseforsikring = new Reiseforsikring(arligPremie.getText(), belop.getText(), dato,
-                betingelser.getText(), omrade.getText(), sum.getText());
-        Reiseforsikring.nyForsikring(reiseforsikring);
-        */
+
+        int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(),"Årlig premie er ikke et tall");
+        int belopInt = NumberParser.parseNumber(belop.getText(),"Beløp er ikke et tall");
+        int sumInt = NumberParser.parseNumber(sum.getText(), "Sum er ikke et tall");
+
+        Reiseforsikring reiseforsikring = new Reiseforsikring(arligPremieInt,
+                                                              belopInt, dato,
+                                                              betingelser.getText(),
+                                                              omrade.getText(),
+                                                              sumInt
+        );
+        kunde.addForsikring(reiseforsikring);
+
     }
     public void initialize(){
     }
