@@ -81,8 +81,8 @@ public class LesCsv implements Reader {
         if (lineArr.length != 5) {
             throw new InvalidFormatException("Feil Format på Kunde i linje:" + lineNumber);
         }
-        LocalDate dato = LocalDate.parse(lineArr[2], mittFormat);
-        Kunde kunde = new Kunde(lineArr[1], dato, lineArr[3], lineArr[4]);
+        LocalDate dato = LocalDate.parse(lineArr[1], mittFormat);
+        Kunde kunde = new Kunde(dato, lineArr[2], lineArr[3], lineArr[4]);
 
         return kunde;
     }

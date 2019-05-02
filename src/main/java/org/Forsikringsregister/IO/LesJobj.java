@@ -1,5 +1,6 @@
 package org.Forsikringsregister.IO;
 
+import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.stage.FileChooser;
@@ -26,10 +27,11 @@ public class LesJobj implements Reader{
 
         FileChooser fileChooser = new FileChooser();
         fileChooser.setInitialDirectory(new File(("data/")));
-        ObservableList<Kunde> importertListe = null;
+        ObservableList<Kunde> importertListe = FXCollections.observableArrayList();
 
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))){
             importertListe = ObservableList.class.cast(ois.readObject());
+
         } catch(ClassNotFoundException e) {
             System.err.println("Could not convert Object");
         }

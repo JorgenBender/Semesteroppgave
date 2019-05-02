@@ -6,6 +6,7 @@ import javafx.stage.FileChooser;
 import org.Forsikringsregister.Programlogikk.Kunde;
 
 import java.io.*;
+import java.util.ArrayList;
 
 
 public class SkrivJobj extends Task<Void> implements Writer{
@@ -21,7 +22,7 @@ public class SkrivJobj extends Task<Void> implements Writer{
     @Override
     public void skrivKundeliste() {
         try (ObjectOutputStream ous = new ObjectOutputStream(new FileOutputStream(file))){
-            ous.writeObject(kundeliste);
+            ous.writeObject(new ArrayList<>(kundeliste));
         } catch (IOException e) {
             e.printStackTrace(); // This should not happen, so we print debug information here.
         }

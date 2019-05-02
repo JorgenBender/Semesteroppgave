@@ -23,7 +23,6 @@ org\Forsikringsregister\IO\SkrivCsv.class
 org\Forsikringsregister\Programlogikk\Husforsikring.class
 org\Forsikringsregister\MainApp.class
 org\Forsikringsregister\Kontrollere\HusforsikringKontroller.class
-org\Forsikringsregister\Kontrollere\ImporterKundeRegisterKontroller.class
 org\Forsikringsregister\Kontrollere\KundeSceneKontroller.class
 org\Forsikringsregister\Kontrollere\HovedSceneKontroller.class
 org\Forsikringsregister\IO\InputjobjThread.class

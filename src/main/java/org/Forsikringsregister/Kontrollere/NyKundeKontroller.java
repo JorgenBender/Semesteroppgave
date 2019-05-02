@@ -29,7 +29,7 @@ public class NyKundeKontroller extends Kontroller{
         else{
             dato = nyKundeRegDato.getValue();
         }
-        Kunderegister.nyKunde(new Kunde(nyKundeNavn.getText(), dato, nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText()));
+        Kunderegister.nyKunde(new Kunde(dato, nyKundeNavn.getText(), nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText()));
         Stage stage = (Stage)nyKundeRegistrer.getScene().getWindow();
         stage.close();
     }
