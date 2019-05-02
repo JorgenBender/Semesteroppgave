@@ -201,11 +201,14 @@ public class LesCsv extends Task<Void> implements Reader {
         try {
             lesKundeliste();
         } catch (Exception e) {
+            System.out.println("Noe gikk galt"+e.getMessage()+e.getCause());
         }
 
         return null;
     }
 
     @Override
-    protected void succeeded(){}
+    protected void succeeded(){
+        System.out.println("Succeeded");
+    }
 }
