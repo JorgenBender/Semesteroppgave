@@ -49,4 +49,16 @@ public class ReiseForsikringKontroller extends Kontroller {
         Reiseforsikring.close();
     }
 
+    @FXML
+    void nyLagring (ActionEvent event) {
+        LocalDate dato;
+        if (Idag.isSelected()) {
+            dato = LocalDate.now();
+        } else {
+            dato = Dato.getValue();
+        }/*
+        Reiseforsikring reiseforsikring = new Reiseforsikring(ArligPremie.getText(), Belop.getText(), Sum.getText(),
+                dato, Omrade.getText(), Betingelser.getText());
+        Reiseforsikring.nyForsikring(reiseforsikring);
+    */}
 }

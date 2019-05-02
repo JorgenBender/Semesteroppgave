@@ -2,12 +2,15 @@ package org.Forsikringsregister.Kontrollere;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import java.net.URL;
 import java.time.LocalDate;
+import java.util.ResourceBundle;
 
-public class BatForsikringKontroller {
+    public class BatForsikringKontroller {
 
     @FXML
     private TextField ArligPremie;
@@ -55,18 +58,32 @@ public class BatForsikringKontroller {
     private Button Avbryt;
 
     @FXML
-    void IDagChecked (ActionEvent event){
-        if(Idag.isSelected()) {
+    void IDagChecked(ActionEvent event) {
+        if (Idag.isSelected()) {
             Dato.setValue(LocalDate.now());
         }
     }
 
     @FXML
-    void avbrytScene (ActionEvent event){
+    void avbrytScene(ActionEvent event) {
         Stage Baatforsikring = (Stage) Avbryt.getScene().getWindow();
         Baatforsikring.close();
     }
-    public void initialize(){
-        
-    }
+
+    @FXML
+    void nyLagring(ActionEvent event) {
+        LocalDate dato;
+        if (Idag.isSelected()) {
+            dato = LocalDate.now();
+        } else {
+            dato = Dato.getValue();
+        }/*
+        Batforsikring batforsikring = new Batforsikring(ArligPremie.getText(), Belop.getText(), RegNummer.getText(),
+                LengdeFot.getText(), Eier.getText(), Battype.getText(), Arsmodell.getText(), MotorType.getText(),
+                MotorStyrke.getText(), dato, Modell.getText(), Betingelser.getText());
+        Batforsikring.nyForsikring(batforsikring);
+    */}
+
+
 }
+

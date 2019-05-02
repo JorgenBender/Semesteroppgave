@@ -51,4 +51,17 @@ public class SkadeMeldingKontroller extends Kontroller{
         Stage Skademelding = (Stage) Avbryt.getScene().getWindow();
         Skademelding.close();
     }
+
+    @FXML
+    void nyLagring(ActionEvent event){
+        LocalDate dato;
+        if (Idag.isSelected()) {
+            dato = LocalDate.now();
+        } else {
+            dato = Dato.getValue();
+        }/*
+        Skademelding skademelding = new Skademelding(SkadeNummer.getText(), TakseringsBelop.getText(), Type.getText(),
+                UtbetaltBelop.getText(), dato, Beskrivelse.getText(), KontaktInfo.getText());
+        Skademelding.nySkademelding(skademelding);
+    */}
 }
