@@ -20,7 +20,7 @@
       <Label fx:id="kundeinfo" layoutX="122.0" layoutY="77.0" prefHeight="141.0" prefWidth="307.0" />
       <TableView fx:id="tableView" layoutX="122.0" layoutY="223.0" onMouseClicked="#selectForsikring" prefHeight="246.0" prefWidth="113.0">
         <columns>
-          <TableColumn fx:id="forsikringstype" prefWidth="98.00001525878906" text="Forsikringer" />
+          <TableColumn fx:id="forsikringstype" prefWidth="113" text="Forsikringer" />
         </columns>
       </TableView>
       <ComboBox fx:id="nyForsikring" layoutX="201.0" layoutY="496.0" prefWidth="150.0" promptText="Ny forsikring" />
