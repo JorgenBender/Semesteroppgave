@@ -34,10 +34,18 @@ public class InputThread extends Task<Void> {
                     LesJobj jobjLeser = new LesJobj(file);
                     Kunderegister.setKundeliste(jobjLeser.lesKundeliste());
                     break;
+                default:
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Error Dialog");
+                    alert.setHeaderText("Fil kunne ikke lastes inn");
+                    alert.setContentText("Inllasting av data fra "+extension+" støttes desverre ikke");
+                    alert.showAndWait();
+                    break;
             }
         }
         return null;
     }
+
     @Override
     protected void succeeded(){
         doneFunc.run();

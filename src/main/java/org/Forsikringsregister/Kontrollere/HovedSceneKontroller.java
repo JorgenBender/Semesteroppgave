@@ -88,6 +88,8 @@ public class HovedSceneKontroller extends Kontroller {
         Task<Void> task;
         FileChooser fileChooser = new FileChooser();
         fileChooser.setInitialDirectory(new File(("data/")));
+        FileChooser.ExtensionFilter extFilter = new FileChooser.ExtensionFilter("Data types .csv or .jobj", "*.csv","*.jobj");
+        fileChooser.getExtensionFilters().addAll(extFilter);
         File file = fileChooser.showOpenDialog(null);
         task = new InputThread(this::initialize, file);
         service.execute(task);
