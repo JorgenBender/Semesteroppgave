@@ -13,20 +13,22 @@ public class Skademelding implements Serializable {
     private String skadeBeskrivelse;
     private String vitner_kontaktinformasjon;
     private int takseringsbelop;
-    private int utbetalt_erstatningsbelop; //kan være lavere enn taksert beløp
+    private int utbetaltErstatningsbelop; //kan være lavere enn taksert beløp
 
     public Skademelding(LocalDate skadeDato,
                         String skadenummer,
                         String skadeType,
                         String skadeBeskrivelse,
                         String vitner_kontaktinformasjon,
-                        int takseringsbelop) {
+                        int takseringsbelop,
+                        int utbetaltErstatningsbelop) {
         this.skadeDato = skadeDato;
         this.skadenummer = skadenummer;
         this.skadeType = skadeType;
         this.skadeBeskrivelse = skadeBeskrivelse;
         this.vitner_kontaktinformasjon = vitner_kontaktinformasjon;
         this.takseringsbelop = takseringsbelop;
+        this.utbetaltErstatningsbelop = utbetaltErstatningsbelop;
     }
 
     public LocalDate getSkadeDato() {
@@ -53,12 +55,12 @@ public class Skademelding implements Serializable {
         return takseringsbelop;
     }
 
-    public int getUtbetalt_erstatningsbelop() {
-        return utbetalt_erstatningsbelop;
+    public int getUtbetaltErstatningsbelop() {
+        return utbetaltErstatningsbelop;
     }
 
-    public void setUtbetalt_erstatningsbelop(int utbetalt_erstatningsbelop) {
-        this.utbetalt_erstatningsbelop = utbetalt_erstatningsbelop;
+    public void setUtbetaltErstatningsbelop(int utbetaltErstatningsbelop) {
+        this.utbetaltErstatningsbelop = utbetaltErstatningsbelop;
     }
 
     public void setSkadeDato(LocalDate skadeDato) {
@@ -88,14 +90,14 @@ public class Skademelding implements Serializable {
     @Override
     public String toString(){
         return String.format("Skademelding:\n Skadedato: %s\n Skadenummer: %s\n Skadetype: %s\n" +
-                            "Skadebeskrivelse: %s\n Vitner: %s\n Takseringsbeløp: %d \n Utbetalst Erstatningsbeløp: %d",
+                            "Skadebeskrivelse: %s\n Vitner: %s\n Takseringsbeløp: %d \n Utbetalt Erstatningsbeløp: %d",
                             getSkadeDato().toString(),getSkadenummer(), getSkadeType(), getSkadeBeskrivelse(),
-                            getVitner_kontaktinformasjon(), getTakseringsbelop(), getUtbetalt_erstatningsbelop());
+                            getVitner_kontaktinformasjon(), getTakseringsbelop(), getUtbetaltErstatningsbelop());
     }
     public String toCsv(){
         return String.format("Skademelding;%s;%s;%s;%s;%s;%d;%d",
                 getSkadeDato().toString(),getSkadenummer(), getSkadeType(), getSkadeBeskrivelse(),
-                getVitner_kontaktinformasjon(), getTakseringsbelop(), getUtbetalt_erstatningsbelop());
+                getVitner_kontaktinformasjon(), getTakseringsbelop(), getUtbetaltErstatningsbelop());
     }
 
 }

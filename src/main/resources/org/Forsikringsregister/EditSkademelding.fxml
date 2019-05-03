@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.EditSkadeMeldingKontroller">
+    <children>
+        <Pane prefHeight="400.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
+        <Label fx:id="tittel" layoutX="140.0" layoutY="29.0" text="Rediger Skademelding">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font></Label>
+        <TextField fx:id="skadeNummer" layoutX="140.0" layoutY="73.0" promptText="Skadenummer" />
+        <TextField fx:id="takseringsBelop" layoutX="140.0" layoutY="108.0" promptText="Takseringsbeløp" />
+        <TextField fx:id="type" layoutX="140.0" layoutY="143.0" promptText="Type skade" />
+        <TextField fx:id="utbetaltErstatningsbelop" layoutX="140.0" layoutY="180.0" prefHeight="31.0" prefWidth="187.0" promptText="Utbetalt Erstatningsbeløp" />
+        <DatePicker fx:id="dato" layoutX="339.0" layoutY="73.0" prefHeight="25.0" prefWidth="149.0" promptText="Dato for skade" />
+        <CheckBox fx:id="iDag" layoutX="499.0" layoutY="77.0" mnemonicParsing="false" onAction="#IDagChecked" text="I dag" />
+        <TextArea fx:id="beskrivelse" layoutX="339.0" layoutY="108.0" prefHeight="62.0" prefWidth="149.0" promptText="Beskrivelse av skaden" />
+        <TextArea fx:id="kontaktInfo" layoutX="339.0" layoutY="174.0" prefHeight="62.0" prefWidth="149.0" promptText="Kontaktinformasjon til vitner" />
+        <Button fx:id="lagre" layoutX="237.0" layoutY="294.0" mnemonicParsing="false" onAction="#lagre" text="Lagre" />
+        <Button fx:id="avbryt" layoutX="339.0" layoutY="294.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" />
+    </children>
+</AnchorPane>
