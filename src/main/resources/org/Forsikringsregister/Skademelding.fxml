@@ -24,7 +24,7 @@
       <DatePicker fx:id="dato" layoutX="339.0" layoutY="73.0" prefHeight="25.0" prefWidth="149.0" promptText="Dato for skade" />
       <CheckBox fx:id="iDag" layoutX="499.0" layoutY="77.0" mnemonicParsing="false" onAction="#IDagChecked" text="I dag" />
       <TextArea fx:id="beskrivelse" layoutX="339.0" layoutY="108.0" prefHeight="62.0" prefWidth="149.0" promptText="Beskrivelse av skaden" />
-      <Button fx:id="lagre" layoutX="237.0" layoutY="294.0" mnemonicParsing="false" onAction="#nyLagring" text="Lagre" />
-      <Button fx:id="avbryt" layoutX="339.0" layoutY="294.0" mnemonicParsing="false" onAction="#avbrytScene" text="Avbryt" />
+      <Button fx:id="lagre" layoutX="237.0" layoutY="294.0" mnemonicParsing="false" onAction="#lagre" text="Lagre" />
+      <Button fx:id="avbryt" layoutX="339.0" layoutY="294.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" />
    </children>
 </AnchorPane>

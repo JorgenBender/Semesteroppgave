@@ -79,10 +79,13 @@ public class FritidsboligforsikringKontroller extends Kontroller{
                     innboBelopInt
             );
             kunde.addForsikring(fritidsboligforsikring);
+
         }
         catch (NumberFormatException e){
             showAlert(e);
         }
+        Stage stage = (Stage)lagre.getScene().getWindow();
+        stage.close();
     }
 
     public void initialize() {

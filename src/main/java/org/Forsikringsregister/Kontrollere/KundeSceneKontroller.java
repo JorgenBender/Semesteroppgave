@@ -134,6 +134,7 @@ public class KundeSceneKontroller extends Kontroller {
                 }
             }
             objektInfo.setText(selectedTable.getSelectionModel().getSelectedItem().toString());
+            refresh();
         }
     }
     public void nyForsikring(){
@@ -184,8 +185,7 @@ public class KundeSceneKontroller extends Kontroller {
                 }
                 break;
         }
-        ObservableList<Forsikring> forsikringer = FXCollections.observableArrayList(kunde.getForsikringer());
-        tableForsikring.getItems().setAll(forsikringer);
+        refresh();
     }
     @FXML
     void nySkademelding(ActionEvent event){
@@ -198,8 +198,7 @@ public class KundeSceneKontroller extends Kontroller {
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
         }
-        ObservableList<Skademelding> skademeldinger = FXCollections.observableArrayList(kunde.getSkademeldinger());
-        tableSkademelding.getItems().setAll(skademeldinger);
+        refresh();
     }
 
     @FXML
@@ -213,8 +212,7 @@ public class KundeSceneKontroller extends Kontroller {
             System.err.println("Cant load new window");
             System.err.println(e.getMessage());
         }
-        ObservableList<String> erstatninger = FXCollections.observableArrayList(kunde.getUbetalteErstatninger());
-        tableErstatning.getItems().setAll(erstatninger);
+        refresh();
     }
     @FXML
     void  slettObjekt(ActionEvent event){
@@ -236,21 +234,10 @@ public class KundeSceneKontroller extends Kontroller {
             }
         }
         objektInfo.setText("");
-        initialize();
+        refresh();
+
     }
-
-
-    public void initialize(){
-
-        kundeinfo.setText(kunde.toString());
-        kundenavn.setText(kunde.getNavn());
-        nyForsikring.getItems().addAll(
-                "Båtforsikring",
-                    "Husforsikring",
-                    "Fritidsboligforsikring",
-                    "Reiseforsikring");
-        nyForsikring.setOnAction(Event -> nyForsikring());
-
+    void refresh(){
         forsikringColumn.setCellValueFactory(new PropertyValueFactory<>("forsikringstype"));
         ObservableList<Forsikring> forsikringer = FXCollections.observableArrayList(kunde.getForsikringer());
         tableForsikring.getItems().setAll(forsikringer);
@@ -262,5 +249,18 @@ public class KundeSceneKontroller extends Kontroller {
         erstatningColumn.setCellValueFactory(data -> new SimpleStringProperty(data.getValue()));
         ObservableList<String> erstatninger = FXCollections.observableArrayList(kunde.getUbetalteErstatninger());
         tableErstatning.getItems().setAll(erstatninger);
+    }
+
+    public void initialize(){
+
+        kundeinfo.setText(kunde.toString());
+        kundenavn.setText(kunde.getNavn());
+        nyForsikring.getItems().addAll(
+                "Båtforsikring",
+                    "Husforsikring",
+                    "Fritidsboligforsikring",
+                    "Reiseforsikring");
+        nyForsikring.setOnAction(Event -> nyForsikring());
+        refresh();
     }
 }

@@ -64,6 +64,8 @@ public class EditReiseforsikringKontroller extends Kontroller {
         catch (NumberFormatException e) {
             showAlert(e);
         }
+        Stage stage = (Stage)lagre.getScene().getWindow();
+        stage.close();
     }
     public void initialize(){
         arligPremie.setText(""+this.reiseforsikring.getArligPremie());

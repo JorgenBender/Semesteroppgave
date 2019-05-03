@@ -75,6 +75,8 @@ public class EditBatforsikringKontroller extends Kontroller{
         catch (NumberFormatException e){
             showAlert(e);
         }
+        Stage stage = (Stage)lagre.getScene().getWindow();
+        stage.close();
     }
     public void initialize(){
         tittel.setText("Rediger Båtforsikring");

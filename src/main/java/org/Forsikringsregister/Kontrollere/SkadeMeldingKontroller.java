@@ -36,13 +36,13 @@ public class SkadeMeldingKontroller extends Kontroller{
     }
 
     @FXML
-    void avbrytScene (ActionEvent event){
+    void avbryt (ActionEvent event){
         Stage Skademelding = (Stage) avbryt.getScene().getWindow();
         Skademelding.close();
     }
 
     @FXML
-    void nyLagring(ActionEvent event){
+    void lagre(ActionEvent event){
         LocalDate dato;
         if (iDag.isSelected()) {
             dato = LocalDate.now();
@@ -57,6 +57,8 @@ public class SkadeMeldingKontroller extends Kontroller{
         catch (NumberFormatException e){
             showAlert(e);
         }
+        Stage stage = (Stage)lagre.getScene().getWindow();
+        stage.close();
     }
     public void initialize(){
     }

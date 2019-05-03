@@ -79,9 +79,8 @@ public class BatforsikringKontroller extends Kontroller{
         catch (NumberFormatException e){
             showAlert(e);
         }
-
-
-
+        Stage stage = (Stage)lagre.getScene().getWindow();
+        stage.close();
     }
 
     public void initialize(){
