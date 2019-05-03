@@ -105,7 +105,7 @@ public class Fritidsboligforsikring extends Forsikring implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("Fritidsboligforsikring:\n%s\n Adresse: %s\nByggeår: %s\nBoligtype: %s\nByggematriale: %s\n" +
+        return String.format("Fritidsboligforsikring:\n%s\nAdresse: %s\nByggeår: %s\nBoligtype: %s\nByggematriale: %s\n" +
                         "Standard: %s\nKvadratmeter: %d\nForsikringsbeløp(hus): %d\nForsikringsbeløp(innbo): %d",
                 super.toString(), getAdresse(), getByggear().toString(), getBoligtype(), getByggemateriale(),
                 getStandard(), getKvadratmeter(), getForsikringsbelopBygning(), getForsikringsbelopInnbo());
