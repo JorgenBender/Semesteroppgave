@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.KundeSceneKontroller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.KundeSceneKontroller">
    <children>
       <Pane prefHeight="633.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
       <Label fx:id="kundenavn" layoutX="355.0" layoutY="24.0" text="Kundenavn">
@@ -36,7 +36,7 @@
       </TableView>
       <ComboBox fx:id="nyForsikring" layoutX="201.0" layoutY="534.0" prefWidth="150.0" promptText="Ny forsikring" />
       <Button fx:id="nySkademelding" layoutX="201.0" layoutY="571.0" mnemonicParsing="false" onAction="#nySkademelding" prefHeight="31.0" prefWidth="150.0" text="Ny Skademelding" />
-      <Button fx:id="nyErstatning" layoutX="489.0" layoutY="534.0" mnemonicParsing="false" onAction="#nyErstatning" prefHeight="31.0" prefWidth="119.0" text="Ny Erstatining" />
+      <Button fx:id="nyErstatning" layoutX="489.0" layoutY="534.0" mnemonicParsing="false" onAction="#nyErstatning" prefHeight="31.0" prefWidth="119.0" text="Ny Erstatning" />
       <Button fx:id="slettObjekt" layoutX="489.0" layoutY="571.0" mnemonicParsing="false" onAction="#slettObjekt" prefHeight="31.0" prefWidth="119.0" text="Slett Objekt" />
 
    </children>
