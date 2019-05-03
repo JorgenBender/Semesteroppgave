@@ -63,8 +63,7 @@ public class LesCsv implements Reader {
                         importertListe.get(lastIndex).setUbetalteErstatninger(parseErstatning(lineArr));
                         break;
                     default:
-
-                        break;
+                        throw new InvalidFormatException("Ikke støttet Format på linje: "+lineNumber);
                 }
             }
         }
