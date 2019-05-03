@@ -108,7 +108,7 @@ public class KundeSceneKontroller extends Kontroller {
             if (event.getClickCount() == 2 && selectedTable == tableSkademelding) //Checking double click
             {
                 try{
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Skademelding.fxml"));
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../EditSkademelding.fxml"));
                     fxmlLoader.setControllerFactory(c ->{
                         return new EditSkadeMeldingKontroller(tableSkademelding.getSelectionModel().getSelectedItem());
                     });

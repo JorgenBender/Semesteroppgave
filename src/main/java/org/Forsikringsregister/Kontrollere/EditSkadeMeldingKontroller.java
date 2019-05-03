@@ -28,6 +28,7 @@ public class EditSkadeMeldingKontroller extends Kontroller{
 
     @FXML private Button avbryt;            @FXML private Label tittel;
 
+    @FXML private TextField utbetaltErstatningsbelop;
     @FXML
     void IDagChecked (ActionEvent event){
         if(iDag.isSelected()) {
@@ -51,13 +52,15 @@ public class EditSkadeMeldingKontroller extends Kontroller{
         }
         try {
             int takseringsbelopInt = NumberParser.parseNumber(takseringsBelop.getText(), "Takseringsbeløp er ikke et tall");
+            int utbetaltErstatningsbelopInt = NumberParser.parseNumber(utbetaltErstatningsbelop.getText(),
+                                                    "Utbetalt erstatningsbeløp er ikke et tall");
             this.skademelding.setSkadeDato(dato);
             this.skademelding.setSkadenummer(skadeNummer.getText());
             this.skademelding.setSkadeType(type.getText());
             this.skademelding.setSkadeBeskrivelse(beskrivelse.getText());
             this.skademelding.setVitner_kontaktinformasjon(kontaktInfo.getText());
             this.skademelding.setTakseringsbelop(takseringsbelopInt);
-            this.skademelding.setUtbetalt_erstatningsbelop(0);
+            this.skademelding.setUtbetaltErstatningsbelop(utbetaltErstatningsbelopInt);
 
         }
         catch (NumberFormatException e){
@@ -67,14 +70,11 @@ public class EditSkadeMeldingKontroller extends Kontroller{
         stage.close();
     }
     public void initialize(){
-        tittel.setText("Rediger Skademelding");
         skadeNummer.setText(this.skademelding.getSkadenummer());
         beskrivelse.setText(this.skademelding.getSkadeBeskrivelse());
         takseringsBelop.setText(""+this.skademelding.getTakseringsbelop());
         dato.setValue(this.skademelding.getSkadeDato());
         type.setText(this.skademelding.getSkadeType());
         kontaktInfo.setText(this.skademelding.getVitner_kontaktinformasjon());
-        TextField utbetaltBelop = new TextField();
-        utbetaltBelop.setPromptText("Utbetalt Erstatningsbeløp");
     }
 }

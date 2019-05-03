@@ -178,7 +178,7 @@ public class LesCsv implements Reader {
 
     private static Skademelding parseSkademelding(String[] lineArr, int lineNumber) throws InvalidFormatException {
 
-        if (lineArr.length != 7) {
+        if (lineArr.length != 8) {
             throw new InvalidFormatException("Feil Format på Skademelding i linje: " + lineNumber);
         }
         LocalDate dato = LocalDate.parse(lineArr[1], mittFormat);
@@ -188,7 +188,8 @@ public class LesCsv implements Reader {
                 lineArr[3],
                 lineArr[4],
                 lineArr[5],
-                NumberParser.parseNumber(lineArr[6], "Feil Format på takseringsbelop i linje: " + lineNumber)
+                NumberParser.parseNumber(lineArr[6], "Feil Format på takseringsbelop i linje: " + lineNumber),
+                NumberParser.parseNumber(lineArr[7],"Feil format på utbetalt beløp i linje" + lineNumber)
         );
 
         return skademelding;
