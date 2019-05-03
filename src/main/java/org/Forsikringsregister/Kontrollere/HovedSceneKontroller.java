@@ -89,30 +89,11 @@ public class HovedSceneKontroller extends Kontroller {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setInitialDirectory(new File(("data/")));
         File file = fileChooser.showOpenDialog(null);
-        String extension = "";
-        if(file != null) {
-            int i = file.getName().lastIndexOf('.');
-            if (i > 0) {
-                extension = file.getName().substring(i + 1);
-            }
-            switch (extension) {
-                case "csv":
-                    task = new InputThread(this::initialize, file, extension);
-                    try {
-                        service.execute(task);
-                    } catch (Exception e) {
-                        System.out.println(e.getMessage());
-                    }
-
-                    break;
-                case "jobj":
-                    LesJobj jobjLeser = new LesJobj(file);
-                    task = new InputThread(this::initialize, file, extension);
-                    service.execute(task);
-                    break;
-            }
-        }
+        task = new InputThread(this::initialize, file);
+        service.execute(task);
     }
+
+
     @FXML
     public void selectKunde(MouseEvent event) {
         if (event.getClickCount() == 2 && tableView.getSelectionModel().getSelectedItem() != null) //Checking double click

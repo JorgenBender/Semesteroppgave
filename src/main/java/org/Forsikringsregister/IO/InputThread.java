@@ -10,26 +10,31 @@ public class InputThread extends Task<Void> {
 
     private Runnable doneFunc;
     private File file;
-    private String filtype;
 
-    public InputThread(Runnable doneFunc, File file, String filtype) {
+    public InputThread(Runnable doneFunc, File file) {
         this.doneFunc = doneFunc;
         this.file = file;
-        this.filtype = filtype;
     }
 
     @Override
     protected Void call() throws Exception {
         //Thread.sleep(1250); //Simulerer en stor innlasting
-        switch (filtype) {
-            case "csv":
-                LesCsv csvLeser = new LesCsv(file);
-                Kunderegister.setKundeliste(csvLeser.lesKundeliste());
-                break;
-            case "jobj":
-                LesJobj jobjLeser= new LesJobj(file);
-                Kunderegister.setKundeliste(jobjLeser.lesKundeliste());
-                break;
+        String extension = "";
+        if (file != null) {
+            int i = file.getName().lastIndexOf('.');
+            if (i > 0) {
+                extension = file.getName().substring(i + 1);
+            }
+            switch (extension) {
+                case "csv":
+                    LesCsv csvLeser = new LesCsv(file);
+                    Kunderegister.setKundeliste(csvLeser.lesKundeliste());
+                    break;
+                case "jobj":
+                    LesJobj jobjLeser = new LesJobj(file);
+                    Kunderegister.setKundeliste(jobjLeser.lesKundeliste());
+                    break;
+            }
         }
         return null;
     }
