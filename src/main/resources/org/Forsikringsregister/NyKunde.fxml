@@ -5,6 +5,8 @@
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
@@ -23,6 +25,13 @@
       </Label>
       <Button fx:id="nyKundeRegistrer" layoutX="186.0" layoutY="385.0" mnemonicParsing="false" onAction="#nyRegistrering" text="Registrer" />
       <Button fx:id="avbryt" layoutX="284.0" layoutY="386.0" mnemonicParsing="false" onAction="#avbryt" text="Avbryt" />
-      <Pane prefHeight="460.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
+      <Pane prefHeight="460.0" prefWidth="113.0" style="-fx-background-color: #7690FC;">
+         <children>
+            <ImageView fitHeight="132.0" fitWidth="132.0" layoutX="-10.0" layoutY="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cosmetic/logo_transparent.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
    </children>
 </AnchorPane>
