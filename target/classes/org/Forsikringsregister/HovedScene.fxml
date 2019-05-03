@@ -6,12 +6,21 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 
 <AnchorPane prefHeight="471.0" prefWidth="798.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.HovedSceneKontroller">
    <children>
-      <Pane prefHeight="471.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
+      <Pane prefHeight="471.0" prefWidth="113.0" style="-fx-background-color: #7690FC;">
+         <children>
+            <ImageView fitHeight="113.0" fitWidth="113.0" layoutY="123.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cosmetic/logo_transparent.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
       <TableView fx:id="tableView" layoutX="117.0" layoutY="37.0" onMouseClicked="#selectKunde" prefHeight="355.0" prefWidth="675.0">
         <columns>
           <TableColumn fx:id="navn" prefWidth="98.0" text="Navn" />
