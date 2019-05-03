@@ -5,7 +5,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.Forsikringsregister.NumberParser;
-import org.Forsikringsregister.Programlogikk.Husforsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Reiseforsikring;
 
@@ -50,19 +49,22 @@ public class ReiseforsikringKontroller extends Kontroller {
         } else {
             dato = this.dato.getValue();
         }
+        try {
+            int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(), "Årlig premie er ikke et tall");
+            int belopInt = NumberParser.parseNumber(belop.getText(), "Beløp er ikke et tall");
+            int sumInt = NumberParser.parseNumber(sum.getText(), "Sum er ikke et tall");
 
-        int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(),"Årlig premie er ikke et tall");
-        int belopInt = NumberParser.parseNumber(belop.getText(),"Beløp er ikke et tall");
-        int sumInt = NumberParser.parseNumber(sum.getText(), "Sum er ikke et tall");
-
-        Reiseforsikring reiseforsikring = new Reiseforsikring(arligPremieInt,
-                                                              belopInt, dato,
-                                                              betingelser.getText(),
-                                                              omrade.getText(),
-                                                              sumInt
-        );
-        kunde.addForsikring(reiseforsikring);
-
+            Reiseforsikring reiseforsikring = new Reiseforsikring(arligPremieInt,
+                    belopInt, dato,
+                    betingelser.getText(),
+                    omrade.getText(),
+                    sumInt);
+            kunde.addForsikring(reiseforsikring);
+        } catch (NumberFormatException e) {
+            showAlert(e);
+        }
+        Stage stage = (Stage)lagre.getScene().getWindow();
+        stage.close();
     }
     public void initialize(){
     }

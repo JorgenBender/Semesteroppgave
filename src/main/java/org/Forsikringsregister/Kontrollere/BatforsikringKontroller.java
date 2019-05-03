@@ -32,7 +32,7 @@ public class BatforsikringKontroller extends Kontroller{
 
     @FXML private CheckBox iDag;            @FXML private Button lagre;
 
-    @FXML private Button avbryt;
+    @FXML private Button avbryt;            @FXML private Label tittel;
 
 
 
@@ -57,25 +57,31 @@ public class BatforsikringKontroller extends Kontroller{
         } else {
             dato = this.dato.getValue();
         }
-        int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(),"Årlig premie er ikke et tall");
-        int belopInt = NumberParser.parseNumber(belop.getText(),"Beløp er ikke et tall");
-        int lengdeFotInt = NumberParser.parseNumber(lengdeFot.getText(),"Lengde er ikke et tall");
 
-
-        Batforsikring batforsikring = new Batforsikring(arligPremieInt,
-                                                        belopInt, dato,
-                                                        betingelser.getText(),
-                                                        eier.getText(),
-                                                        regNummer.getText(),
-                                                        battype.getText(),
-                                                        modell.getText(),
-                                                        lengdeFotInt,
-                                                        arsmodell.getText(),
-                                                        motorType.getText(),
-                                                        motorStyrke.getText()
-        );
-        kunde.addForsikring(batforsikring);
+        try {
+            int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(), "Årlig premie er ikke et tall");
+            int belopInt = NumberParser.parseNumber(belop.getText(), "Beløp er ikke et tall");
+            int lengdeFotInt = NumberParser.parseNumber(lengdeFot.getText(), "Lengde er ikke et tall");
+            Batforsikring batforsikring = new Batforsikring(
+                    arligPremieInt,
+                    belopInt, dato,
+                    betingelser.getText(),
+                    eier.getText(),
+                    regNummer.getText(),
+                    battype.getText(),
+                    modell.getText(),
+                    lengdeFotInt,
+                    arsmodell.getText(),
+                    motorType.getText(),
+                    motorStyrke.getText());
+            kunde.addForsikring(batforsikring);
         }
+        catch (NumberFormatException e){
+            showAlert(e);
+        }
+        Stage stage = (Stage)lagre.getScene().getWindow();
+        stage.close();
+    }
 
     public void initialize(){
     }

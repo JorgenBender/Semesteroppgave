@@ -4,14 +4,13 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.concurrent.Task;
 import javafx.stage.FileChooser;
+import org.Forsikringsregister.Exceptions.DeserializingFailedException;
 import org.Forsikringsregister.Exceptions.InvalidFormatException;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Kunderegister;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
+import java.io.*;
+import java.util.ArrayList;
 
 public class LesJobj implements Reader{
 
@@ -23,17 +22,21 @@ public class LesJobj implements Reader{
 
 
     @Override
-    public ObservableList<Kunde> lesKundeliste() throws IOException, InvalidFormatException {
+    public ObservableList<Kunde> lesKundeliste() throws IOException, DeserializingFailedException {
 
         FileChooser fileChooser = new FileChooser();
         fileChooser.setInitialDirectory(new File(("data/")));
-        ObservableList<Kunde> importertListe = FXCollections.observableArrayList();
+        ObservableList<Kunde> importertListe;
 
         try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream(file))){
-            importertListe = ObservableList.class.cast(ois.readObject());
-
-        } catch(ClassNotFoundException e) {
-            System.err.println("Could not convert Object");
+            ArrayList<Kunde> arrayList = ArrayList.class.cast(ois.readObject());
+            importertListe = FXCollections.observableArrayList(arrayList);
+        }
+        catch(ClassNotFoundException  | ClassCastException e) {
+            throw new DeserializingFailedException("Filen er ikke en kundeliste");
+        }
+        catch(StreamCorruptedException e){
+            throw new DeserializingFailedException("Filen er korrupt");
         }
         return importertListe;
     }

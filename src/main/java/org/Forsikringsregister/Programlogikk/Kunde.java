@@ -45,6 +45,8 @@ public class Kunde implements Serializable {
 
     public void addForsikring(Forsikring nyForsikring) { this.forsikringer.add(nyForsikring); antallForsikringer++;}
 
+    public void removeForsikring(Forsikring nyForsikring) { this.forsikringer.remove(nyForsikring); antallForsikringer--;}
+
     public void addSkademelding(Skademelding nySkademelding){ this.skademeldinger.add(nySkademelding); }
 
     public void addUbetalteErstatninger(String nyErstatning) { this.ubetalteErstatninger.add(nyErstatning); }
@@ -55,7 +57,7 @@ public class Kunde implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("%s:\nBle kunde: %s\n Faktureringsadresse: %s\n Forsikringsnummer: %s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer());
+        return String.format("%s:\nBle kunde: %s\nFaktureringsadresse: %s\nForsikringsnummer: %s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer());
     }
     public String toCsv() {
 

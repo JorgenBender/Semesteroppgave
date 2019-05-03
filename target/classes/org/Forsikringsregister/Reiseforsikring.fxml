@@ -10,10 +10,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.ReiseforsikringKontroller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.ReiseforsikringKontroller">
    <children>
       <Pane prefHeight="400.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
-      <Label layoutX="141.0" layoutY="23.0" text="Opprettelse av reiseforsikring">
+      <Label fx:id="tittel" layoutX="141.0" layoutY="23.0" text="Opprettelse av reiseforsikring">
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Label>
@@ -21,7 +21,7 @@
       <TextField fx:id="belop" layoutX="144.0" layoutY="128.0" promptText="Forsikringsbeløp" />
       <TextArea fx:id="omrade" layoutX="144.0" layoutY="168.0" prefHeight="55.0" prefWidth="149.0" promptText="Forsikringsområde" />
       <DatePicker fx:id="dato" layoutX="336.0" layoutY="92.0" prefHeight="25.0" prefWidth="149.0" promptText="Dato opprettet" />
-      <CheckBox fx:id="iDag" layoutX="512.0" layoutY="92.0" mnemonicParsing="false" onAction="#iDag" text="I dag" />
+      <CheckBox fx:id="iDag" layoutX="500.0" layoutY="96.0" mnemonicParsing="false" onAction="#iDag" text="I dag" />
       <TextField fx:id="sum" layoutX="336.0" layoutY="128.0" promptText="Forsikringssum" />
       <TextArea fx:id="betingelser" layoutX="336.0" layoutY="168.0" prefHeight="58.0" prefWidth="185.0" promptText="Forsikringsbetingelser" />
       <Button fx:id="lagre" layoutX="248.0" layoutY="320.0" mnemonicParsing="false" onAction="#lagre" text="Lagre" />

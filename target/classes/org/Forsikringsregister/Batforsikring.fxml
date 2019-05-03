@@ -10,10 +10,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.BatforsikringKontroller">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.BatforsikringKontroller">
    <children>
       <Pane prefHeight="400.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
-      <Label layoutX="151.0" layoutY="26.0" text="Opprettelse av båtforsikring">
+      <Label fx:id="tittel" layoutX="151.0" layoutY="26.0" text="Opprettelse av båtforsikring">
          <font>
             <Font name="System Bold" size="18.0" />
          </font></Label>

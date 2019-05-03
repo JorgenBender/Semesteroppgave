@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class Batforsikring extends Forsikring implements Serializable {
+
     private String forsikringstype = "Batforsikring";
     private String eier;
     private String registreringsnummer;
@@ -71,10 +72,42 @@ public class Batforsikring extends Forsikring implements Serializable {
 
     public String getForsikringstype() { return forsikringstype; }
 
+    public void setEier(String eier) {
+        this.eier = eier;
+    }
+
+    public void setRegistreringsnummer(String registreringsnummer) {
+        this.registreringsnummer = registreringsnummer;
+    }
+
+    public void setBattype(String battype) {
+        this.battype = battype;
+    }
+
+    public void setModell(String modell) {
+        this.modell = modell;
+    }
+
+    public void setLengdeFot(int lengdeFot) {
+        this.lengdeFot = lengdeFot;
+    }
+
+    public void setArsmodell(String arsmodell) {
+        this.arsmodell = arsmodell;
+    }
+
+    public void setMotortype(String motortype) {
+        this.motortype = motortype;
+    }
+
+    public void setMotorstyrke(String motorstyrke) {
+        this.motorstyrke = motorstyrke;
+    }
+
     @Override
     public String toString(){
-        return String.format("Båtforsikring:\n%s Eier: %s\n Regnr: %s\n Type: %s\n Modell:" +
-                            "%s\n lengde(fot): %d\n Årsmodell: %s\n Motortype: %s\n Motorkraft: %s",
+        return String.format("Båtforsikring:\n%s\n Eier: %s\nRegnr: %s\nType: %s\nModell: " +
+                            "%s\nlengde(fot): %d\nÅrsmodell: %s\nMotortype: %s\nMotorkraft: %s",
                             super.toString(),getEier(), getRegistreringsnummer(),getBattype(),getModell(),
                             getLengdeFot(),getArsmodell(),getMotortype(),getMotorstyrke());
     }

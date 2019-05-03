@@ -23,19 +23,11 @@ public class HusforsikringKontroller extends Kontroller {
         return this.kunde;
     }
 
-    @FXML private Label tittel;
-    @FXML
-    private TextField arligPremie;
-    @FXML
-    private TextField belop;
+    @FXML private Label tittel;         @FXML private TextField arligPremie;
 
-    @FXML
-    private TextField byggear;
-    @FXML
-    private TextField materiale;
+    @FXML private TextField belop;      @FXML private TextField byggear;
 
-    @FXML
-    private TextField kvadratmeter;
+    @FXML private TextField materiale;  @FXML private TextField kvadratmeter;
     @FXML
     private TextField innboBelop;
 
@@ -83,28 +75,31 @@ public class HusforsikringKontroller extends Kontroller {
         } else {
             dato = this.dato.getValue();
         }
-        int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(), "Årlig premie er ikke et tall");
-        int belopInt = NumberParser.parseNumber(belop.getText(), "Beløp er ikke et tall");
-        int kvadratmeterInt = NumberParser.parseNumber(kvadratmeter.getText(), "Kvadratmeter er ikke et tall");
-        int bygningBelopInt = NumberParser.parseNumber(bygningBelop.getText(), "Forsikringsbeløp bygning er ikke et tall");
-        int innboBelopInt = NumberParser.parseNumber(innboBelop.getText(), "Forsikringsbeløp innbo er ikke et tall");
-
-
-        Husforsikring husforsikring= new Husforsikring(arligPremieInt,
-                                                    belopInt, dato,
-                                                    betingelser.getText(),
-                                                    adresse.getText(),
-                                                    byggear.getText(),
-                                                      boligType.getText(),
-                                                      materiale.getText(),
-                                                      standard.getText(),
-                                                      kvadratmeterInt,
-                                                      bygningBelopInt,
-                                                      innboBelopInt
-);
-        kunde.addForsikring(husforsikring);
+        try {
+            int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(), "Årlig premie er ikke et tall");
+            int belopInt = NumberParser.parseNumber(belop.getText(), "Beløp er ikke et tall");
+            int kvadratmeterInt = NumberParser.parseNumber(kvadratmeter.getText(), "Kvadratmeter er ikke et tall");
+            int bygningBelopInt = NumberParser.parseNumber(bygningBelop.getText(), "Forsikringsbeløp bygning er ikke et tall");
+            int innboBelopInt = NumberParser.parseNumber(innboBelop.getText(), "Forsikringsbeløp innbo er ikke et tall");
+            Husforsikring husforsikring = new Husforsikring(arligPremieInt,
+                    belopInt, dato,
+                    betingelser.getText(),
+                    adresse.getText(),
+                    byggear.getText(),
+                    boligType.getText(),
+                    materiale.getText(),
+                    standard.getText(),
+                    kvadratmeterInt,
+                    bygningBelopInt,
+                    innboBelopInt);
+            kunde.addForsikring(husforsikring);
+        }
+        catch (NumberFormatException e) {
+            showAlert(e);
+        }
+        Stage stage = (Stage)lagre.getScene().getWindow();
+        stage.close();
     }
-
     public void initialize() {
     }
 }
