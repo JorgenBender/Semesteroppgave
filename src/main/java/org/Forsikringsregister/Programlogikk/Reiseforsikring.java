@@ -1,7 +1,5 @@
 package org.Forsikringsregister.Programlogikk;
 
-import org.Forsikringsregister.Programlogikk.Forsikring;
-
 import java.io.Serializable;
 import java.time.LocalDate;
 
@@ -38,11 +36,11 @@ public class Reiseforsikring extends Forsikring implements Serializable {
 
     @Override
     public String toString(){
-        return String.format("Reiseforsikring:\n%s Forsikringsområde: %s\nForsikringssum: %d",super.toString(),getForsikringsOmrade(),getForsikringsSum());
+        return String.format("Reiseforsikring:\n%s\n Forsikringsområde: %s\nForsikringssum: %d",
+                super.toString(),getForsikringsOmrade(),getForsikringsSum());
     }
     @Override
     public String toCsv(){
         return String.format("%s;%s;%s;%d",getForsikringstype(),super.toCsv(),getForsikringsOmrade(),getForsikringsSum());
     }
-
 }

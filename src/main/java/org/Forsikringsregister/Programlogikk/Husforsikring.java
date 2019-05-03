@@ -106,7 +106,7 @@ public class Husforsikring extends Forsikring implements Serializable {
 
     @Override
     public String toString(){
-        return String.format("Husforsikring:\n%s Adresse: %s\n Byggeår: %s\n Boligtype: %s\n Byggematriale: %s\n" +
+        return String.format("Husforsikring:\n%s\n Adresse: %s\n Byggeår: %s\n Boligtype: %s\n Byggematriale: %s\n" +
                         "Standard: %s\nKvadratmeter: %d\nForsikringsbeløp(hus): %d\nForsikringsbeløp(innbo): %d",
                         super.toString(),getAdresse(), getByggear().toString(),getBoligtype(),getByggemateriale(),
                         getStandard(),getKvadratmeter(),getForsikringsbelopBygning(),getForsikringsbelopInnbo());

@@ -28,6 +28,7 @@ public class NyKundeKontroller extends Kontroller{
         }
         else{
             dato = nyKundeRegDato.getValue();
+            System.out.print(dato.toString());
         }
         Kunderegister.nyKunde(new Kunde(dato, nyKundeNavn.getText(), nyKundeFakturaAdresse.getText(),nyKundeForsikringsnummer.getText()));
         Stage stage = (Stage)nyKundeRegistrer.getScene().getWindow();

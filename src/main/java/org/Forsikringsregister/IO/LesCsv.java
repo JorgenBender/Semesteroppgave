@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class LesCsv implements Reader {
 
-    private static DateTimeFormatter mittFormat = DateTimeFormatter.ofPattern("yyyy-DD-mm");
+    private static DateTimeFormatter mittFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     private File file;
 
