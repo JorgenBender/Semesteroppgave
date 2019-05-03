@@ -5,12 +5,15 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
 import javafx.stage.Stage;
+import org.Forsikringsregister.Programlogikk.Kunde;
 
 public class EditErstatningKontroller extends Kontroller{
 
     private String enErstatning;
-    public EditErstatningKontroller(String string){
+    private Kunde kunde;
+    public EditErstatningKontroller(String string, Kunde kunde){
         this.enErstatning = string;
+        this.kunde = kunde;
     }
     public String getErstatning(){return this.enErstatning;}
 
@@ -23,7 +26,9 @@ public class EditErstatningKontroller extends Kontroller{
 
     @FXML
     void lagre(ActionEvent event){
-        this.enErstatning = erstatning.getText();
+        kunde.getUbetalteErstatninger().remove(this.enErstatning);
+        kunde.addUbetalteErstatninger(erstatning.getText());
+        erstatning.getText();
         Stage stage = (Stage)lagre.getScene().getWindow();
         stage.close();
     }
