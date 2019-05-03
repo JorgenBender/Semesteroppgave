@@ -124,7 +124,7 @@ public class KundeSceneKontroller extends Kontroller {
                 try{
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Erstatning.fxml"));
                     fxmlLoader.setControllerFactory(c ->{
-                        return new EditErstatningKontroller(tableErstatning.getSelectionModel().getSelectedItem());
+                        return new EditErstatningKontroller(tableErstatning.getSelectionModel().getSelectedItem(),kunde);
                     });
                     Stage editErstatning = loadStage(fxmlLoader);
                     editErstatning.showAndWait();
@@ -132,8 +132,14 @@ public class KundeSceneKontroller extends Kontroller {
                     System.err.println("Cant load new window");
                     System.err.println(e.getMessage() + e.getCause());
                 }
+                tableErstatning.getSelectionModel().select(null);
             }
-            objektInfo.setText(selectedTable.getSelectionModel().getSelectedItem().toString());
+            if (selectedTable.getSelectionModel().getSelectedItem() != null){
+                objektInfo.setText(selectedTable.getSelectionModel().getSelectedItem().toString());
+            }
+            else {
+                objektInfo.setText("");
+            }
             refresh();
         }
     }
