@@ -57,7 +57,6 @@ public class BatforsikringKontroller extends Kontroller{
         } else {
             dato = this.dato.getValue();
         }
-
         try {
             int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(), "Årlig premie er ikke et tall");
             int belopInt = NumberParser.parseNumber(belop.getText(), "Beløp er ikke et tall");
@@ -75,14 +74,11 @@ public class BatforsikringKontroller extends Kontroller{
                     motorType.getText(),
                     motorStyrke.getText());
             kunde.addForsikring(batforsikring);
+            Stage stage = (Stage) lagre.getScene().getWindow();
+            stage.close();
         }
-        catch (NumberFormatException e){
-            showAlert(e);
-        }
-        Stage stage = (Stage)lagre.getScene().getWindow();
-        stage.close();
+        catch (NumberFormatException e) { showAlert(e); }
     }
-
     public void initialize(){
     }
 }

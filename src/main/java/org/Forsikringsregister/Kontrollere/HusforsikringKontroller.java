@@ -93,12 +93,11 @@ public class HusforsikringKontroller extends Kontroller {
                     bygningBelopInt,
                     innboBelopInt);
             kunde.addForsikring(husforsikring);
-        }
-        catch (NumberFormatException e) {
+            Stage stage = (Stage) lagre.getScene().getWindow();
+            stage.close();
+        } catch (NumberFormatException e) {
             showAlert(e);
         }
-        Stage stage = (Stage)lagre.getScene().getWindow();
-        stage.close();
     }
     public void initialize() {
     }

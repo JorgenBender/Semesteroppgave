@@ -53,12 +53,12 @@ public class SkadeMeldingKontroller extends Kontroller{
             int takseringsbelopInt = NumberParser.parseNumber(takseringsBelop.getText(), "Takseringsbeløp er ikke et tall");
             Skademelding skademelding = new Skademelding(dato, skadeNummer.getText(), type.getText(), beskrivelse.getText(), kontaktInfo.getText(), takseringsbelopInt, 0);
             kunde.addSkademelding(skademelding);
+            Stage stage = (Stage)lagre.getScene().getWindow();
+            stage.close();
         }
         catch (NumberFormatException e){
             showAlert(e);
         }
-        Stage stage = (Stage)lagre.getScene().getWindow();
-        stage.close();
     }
     public void initialize(){
     }

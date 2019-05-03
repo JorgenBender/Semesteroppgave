@@ -61,13 +61,13 @@ public class EditSkadeMeldingKontroller extends Kontroller{
             this.skademelding.setVitner_kontaktinformasjon(kontaktInfo.getText());
             this.skademelding.setTakseringsbelop(takseringsbelopInt);
             this.skademelding.setUtbetaltErstatningsbelop(utbetaltErstatningsbelopInt);
+            Stage stage = (Stage)lagre.getScene().getWindow();
+            stage.close();
 
         }
         catch (NumberFormatException e){
             showAlert(e);
         }
-        Stage stage = (Stage)lagre.getScene().getWindow();
-        stage.close();
     }
     public void initialize(){
         skadeNummer.setText(this.skademelding.getSkadenummer());

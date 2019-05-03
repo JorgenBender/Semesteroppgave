@@ -60,12 +60,12 @@ public class EditReiseforsikringKontroller extends Kontroller {
             this.reiseforsikring.setBetingelser(betingelser.getText());
             this.reiseforsikring.setForsikringsOmrade(omrade.getText());
             this.reiseforsikring.setForsikringsSum(sumInt);
+            Stage stage = (Stage)lagre.getScene().getWindow();
+            stage.close();
         }
         catch (NumberFormatException e) {
             showAlert(e);
         }
-        Stage stage = (Stage)lagre.getScene().getWindow();
-        stage.close();
     }
     public void initialize(){
         arligPremie.setText(""+this.reiseforsikring.getArligPremie());

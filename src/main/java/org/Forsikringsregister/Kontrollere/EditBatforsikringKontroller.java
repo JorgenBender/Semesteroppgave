@@ -71,12 +71,12 @@ public class EditBatforsikringKontroller extends Kontroller{
             this.batforsikring.setArsmodell(arsmodell.getText());
             this.batforsikring.setMotortype(motorType.getText());
             this.batforsikring.setMotorstyrke(motorStyrke.getText());
+            Stage stage = (Stage)lagre.getScene().getWindow();
+            stage.close();
         }
         catch (NumberFormatException e){
             showAlert(e);
         }
-        Stage stage = (Stage)lagre.getScene().getWindow();
-        stage.close();
     }
     public void initialize(){
         tittel.setText("Rediger Båtforsikring");

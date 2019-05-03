@@ -101,12 +101,12 @@ public class EditHusforsikringKontroller extends Kontroller {
             this.husforsikring.setKvadratmeter(kvadratmeterInt);
             this.husforsikring.setForsikringsbelopBygning(bygningBelopInt);
             this.husforsikring.setForsikringsbelopInnbo(innboBelopInt);
+            Stage stage = (Stage)lagre.getScene().getWindow();
+            stage.close();
         }
         catch (NumberFormatException e) {
             showAlert(e);
         }
-        Stage stage = (Stage)lagre.getScene().getWindow();
-        stage.close();
     }
     public void initialize() {
         arligPremie.setText(""+this.husforsikring.getArligPremie());
