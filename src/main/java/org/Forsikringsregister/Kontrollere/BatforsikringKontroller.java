@@ -45,8 +45,8 @@ public class BatforsikringKontroller extends Kontroller{
 
     @FXML
     void avbryt (ActionEvent event){
-        Stage HusForsikring = (Stage) avbryt.getScene().getWindow();
-        HusForsikring.close();
+        Stage BatForsikring = (Stage) avbryt.getScene().getWindow();
+        BatForsikring.close();
     }
 
     @FXML

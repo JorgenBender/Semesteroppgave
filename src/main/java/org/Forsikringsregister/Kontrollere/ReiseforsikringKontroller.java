@@ -37,8 +37,8 @@ public class ReiseforsikringKontroller extends Kontroller {
 
     @FXML
     void avbryt (ActionEvent event){
-        Stage HusForsikring = (Stage) avbryt.getScene().getWindow();
-        HusForsikring.close();
+        Stage ReiseForsikring = (Stage) avbryt.getScene().getWindow();
+        ReiseForsikring.close();
     }
 
     @FXML
