@@ -61,6 +61,30 @@ public class Skademelding implements Serializable {
         this.utbetalt_erstatningsbelop = utbetalt_erstatningsbelop;
     }
 
+    public void setSkadeDato(LocalDate skadeDato) {
+        this.skadeDato = skadeDato;
+    }
+
+    public void setSkadenummer(String skadenummer) {
+        this.skadenummer = skadenummer;
+    }
+
+    public void setSkadeType(String skadeType) {
+        this.skadeType = skadeType;
+    }
+
+    public void setSkadeBeskrivelse(String skadeBeskrivelse) {
+        this.skadeBeskrivelse = skadeBeskrivelse;
+    }
+
+    public void setVitner_kontaktinformasjon(String vitner_kontaktinformasjon) {
+        this.vitner_kontaktinformasjon = vitner_kontaktinformasjon;
+    }
+
+    public void setTakseringsbelop(int takseringsbelop) {
+        this.takseringsbelop = takseringsbelop;
+    }
+
     @Override
     public String toString(){
         return String.format("Skademelding:\n Skadedato: %s\n Skadenummer: %s\n Skadetype: %s\n" +
@@ -69,7 +93,7 @@ public class Skademelding implements Serializable {
                             getVitner_kontaktinformasjon(), getTakseringsbelop(), getUtbetalt_erstatningsbelop());
     }
     public String toCsv(){
-        return String.format("%Skademelding;s;%s;%s;%s;%s;%d;%d",
+        return String.format("Skademelding;%s;%s;%s;%s;%s;%d;%d",
                 getSkadeDato().toString(),getSkadenummer(), getSkadeType(), getSkadeBeskrivelse(),
                 getVitner_kontaktinformasjon(), getTakseringsbelop(), getUtbetalt_erstatningsbelop());
     }

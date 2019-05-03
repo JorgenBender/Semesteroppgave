@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 import org.Forsikringsregister.Programlogikk.Batforsikring;
 import org.Forsikringsregister.Programlogikk.Forsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
+import org.Forsikringsregister.Programlogikk.Skademelding;
+
 import java.io.IOException;
 
 public class Kontroller {

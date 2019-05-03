@@ -3,6 +3,7 @@ C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsi
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Forsikring.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Exceptions\DeserializingFailedException.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\EditHusforsikringKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\EditSkadeMeldingKontroller.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\Reader.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\LesJobj.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Batforsikring.java
@@ -10,6 +11,7 @@ C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsi
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\EditFritidsboligforsikringKontroller.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\IO\LesCsv.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\FritidsboligforsikringKontroller.java
+C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\EditErstatningKontroller.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\ErstatningKontroller.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Kontrollere\HusforsikringKontroller.java
 C:\Users\Jørgen Bender\Documents\GitHub\Semesteroppgave\src\main\java\org\Forsikringsregister\Programlogikk\Fritidsboligforsikring.java

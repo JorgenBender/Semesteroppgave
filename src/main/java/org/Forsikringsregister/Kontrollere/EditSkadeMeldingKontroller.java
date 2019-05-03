@@ -10,13 +10,13 @@ import org.Forsikringsregister.Programlogikk.Skademelding;
 
 import java.time.LocalDate;
 
-public class SkadeMeldingKontroller extends Kontroller{
+public class EditSkadeMeldingKontroller extends Kontroller{
 
-    private Kunde kunde;
-    public SkadeMeldingKontroller(Kunde kunde){
-        this.kunde=kunde;
+    private Skademelding skademelding;
+    public EditSkadeMeldingKontroller(Skademelding skademelding){
+        this.skademelding = skademelding;
     }
-    public Kunde getKunde(){return this.kunde;}
+    public Skademelding getSkademelding(){return this.skademelding;}
 
     @FXML private TextField skadeNummer;    @FXML private TextField takseringsBelop;
 
@@ -51,13 +51,28 @@ public class SkadeMeldingKontroller extends Kontroller{
         }
         try {
             int takseringsbelopInt = NumberParser.parseNumber(takseringsBelop.getText(), "Takseringsbeløp er ikke et tall");
-            Skademelding skademelding = new Skademelding(dato, skadeNummer.getText(), type.getText(), beskrivelse.getText(), kontaktInfo.getText(), takseringsbelopInt);
-            kunde.addSkademelding(skademelding);
+            this.skademelding.setSkadeDato(dato);
+            this.skademelding.setSkadenummer(skadeNummer.getText());
+            this.skademelding.setSkadeType(type.getText());
+            this.skademelding.setSkadeBeskrivelse(beskrivelse.getText());
+            this.skademelding.setVitner_kontaktinformasjon(kontaktInfo.getText());
+            this.skademelding.setTakseringsbelop(takseringsbelopInt);
+            this.skademelding.setUtbetalt_erstatningsbelop(0);
+
         }
         catch (NumberFormatException e){
             showAlert(e);
         }
     }
     public void initialize(){
+        tittel.setText("Rediger Skademelding");
+        skadeNummer.setText(this.skademelding.getSkadenummer());
+        beskrivelse.setText(this.skademelding.getSkadeBeskrivelse());
+        takseringsBelop.setText(""+this.skademelding.getTakseringsbelop());
+        dato.setValue(this.skademelding.getSkadeDato());
+        type.setText(this.skademelding.getSkadeType());
+        kontaktInfo.setText(this.skademelding.getVitner_kontaktinformasjon());
+        TextField utbetaltBelop = new TextField();
+        utbetaltBelop.setPromptText("Utbetalt Erstatningsbeløp");
     }
 }

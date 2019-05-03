@@ -57,7 +57,7 @@ public class Kunde implements Serializable {
 
     @Override
     public String toString() {
-        return String.format("%s:\nBle kunde: %s\n Faktureringsadresse: %s\n Forsikringsnummer: %s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer());
+        return String.format("%s:\nBle kunde: %s\nFaktureringsadresse: %s\nForsikringsnummer: %s", getNavn(), getDatoKundeforhold().toString(), getFakturaadresse(), getForsikringsnummer());
     }
     public String toCsv() {
 

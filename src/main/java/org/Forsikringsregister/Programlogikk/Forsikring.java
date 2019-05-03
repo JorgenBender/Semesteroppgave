@@ -52,7 +52,7 @@ public class Forsikring implements Serializable{
 
     @Override
     public String toString(){
-        return String.format("Årlig Premie: %d\n Forsikringsbeløp: %d \n Opprettet dato: %s\n Betingelser: %s\n",
+        return String.format("Årlig Premie: %d\nForsikringsbeløp: %d\nOpprettet dato: %s\nBetingelser: %s",
                             getArligPremie(),getForsikringsbelop(),getOpprettetDato().toString(),getBetingelser());
     }
     public String toCsv(){

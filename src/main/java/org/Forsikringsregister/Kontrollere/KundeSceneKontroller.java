@@ -58,56 +58,84 @@ public class KundeSceneKontroller extends Kontroller {
     public void selectObjekt(MouseEvent event) {
 
         TableView selectedTable = (TableView) event.getSource();
-        for (TableView table : new TableView[]{tableForsikring, tableSkademelding, tableErstatning}) {
-            if (table != selectedTable) {
-                table.getSelectionModel().select(null);
+        if (selectedTable.getSelectionModel().getSelectedItem() != null) {
+            for (TableView table : new TableView[]{tableForsikring, tableSkademelding, tableErstatning}) {
+                if (table != selectedTable) {
+                    table.getSelectionModel().select(null);
+                }
             }
-        }
-
-        if (event.getClickCount() == 2 && selectedTable == tableForsikring && selectedTable.getSelectionModel().getSelectedItem() != null) //Checking double click
-        {
-            switch (tableForsikring.getSelectionModel().getSelectedItem().getClass().getCanonicalName()){
-                case "org.Forsikringsregister.Programlogikk.Batforsikring":
-                    try {
-                        Stage editForsikring = openStageEditForsikring("../Batforsikring.fxml",tableForsikring.getSelectionModel().getSelectedItem());
-                        editForsikring.showAndWait();
-                    } catch (IOException e) {
-                        System.err.println("Cant load new window");
-                        System.err.println(e.getMessage()+e.getCause());
-                    }
-                    break;
-                case "org.Forsikringsregister.Programlogikk.Husforsikring":
-                    try {
-                        Stage editForsikring = openStageEditForsikring("../Husforsikring.fxml",tableForsikring.getSelectionModel().getSelectedItem());
-                        editForsikring.showAndWait();
-                    } catch (IOException e) {
-                        System.err.println("Cant load new window");
-                        System.err.println(e.getMessage()+e.getCause());
-                    }
-                    break;
-                case "org.Forsikringsregister.Programlogikk.Fritidsboligforsikring":
-                    try {
-                        Stage editForsikring = openStageEditForsikring("../Fritidsboligforsikring.fxml",tableForsikring.getSelectionModel().getSelectedItem());
-                        editForsikring.showAndWait();
-                    } catch (IOException e) {
-                        System.err.println("Cant load new window");
-                        System.err.println(e.getMessage()+e.getCause());
-                    }
-                    break;
-                case "org.Forsikringsregister.Programlogikk.Reiseforsikring":
-                    try {
-                        Stage editForsikring = openStageEditForsikring("../Reiseforsikring.fxml",tableForsikring.getSelectionModel().getSelectedItem());
-                        editForsikring.showAndWait();
-                    } catch (IOException e) {
-                        System.err.println("Cant load new window");
-                        System.err.println(e.getMessage()+e.getCause());
-                    }
-                    break;
+            if (event.getClickCount() == 2 && selectedTable == tableForsikring) //Checking double click
+            {
+                switch (tableForsikring.getSelectionModel().getSelectedItem().getClass().getCanonicalName()) {
+                    case "org.Forsikringsregister.Programlogikk.Batforsikring":
+                        try {
+                            Stage editForsikring = openStageEditForsikring("../Batforsikring.fxml", tableForsikring.getSelectionModel().getSelectedItem());
+                            editForsikring.showAndWait();
+                        } catch (IOException e) {
+                            System.err.println("Cant load new window");
+                            System.err.println(e.getMessage() + e.getCause());
+                        }
+                        break;
+                    case "org.Forsikringsregister.Programlogikk.Husforsikring":
+                        try {
+                            Stage editForsikring = openStageEditForsikring("../Husforsikring.fxml", tableForsikring.getSelectionModel().getSelectedItem());
+                            editForsikring.showAndWait();
+                        } catch (IOException e) {
+                            System.err.println("Cant load new window");
+                            System.err.println(e.getMessage() + e.getCause());
+                        }
+                        break;
+                    case "org.Forsikringsregister.Programlogikk.Fritidsboligforsikring":
+                        try {
+                            Stage editForsikring = openStageEditForsikring("../Fritidsboligforsikring.fxml", tableForsikring.getSelectionModel().getSelectedItem());
+                            editForsikring.showAndWait();
+                        } catch (IOException e) {
+                            System.err.println("Cant load new window");
+                            System.err.println(e.getMessage() + e.getCause());
+                        }
+                        break;
+                    case "org.Forsikringsregister.Programlogikk.Reiseforsikring":
+                        try {
+                            Stage editForsikring = openStageEditForsikring("../Reiseforsikring.fxml", tableForsikring.getSelectionModel().getSelectedItem());
+                            editForsikring.showAndWait();
+                        } catch (IOException e) {
+                            System.err.println("Cant load new window");
+                            System.err.println(e.getMessage() + e.getCause());
+                        }
+                        break;
+                }
             }
+            if (event.getClickCount() == 2 && selectedTable == tableSkademelding) //Checking double click
+            {
+                try{
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Skademelding.fxml"));
+                    fxmlLoader.setControllerFactory(c ->{
+                        return new EditSkadeMeldingKontroller(tableSkademelding.getSelectionModel().getSelectedItem());
+                    });
+                    Stage editSkademelding = loadStage(fxmlLoader);
+                    editSkademelding.showAndWait();
+                } catch (IOException e){
+                    System.err.println("Cant load new window");
+                    System.err.println(e.getMessage() + e.getCause());
+                }
+            }
+            if (event.getClickCount() == 2 && selectedTable == tableErstatning)
+            {
+                try{
+                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("../Erstatning.fxml"));
+                    fxmlLoader.setControllerFactory(c ->{
+                        return new EditErstatningKontroller(tableErstatning.getSelectionModel().getSelectedItem());
+                    });
+                    Stage editErstatning = loadStage(fxmlLoader);
+                    editErstatning.showAndWait();
+                } catch (IOException e){
+                    System.err.println("Cant load new window");
+                    System.err.println(e.getMessage() + e.getCause());
+                }
+            }
+            objektInfo.setText(selectedTable.getSelectionModel().getSelectedItem().toString());
         }
-        objektInfo.setText(selectedTable.getSelectionModel().getSelectedItem().toString());
     }
-
     public void nyForsikring(){
 
         switch (nyForsikring.getValue()){
@@ -227,7 +255,7 @@ public class KundeSceneKontroller extends Kontroller {
         ObservableList<Forsikring> forsikringer = FXCollections.observableArrayList(kunde.getForsikringer());
         tableForsikring.getItems().setAll(forsikringer);
 
-        skademeldingColumn.setCellValueFactory(new PropertyValueFactory<>("skademeldingType"));
+        skademeldingColumn.setCellValueFactory(new PropertyValueFactory<>("skadeType"));
         ObservableList<Skademelding> skademeldinger = FXCollections.observableArrayList(kunde.getSkademeldinger());
         tableSkademelding.getItems().setAll(skademeldinger);
 

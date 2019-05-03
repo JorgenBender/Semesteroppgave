@@ -1,3 +1,4 @@
+org\Forsikringsregister\Kontrollere\EditSkadeMeldingKontroller.class
 org\Forsikringsregister\Programlogikk\Forsikring.class
 org\Forsikringsregister\Kontrollere\ErstatningKontroller.class
 org\Forsikringsregister\Programlogikk\Kunde.class
@@ -9,6 +10,7 @@ module-info.class
 org\Forsikringsregister\Exceptions\InvalidFormatException.class
 org\Forsikringsregister\NumberParser.class
 org\Forsikringsregister\Kontrollere\FritidsboligforsikringKontroller.class
+org\Forsikringsregister\Kontrollere\EditErstatningKontroller.class
 org\Forsikringsregister\Kontrollere\EditReiseforsikringKontroller.class
 org\Forsikringsregister\Programlogikk\Batforsikring.class
 org\Forsikringsregister\IO\Reader.class
