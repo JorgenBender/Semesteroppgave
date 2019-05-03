@@ -34,6 +34,22 @@ public class Forsikring implements Serializable{
         return betingelser;
     }
 
+    public void setArligPremie(int arligPremie) {
+        this.arligPremie = arligPremie;
+    }
+
+    public void setForsikringsbelop(int forsikringsbelop) {
+        this.forsikringsbelop = forsikringsbelop;
+    }
+
+    public void setOpprettetDato(LocalDate opprettetDato) {
+        this.opprettetDato = opprettetDato;
+    }
+
+    public void setBetingelser(String betingelser) {
+        this.betingelser = betingelser;
+    }
+
     @Override
     public String toString(){
         return String.format("Årlig Premie: %d\n Forsikringsbeløp: %d \n Opprettet dato: %s\n Betingelser: %s\n",

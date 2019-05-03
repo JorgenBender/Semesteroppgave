@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
@@ -8,22 +9,35 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="536.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.KundeSceneKontroller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="633.0" prefWidth="749.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.Forsikringsregister.Kontrollere.KundeSceneKontroller">
    <children>
-      <Pane prefHeight="536.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
-      <Label fx:id="kundenavn" layoutX="212.0" layoutY="30.0" text="Kundenavn">
+      <Pane prefHeight="633.0" prefWidth="113.0" style="-fx-background-color: #7690FC;" />
+      <Label fx:id="kundenavn" layoutX="355.0" layoutY="24.0" text="Kundenavn">
          <font>
             <Font name="System Bold" size="24.0" />
          </font>
       </Label>
-      <Label fx:id="forsikringsinfo" layoutX="246.0" layoutY="225.0" prefHeight="246.0" prefWidth="199.0" />
-      <Label fx:id="kundeinfo" layoutX="122.0" layoutY="77.0" prefHeight="141.0" prefWidth="307.0" />
-      <TableView fx:id="tableView" layoutX="122.0" layoutY="223.0" onMouseClicked="#selectForsikring" prefHeight="246.0" prefWidth="113.0">
+      <Label fx:id="objektInfo" layoutX="476.0" layoutY="223.0" prefHeight="307.0" prefWidth="255.0" text="Info:" />
+      <Label fx:id="kundeinfo" layoutX="122.0" layoutY="77.0" prefHeight="141.0" prefWidth="307.0" text="Kundeinfo" />
+      <TableView id="forsikringer" fx:id="tableForsikring" layoutX="122.0" layoutY="223.0" onMouseClicked="#selectObjekt" prefHeight="307.0" prefWidth="120.0">
         <columns>
-          <TableColumn fx:id="forsikringstype" prefWidth="113" text="Forsikringer" />
+          <TableColumn fx:id="forsikringColumn" prefWidth="120.0" text="Forsikringer" />
         </columns>
       </TableView>
-      <ComboBox fx:id="nyForsikring" layoutX="201.0" layoutY="496.0" prefWidth="150.0" promptText="Ny forsikring" />
+      <TableView id="skademeldinger" fx:id="tableSkademelding" layoutX="241.0" layoutY="223.0" onMouseClicked="#selectObjekt" prefHeight="307.0" prefWidth="128.0">
+         <columns>
+            <TableColumn fx:id="skademeldingColumn" prefWidth="132.0" text="Skademeldinger" />
+         </columns>
+      </TableView>
+      <TableView id="erstatninger" fx:id="tableErstatning" layoutX="369.0" layoutY="223.0" onMouseClicked="#selectObjekt" prefHeight="307.0" prefWidth="100.0">
+         <columns>
+            <TableColumn fx:id="erstatningColumn" minWidth="-1.0" prefWidth="100.0" text="Erstatninger" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="nyForsikring" layoutX="201.0" layoutY="534.0" prefWidth="150.0" promptText="Ny forsikring" />
+      <Button fx:id="nySkademelding" layoutX="201.0" layoutY="571.0" mnemonicParsing="false" onAction="#nySkademelding" prefHeight="31.0" prefWidth="150.0" text="Ny Skademelding" />
+      <Button fx:id="nyErstatning" layoutX="489.0" layoutY="534.0" mnemonicParsing="false" onAction="#nyErstatning" prefHeight="31.0" prefWidth="119.0" text="Ny Erstatining" />
+      <Button fx:id="slettObjekt" layoutX="489.0" layoutY="571.0" mnemonicParsing="false" onAction="#slettObjekt" prefHeight="31.0" prefWidth="119.0" text="Slett Objekt" />
 
    </children>
 </AnchorPane>

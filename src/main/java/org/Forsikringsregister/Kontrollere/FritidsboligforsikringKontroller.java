@@ -6,16 +6,15 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.Forsikringsregister.NumberParser;
 import org.Forsikringsregister.Programlogikk.Fritidsboligforsikring;
-import org.Forsikringsregister.Programlogikk.Husforsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
 
 import java.time.LocalDate;
 
-public class HusforsikringKontroller extends Kontroller {
+public class FritidsboligforsikringKontroller extends Kontroller{
 
     private Kunde kunde;
 
-    public HusforsikringKontroller(Kunde kunde) {
+    public FritidsboligforsikringKontroller(Kunde kunde) {
         this.kunde = kunde;
     }
 
@@ -23,36 +22,22 @@ public class HusforsikringKontroller extends Kontroller {
         return this.kunde;
     }
 
-    @FXML private Label tittel;         @FXML private TextField arligPremie;
+    @FXML
+    private TextField arligPremie;            @FXML private TextField belop;
 
-    @FXML private TextField belop;      @FXML private TextField byggear;
+    @FXML private TextField byggear;          @FXML private TextField materiale;
 
-    @FXML private TextField materiale;  @FXML private TextField kvadratmeter;
-    @FXML
-    private TextField innboBelop;
+    @FXML private TextField kvadratmeter;     @FXML private TextField innboBelop;
 
-    @FXML
-    private TextField adresse;
-    @FXML
-    private TextField boligType;
+    @FXML private TextField adresse;          @FXML private TextField boligType;
 
-    @FXML
-    private TextField standard;
-    @FXML
-    private TextField bygningBelop;
+    @FXML private TextField standard;         @FXML private TextField bygningBelop;
 
-    @FXML
-    private DatePicker dato;
-    @FXML
-    private TextArea betingelser;
+    @FXML private DatePicker dato;            @FXML private TextArea betingelser;
 
-    @FXML
-    private CheckBox iDag;
-    @FXML
-    private Button lagre;
+    @FXML private CheckBox iDag;              @FXML private Button lagre;
 
-    @FXML
-    private Button avbryt;
+    @FXML private Button avbryt;
 
     @FXML
     void iDag(ActionEvent event) {
@@ -63,8 +48,8 @@ public class HusforsikringKontroller extends Kontroller {
 
     @FXML
     void avbryt(ActionEvent event) {
-        Stage HusForsikring = (Stage) avbryt.getScene().getWindow();
-        HusForsikring.close();
+        Stage FritidsboligForsikring = (Stage) avbryt.getScene().getWindow();
+        FritidsboligForsikring.close();
     }
 
     @FXML
@@ -81,7 +66,7 @@ public class HusforsikringKontroller extends Kontroller {
             int kvadratmeterInt = NumberParser.parseNumber(kvadratmeter.getText(), "Kvadratmeter er ikke et tall");
             int bygningBelopInt = NumberParser.parseNumber(bygningBelop.getText(), "Forsikringsbeløp bygning er ikke et tall");
             int innboBelopInt = NumberParser.parseNumber(innboBelop.getText(), "Forsikringsbeløp innbo er ikke et tall");
-            Husforsikring husforsikring = new Husforsikring(arligPremieInt,
+            Fritidsboligforsikring fritidsboligforsikring = new Fritidsboligforsikring(arligPremieInt,
                     belopInt, dato,
                     betingelser.getText(),
                     adresse.getText(),
@@ -91,14 +76,15 @@ public class HusforsikringKontroller extends Kontroller {
                     standard.getText(),
                     kvadratmeterInt,
                     bygningBelopInt,
-                    innboBelopInt);
-            kunde.addForsikring(husforsikring);
+                    innboBelopInt
+            );
+            kunde.addForsikring(fritidsboligforsikring);
         }
-        catch (NumberFormatException e) {
+        catch (NumberFormatException e){
             showAlert(e);
         }
     }
+
     public void initialize() {
     }
 }
-

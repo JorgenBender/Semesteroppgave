@@ -45,6 +45,8 @@ public class Kunde implements Serializable {
 
     public void addForsikring(Forsikring nyForsikring) { this.forsikringer.add(nyForsikring); antallForsikringer++;}
 
+    public void removeForsikring(Forsikring nyForsikring) { this.forsikringer.remove(nyForsikring); antallForsikringer--;}
+
     public void addSkademelding(Skademelding nySkademelding){ this.skademeldinger.add(nySkademelding); }
 
     public void addUbetalteErstatninger(String nyErstatning) { this.ubetalteErstatninger.add(nyErstatning); }

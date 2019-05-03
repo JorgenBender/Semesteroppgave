@@ -5,45 +5,57 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.Forsikringsregister.NumberParser;
+import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Skademelding;
 
 import java.time.LocalDate;
 
 public class SkadeMeldingKontroller extends Kontroller{
 
-    @FXML private TextField SkadeNummer;    @FXML private TextField TakseringsBelop;
+    private Kunde kunde;
+    public SkadeMeldingKontroller(Kunde kunde){
+        this.kunde=kunde;
+    }
+    public Kunde getKunde(){return this.kunde;}
 
-    @FXML private TextField Type;           @FXML private TextField UtbetaltBelop;
+    @FXML private TextField skadeNummer;    @FXML private TextField takseringsBelop;
 
-    @FXML private TextArea Beskrivelse;     @FXML private TextArea KontaktInfo;
+    @FXML private TextField type;           @FXML private DatePicker dato;
 
-    @FXML private DatePicker Dato;          @FXML private CheckBox Idag;
+    @FXML private TextArea beskrivelse;     @FXML private TextArea kontaktInfo;
 
-    @FXML private Button Lagre;             @FXML private Button Avbryt;
+    @FXML private CheckBox iDag;            @FXML private Button lagre;
+
+    @FXML private Button avbryt;
 
     @FXML
     void IDagChecked (ActionEvent event){
-        if(Idag.isSelected()) {
-            Dato.setValue(LocalDate.now());
+        if(iDag.isSelected()) {
+            dato.setValue(LocalDate.now());
         }
     }
 
     @FXML
     void avbrytScene (ActionEvent event){
-        Stage Skademelding = (Stage) Avbryt.getScene().getWindow();
+        Stage Skademelding = (Stage) avbryt.getScene().getWindow();
         Skademelding.close();
     }
 
     @FXML
     void nyLagring(ActionEvent event){
         LocalDate dato;
-        if (Idag.isSelected()) {
+        if (iDag.isSelected()) {
             dato = LocalDate.now();
         } else {
-            dato = Dato.getValue();
+            dato = this.dato.getValue();
         }
-        int takseringsbelopInt = NumberParser.parseNumber(TakseringsBelop.getText(),"Takseringsbeløp er ikke et tall");
-        int utbetalt_erstatningsbelopInt = NumberParser.parseNumber(UtbetaltBelop.getText(),"Utbetalt erstatningsbeløp er ikke et tall");
-        Skademelding skademelding = new Skademelding(dato,SkadeNummer.getText(),Type.getText(),Beskrivelse.getText(),KontaktInfo.getText(),takseringsbelopInt);
+        try {
+            int takseringsbelopInt = NumberParser.parseNumber(takseringsBelop.getText(), "Takseringsbeløp er ikke et tall");
+            Skademelding skademelding = new Skademelding(dato, skadeNummer.getText(), type.getText(), beskrivelse.getText(), kontaktInfo.getText(), takseringsbelopInt);
+            kunde.addSkademelding(skademelding);
+        }
+        catch (NumberFormatException e){
+            showAlert(e);
+        }
     }
 }

@@ -6,17 +6,16 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.Forsikringsregister.NumberParser;
 import org.Forsikringsregister.Programlogikk.Batforsikring;
+import org.Forsikringsregister.Programlogikk.Forsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
 
 import java.time.LocalDate;
 
-public class BatforsikringKontroller extends Kontroller{
+public class EditBatforsikringKontroller extends Kontroller{
 
-    private Kunde kunde;
-    public BatforsikringKontroller(Kunde kunde){
-        this.kunde=kunde;
-    }
-    public Kunde getKunde(){return this.kunde;}
+    private Batforsikring batforsikring;
+    public EditBatforsikringKontroller(Forsikring forsikring) { this.batforsikring = (Batforsikring)forsikring;}
+    public Batforsikring getKunde(){return this.batforsikring;}
 
     @FXML private TextField arligPremie;    @FXML private TextField belop;
 
@@ -33,8 +32,6 @@ public class BatforsikringKontroller extends Kontroller{
     @FXML private CheckBox iDag;            @FXML private Button lagre;
 
     @FXML private Button avbryt;            @FXML private Label tittel;
-
-
 
     @FXML
     void iDag (ActionEvent event){
@@ -62,28 +59,36 @@ public class BatforsikringKontroller extends Kontroller{
             int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(), "Årlig premie er ikke et tall");
             int belopInt = NumberParser.parseNumber(belop.getText(), "Beløp er ikke et tall");
             int lengdeFotInt = NumberParser.parseNumber(lengdeFot.getText(), "Lengde er ikke et tall");
-            Batforsikring batforsikring = new Batforsikring(
-                    arligPremieInt,
-                    belopInt, dato,
-                    betingelser.getText(),
-                    eier.getText(),
-                    regNummer.getText(),
-                    battype.getText(),
-                    modell.getText(),
-                    lengdeFotInt,
-                    arsmodell.getText(),
-                    motorType.getText(),
-                    motorStyrke.getText());
-            kunde.addForsikring(batforsikring);
+            this.batforsikring.setArligPremie(arligPremieInt);
+            this.batforsikring.setForsikringsbelop(belopInt);
+            this.batforsikring.setOpprettetDato(dato);
+            this.batforsikring.setBetingelser(betingelser.getText());
+            this.batforsikring.setEier(eier.getText());
+            this.batforsikring.setRegistreringsnummer(regNummer.getText());
+            this.batforsikring.setBattype(battype.getText());
+            this.batforsikring.setModell(modell.getText());
+            this.batforsikring.setLengdeFot(lengdeFotInt);
+            this.batforsikring.setArsmodell(arsmodell.getText());
+            this.batforsikring.setMotortype(motorType.getText());
+            this.batforsikring.setMotorstyrke(motorStyrke.getText());
         }
         catch (NumberFormatException e){
             showAlert(e);
         }
-
-
-
     }
-
     public void initialize(){
+        tittel.setText("Rediger Båtforsikring");
+        arligPremie.setText(""+batforsikring.getArligPremie());
+        belop.setText(""+batforsikring.getForsikringsbelop());
+        regNummer.setText(batforsikring.getRegistreringsnummer());
+        lengdeFot.setText(""+batforsikring.getLengdeFot());
+        eier.setText(batforsikring.getEier());
+        battype.setText(batforsikring.getBattype());
+        arsmodell.setText(batforsikring.getArsmodell());
+        motorType.setText(batforsikring.getMotortype());
+        motorStyrke.setText(batforsikring.getMotorstyrke());
+        modell.setText(batforsikring.getModell());
+        dato.setValue(batforsikring.getOpprettetDato());
+        betingelser.setText(batforsikring.getBetingelser());
     }
 }

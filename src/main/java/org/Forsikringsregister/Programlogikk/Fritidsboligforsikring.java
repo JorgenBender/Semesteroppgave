@@ -71,6 +71,37 @@ public class Fritidsboligforsikring extends Forsikring implements Serializable {
 
     public String getForsikringstype() { return forsikringstype; }
 
+    public void setAdresse(String adresse) {
+        this.adresse = adresse;
+    }
+
+    public void setByggear(String byggear) {
+        this.byggear = byggear;
+    }
+
+    public void setBoligtype(String boligtype) {
+        this.boligtype = boligtype;
+    }
+
+    public void setByggemateriale(String byggemateriale) {
+        this.byggemateriale = byggemateriale;
+    }
+
+    public void setStandard(String standard) {
+        this.standard = standard;
+    }
+
+    public void setKvadratmeter(int kvadratmeter) {
+        this.kvadratmeter = kvadratmeter;
+    }
+
+    public void setForsikringsbelopBygning(int forsikringsbelopBygning) {
+        this.forsikringsbelopBygning = forsikringsbelopBygning;
+    }
+
+    public void setForsikringsbelopInnbo(int forsikringsbelopInnbo) {
+        this.forsikringsbelopInnbo = forsikringsbelopInnbo;
+    }
 
     @Override
     public String toString() {

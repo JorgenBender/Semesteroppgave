@@ -5,18 +5,19 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 import org.Forsikringsregister.NumberParser;
+import org.Forsikringsregister.Programlogikk.Forsikring;
 import org.Forsikringsregister.Programlogikk.Kunde;
 import org.Forsikringsregister.Programlogikk.Reiseforsikring;
 
 import java.time.LocalDate;
 
-public class ReiseforsikringKontroller extends Kontroller {
+public class EditReiseforsikringKontroller extends Kontroller {
 
-    private Kunde kunde;
-    public ReiseforsikringKontroller(Kunde kunde){
-        this.kunde=kunde;
+    private Reiseforsikring reiseforsikring;
+    public EditReiseforsikringKontroller(Forsikring forsikring){
+        this.reiseforsikring = (Reiseforsikring) forsikring;
     }
-    public Kunde getKunde(){return this.kunde;}
+    public Reiseforsikring getReiseforsikring(){return this.reiseforsikring;}
 
     @FXML private TextField arligPremie;    @FXML private TextField belop;
 
@@ -53,17 +54,23 @@ public class ReiseforsikringKontroller extends Kontroller {
             int arligPremieInt = NumberParser.parseNumber(arligPremie.getText(), "Årlig premie er ikke et tall");
             int belopInt = NumberParser.parseNumber(belop.getText(), "Beløp er ikke et tall");
             int sumInt = NumberParser.parseNumber(sum.getText(), "Sum er ikke et tall");
-
-            Reiseforsikring reiseforsikring = new Reiseforsikring(arligPremieInt,
-                    belopInt, dato,
-                    betingelser.getText(),
-                    omrade.getText(),
-                    sumInt);
-            kunde.addForsikring(reiseforsikring);
-        } catch (NumberFormatException e) {
+            this.reiseforsikring.setArligPremie(arligPremieInt);
+            this.reiseforsikring.setForsikringsbelop(belopInt);
+            this.reiseforsikring.setOpprettetDato(dato);
+            this.reiseforsikring.setBetingelser(betingelser.getText());
+            this.reiseforsikring.setForsikringsOmrade(omrade.getText());
+            this.reiseforsikring.setForsikringsSum(sumInt);
+        }
+        catch (NumberFormatException e) {
             showAlert(e);
         }
     }
     public void initialize(){
+        arligPremie.setText(""+this.reiseforsikring.getArligPremie());
+        belop.setText(""+this.reiseforsikring.getForsikringsbelop());
+        dato.setValue(this.reiseforsikring.getOpprettetDato());
+        betingelser.setText(this.reiseforsikring.getBetingelser());
+        omrade.setText(this.reiseforsikring.getForsikringsOmrade());
+        sum.setText(""+this.reiseforsikring.getForsikringsSum());
     }
 }

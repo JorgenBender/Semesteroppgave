@@ -28,6 +28,14 @@ public class Reiseforsikring extends Forsikring implements Serializable {
 
     public String getForsikringstype() { return forsikringstype; }
 
+    public void setForsikringsOmrade(String forsikringsOmrade) {
+        this.forsikringsOmrade = forsikringsOmrade;
+    }
+
+    public void setForsikringsSum(int forsikringsSum) {
+        this.forsikringsSum = forsikringsSum;
+    }
+
     @Override
     public String toString(){
         return String.format("Reiseforsikring:\n%s Forsikringsområde: %s\n Forsikringssum: %d",super.toString(),getForsikringsOmrade(),getForsikringsSum());
